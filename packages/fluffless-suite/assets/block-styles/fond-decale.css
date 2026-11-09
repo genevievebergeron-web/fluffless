@@ -1,0 +1,20 @@
+/* Fond décalé : une plaque de la deuxième couleur d'accent décalée derrière l'image, vers la
+   droite et le bas (vers la gauche en écriture de droite à gauche), coins doux. L'image garde ses
+   proportions ; sa marge réserve la place de la plaque, rien ne déborde et la légende reste sous
+   la plaque. Le réglage natif « Ombre » du bloc remplace la plaque. */
+.is-style-fond-decale {
+	--fl-fond: var(--wp--preset--spacing--30, 1rem);
+}
+
+.is-style-fond-decale.is-style-fond-decale img {
+	max-width: calc(100% - var(--fl-fond));
+	height: auto;
+	margin-inline-end: var(--fl-fond);
+	margin-block-end: var(--fl-fond);
+	border-radius: var(--wp--custom--radius--soft, 0.5rem);
+	box-shadow: var(--fl-fond) var(--fl-fond) 0 0 var(--wp--preset--color--accent-2);
+}
+
+[dir="rtl"] .is-style-fond-decale.is-style-fond-decale img {
+	box-shadow: calc(-1 * var(--fl-fond)) var(--fl-fond) 0 0 var(--wp--preset--color--accent-2);
+}

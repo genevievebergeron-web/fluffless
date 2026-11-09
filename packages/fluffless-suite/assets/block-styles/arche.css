@@ -1,0 +1,7 @@
+/* Arche : image en portrait 3:4, haut en demi-cercle, bas carré. */
+.is-style-arche img {
+	height: auto;
+	aspect-ratio: 3 / 4;
+	border-radius: 9999px 9999px 0 0;
+	object-fit: cover;
+}

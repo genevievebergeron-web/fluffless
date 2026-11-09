@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/glossaire",
+	"version": "0.2.1",
+	"title": "Glossary",
+	"category": "design",
+	"icon": "editor-spellcheck",
+	"description": "A list of terms and their definitions, in one or two columns: a native description list, readable by assistive technology. Each term is a Term block with its own anchor. Put a heading before it. CSS only.",
+	"keywords": [ "glossary", "definitions", "terms", "lexicon", "glossaire", "lexique" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"columns": { "type": "number", "enum": [ 2, 1 ], "default": 2 }
+	},
+	"allowedBlocks": [ "fluffless/terme" ],
+	"providesContext": { "fluffless/glossaire": "columns" },
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

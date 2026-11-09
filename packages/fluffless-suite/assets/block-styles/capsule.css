@@ -1,0 +1,46 @@
+/* Capsule flottante : le groupe racine de l'entête porte le style, <header> colle (même approche
+   que « reduit ») sous la barre d'administration, et le groupe se détache du bord en capsule. Le
+   flou (entête au fond Base seulement) vit sur un pseudo-élément : backdrop-filter sur le groupe en ferait le bloc conteneur des
+   menus en position fixe. Ni overflow ni clip-path : sous-menus et panneau de menu dépassent ;
+   panneau ouvert, le rayon se ramène pour ne rien rogner. scroll-padding-top garde le focus et les
+   ancres hors de l'entête. Fond à 92 % : à 85 %, un lien accent tombait à 3,96:1 quand un bloc de
+   couleur Contraste passait derrière (4,57:1 au minimum à 92 %, sept palettes du thème). Le collage ne vaut qu'à l'écran : à l'impression, l'entête reste en place. */
+@media screen {
+	header.wp-block-template-part:has(> .is-style-capsule) {
+		position: sticky;
+		top: calc(var(--wp-admin--admin-bar--height, 0px) + var(--wp--preset--spacing--20));
+		z-index: 30;
+	}
+}
+
+html:has(.is-style-capsule) {
+	scroll-padding-top: 7rem;
+}
+
+.is-style-capsule {
+	position: relative;
+	margin-inline: var(--wp--preset--spacing--30);
+	border-radius: var(--wp--custom--radius--round,9999px);
+	box-shadow: 0 0.25rem 1rem -0.5rem color-mix(in srgb, var(--wp--preset--color--contrast) 25%, transparent);
+}
+
+.is-style-capsule:has(details[open]) {
+	border-radius: var(--wp--custom--radius--large,1.5rem);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+	.is-style-capsule.has-base-background-color {
+		isolation: isolate;
+		background: none !important;
+	}
+
+	.is-style-capsule.has-base-background-color::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		border-radius: inherit;
+		background: color-mix(in srgb, var(--wp--preset--color--base) 92%, transparent);
+		backdrop-filter: blur(12px);
+	}
+}

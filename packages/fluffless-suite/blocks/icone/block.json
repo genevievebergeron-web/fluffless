@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/icone",
+	"version": "0.2.1",
+	"title": "Icon",
+	"example": {"attributes": {"icon": "sparkles", "size": "large"}},
+	"category": "design",
+	"icon": "star-filled",
+	"description": "Lucide icon as inline SVG, rendered on the server, with no JavaScript on the site.",
+	"keywords": [ "icon", "pictogram", "symbol", "svg" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"icon": { "type": "string", "default": "sparkles" },
+		"size": { "type": "string", "enum": [ "small", "medium", "large", "xl" ], "default": "medium" },
+		"label": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"align": [ "left", "center", "right" ],
+		"color": {
+			"text": true,
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"customColor": false,
+			"__experimentalDefaultControls": { "text": true }
+		},
+		"spacing": { "margin": true, "padding": false }
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

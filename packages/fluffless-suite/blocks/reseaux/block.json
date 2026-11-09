@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/reseaux",
+	"version": "0.2.1",
+	"title": "Social networks",
+	"example": {},
+	"category": "widgets",
+	"icon": "share",
+	"description": "Inline SVG icons for the networks set in Settings, Fluffless, Footer. No script, no external request.",
+	"keywords": [ "footer" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": false,
+		"color": { "text": true, "background": false, "gradients": false, "link": true, "customColor": false },
+		"typography": { "fontSize": true },
+		"spacing": { "margin": true }
+	},
+	"editorScript": "fluffless-footer-blocks-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

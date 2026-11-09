@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/qui-nous-sommes",
+	"version": "0.2.1",
+	"title": "About us",
+	"category": "design",
+	"icon": "groups",
+	"description": "A heading and a short text beside a photo or a few key figures, with or without the mission set apart. The content stays in regular blocks.",
+	"keywords": [ "about", "who we are", "mission", "story", "figures", "à propos" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

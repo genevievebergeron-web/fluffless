@@ -1,0 +1,19 @@
+/* Bouton souligné : texte seul, sans fond ni bordure ; un trait de la couleur du texte
+   s'étire de la gauche au survol et au clavier (image de fond en dégradé plat, sans couleur
+   ajoutée). */
+.wp-block-button.is-style-souligne .wp-block-button__link {
+	padding-inline: 0;
+	border-color: transparent;
+	border-radius: 0;
+	background-color: transparent;
+	color: currentColor;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-repeat: no-repeat;
+	background-size: 0 2px;
+	background-position: 0 100%;
+	transition: background-size var(--wp--custom--transition);
+}
+
+.wp-block-button.is-style-souligne .wp-block-button__link:is(:hover, :focus-visible) {
+	background-size: 100% 2px;
+}

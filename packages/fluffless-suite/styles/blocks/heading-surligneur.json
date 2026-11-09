@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Highlighter",
+	"slug": "surligneur",
+	"blockTypes": [
+		"core/heading",
+		"core/paragraph"
+	],
+	"styles": {}
+}

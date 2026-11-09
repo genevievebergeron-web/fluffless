@@ -1,0 +1,25 @@
+{
+	"ci": {
+		"collect": {
+			"url": ["http://127.0.0.1:8882/"],
+			"numberOfRuns": 3,
+			"settings": {
+				"preset": "perf",
+				"formFactor": "mobile",
+				"budgetPath": "tools/budgets.json"
+			}
+		},
+		"assert": {
+			"assertions": {
+				"performance-budget": "error",
+				"resource-summary:script:size": ["error", { "maxNumericValue": 0 }],
+				"resource-summary:third-party:count": ["error", { "maxNumericValue": 0 }],
+				"dom-size": ["error", { "maxNumericValue": 800 }]
+			}
+		},
+		"upload": {
+			"target": "filesystem",
+			"outputDir": "tools/reports/lhci"
+		}
+	}
+}

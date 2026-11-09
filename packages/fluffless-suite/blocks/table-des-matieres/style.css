@@ -1,0 +1,11 @@
+.fluffless-section.fluffless-table-des-matieres{padding:var(--wp--preset--spacing--40,1.5rem);border:1px solid var(--wp--preset--color--divider)}
+.fluffless-table-des-matieres__title{margin:0 0 .5rem;font-weight:600}
+.fluffless-table-des-matieres__list{margin:0;padding-inline-start:1.5rem}
+.fluffless-table-des-matieres__list ol{margin-block:.35em 0;padding-inline-start:1.5rem}
+.fluffless-table-des-matieres.is-numbering-plain :is(.fluffless-table-des-matieres__list,.fluffless-table-des-matieres__list ol){list-style:none;padding-inline-start:0}
+.fluffless-table-des-matieres.is-numbering-plain .fluffless-table-des-matieres__list ol{padding-inline-start:1rem}
+.fluffless-table-des-matieres__list li+li{margin-block-start:.35em}
+.fluffless-table-des-matieres__list a{text-decoration:none}
+.fluffless-table-des-matieres__list a:hover{text-decoration:underline}
+:is(h2,h3)[id]{scroll-margin-block-start:1rem}
+@media (prefers-reduced-motion:no-preference){html:has(.fluffless-table-des-matieres){scroll-behavior:smooth}}

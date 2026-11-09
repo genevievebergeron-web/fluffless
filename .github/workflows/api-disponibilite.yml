@@ -1,0 +1,51 @@
+# Contrôle horaire de l'API Fluffless (canner). Un échec envoie un courriel GitHub au propriétaire du dépôt.
+name: Disponibilité de l'API
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+# Lecture du dépôt seulement : le checkout du dépôt privé échoue sans contents: read (« Repository not found »).
+permissions:
+  contents: read
+
+jobs:
+  sonde:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      # Le domaine public d'abord : c'est celui que les sites clients appellent (Update URI, FLUFFLESS_API_URL).
+      - name: GET /health (domaine public et hôte canner)
+        run: |
+          set -euo pipefail
+          for url in https://api.fluffless.dev/health https://fluffless-api.canner.app/health; do
+            body="$(curl --fail --silent --show-error --max-time 20 --retry 2 --retry-delay 5 "$url")"
+            echo "$url -> $body"
+            test "$body" = '{"status":"ok"}'
+          done
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: packages/fluffless-suite/src/Modules/Updates.php
+          sparse-checkout-cone-mode: false
+
+      # Lecture seule : la signature du manifeste servi doit se vérifier avec la clé publique livrée dans la Suite.
+      # Aucune version stable publiée (404) : rien à vérifier, la sonde passe.
+      - name: Manifeste signé (clé du serveur = clé de la Suite)
+        run: |
+          set -euo pipefail
+          code="$(curl --silent --max-time 20 --retry 2 --retry-delay 5 -o manifeste.json -w '%{http_code}' 'https://api.fluffless.dev/v1/manifest?slug=fluffless-suite')"
+          if [ "$code" = 404 ]; then echo "Aucune version stable publiée : rien à vérifier."; exit 0; fi
+          test "$code" = 200
+          node -e '
+            const c = require("crypto"), fs = require("fs");
+            const php = fs.readFileSync("packages/fluffless-suite/src/Modules/Updates.php", "utf8");
+            const key = /SIGNING_PUBLIC_KEY\s*=\s*\x27([^\x27]+)\x27/.exec(php)?.[1];
+            if (!key) { console.error("Clé publique introuvable dans Updates.php"); process.exit(1); }
+            const pub = c.createPublicKey({ key: Buffer.concat([Buffer.from("302a300506032b6570032100", "hex"), Buffer.from(key, "base64")]), format: "der", type: "spki" });
+            const r = JSON.parse(fs.readFileSync("manifeste.json", "utf8"));
+            const ok = c.verify(null, Buffer.from(r.manifest), pub, Buffer.from(r.manifest_signature, "base64"));
+            console.log(r.slug, r.version, ok ? "signature valide" : "SIGNATURE INVALIDE");
+            process.exit(ok ? 0 : 1);
+          '

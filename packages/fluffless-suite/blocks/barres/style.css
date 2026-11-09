@@ -1,0 +1,9 @@
+/* Piste et remplissage en CSS ; la valeur vient d'une variable posée au rendu. */
+.fluffless-barre{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:baseline}
+.fluffless-barre__label{flex:1}
+.fluffless-barre__value{font-variant-numeric:tabular-nums;color:var(--wp--preset--color--muted)}
+.fluffless-barre__track{flex-basis:100%;block-size:.5rem;border-radius:var(--wp--custom--radius--round,1rem);background:var(--wp--preset--color--divider);overflow:hidden}
+.fluffless-barre__fill{display:block;block-size:100%;inline-size:var(--fl-v,0%);border-radius:inherit;background:var(--wp--preset--color--accent)}
+.fluffless-barres.is-size-thick .fluffless-barre__track{block-size:1rem}
+.fluffless-barres.is-values-hidden .fluffless-barre__value{display:none}
+.fluffless-barres__list>*+*{margin-block-start:var(--wp--preset--spacing--30,1rem)}

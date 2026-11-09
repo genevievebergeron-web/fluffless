@@ -1,0 +1,8 @@
+/* Panneau de menu : details absolu sous <header> relatif, empilé sous 600 px. */
+.fluffless-panneau-menu{position:static}
+.fluffless-panneau-menu__summary{cursor:pointer;list-style:none}
+.fluffless-panneau-menu__summary::after{content:" \2193"}
+[open]>.fluffless-panneau-menu__summary::after{content:" \2191"}
+.fluffless-panneau-menu__panel{position:absolute;inset-inline:0;top:100%;z-index:20;padding:var(--wp--preset--spacing--50);background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);border-block-start:1px solid var(--wp--preset--color--divider);box-shadow:var(--wp--preset--shadow--soft,0 1rem 2rem -1rem color-mix(in srgb,currentcolor 25%,transparent))}
+.is-width-content>details>.fluffless-panneau-menu__panel{inset-inline:auto;min-inline-size:20rem;max-inline-size:40rem;border:1px solid var(--wp--preset--color--divider)}
+@media (max-width:600px){.fluffless-panneau-menu__panel{position:static;min-inline-size:0;padding:var(--wp--preset--spacing--30) 0 0;border:0;box-shadow:none}}

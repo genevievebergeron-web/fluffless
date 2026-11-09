@@ -1,0 +1,8 @@
+/* Filet ou guillemet décoratif (texte de remplacement vide : les lecteurs d'écran ne le lisent pas). */
+.fluffless-citation .wp-block-quote{margin:0;border:0;padding:0}
+.fluffless-citation .wp-block-quote p{line-height:1.25}
+.fluffless-citation.is-size-large .wp-block-quote p{font-size:var(--wp--preset--font-size--xx-large)}
+.fluffless-citation.is-size-compact .wp-block-quote p{font-size:var(--wp--preset--font-size--large)}
+.fluffless-citation.is-mark-rule{border-inline-start:.25rem solid var(--wp--preset--color--accent);padding-inline-start:var(--wp--preset--spacing--40,1.5rem)}
+.fluffless-citation.is-mark-quotes .wp-block-quote::before{content:"\201C";content:"\201C"/"";display:block;font-size:4em;line-height:.8;color:var(--wp--preset--color--accent)}
+.fluffless-citation__author{font-size:var(--wp--preset--font-size--small)}

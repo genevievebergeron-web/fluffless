@@ -1,0 +1,27 @@
+/* Bloc de fermeture : aplat de la palette, grand rembourrage vertical, contenu centré, lien ou
+   bouton très gros. Sans couleur de fond choisie dans l'éditeur, l'aplat est l'accent et
+   border-image le prolonge jusqu'aux bords de la fenêtre sans créer de défilement horizontal ;
+   avec une couleur choisie, celle-ci est respectée et la largeur suit l'alignement du bloc. */
+.is-style-fermeture {
+	padding-block: clamp(4rem, 12vw, 9rem);
+	text-align: center;
+}
+
+.is-style-fermeture:is(.is-background-accent, .wp-block-group:not(.has-background)) {
+	border-image: conic-gradient(var(--wp--preset--color--accent) 0 0) fill 0 / 0 / 0 100vw;
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--on-accent);
+}
+
+.wp-block-group.is-style-fermeture:not(.has-background) .wp-block-button:not(.is-style-outline) > .wp-element-button {
+	background: var(--wp--preset--color--on-accent);
+	color: var(--wp--preset--color--accent);
+}
+
+.is-style-fermeture .wp-block-buttons {
+	justify-content: center;
+}
+
+.is-style-fermeture :is(.wp-element-button, p > a:only-child) {
+	font-size: clamp(1.5rem, 1rem + 3vw, 3rem);
+}

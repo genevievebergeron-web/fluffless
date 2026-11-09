@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/equipe",
+	"version": "0.2.1",
+	"title": "Team",
+	"category": "design",
+	"icon": "groups",
+	"description": "One card per person on two, three or four columns: a round or square photo, the name, and on request the role, a short bio and a LinkedIn link. The content stays in regular blocks.",
+	"keywords": [ "team", "people", "staff", "portraits", "équipe" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"photo": { "type": "string", "enum": [ "round", "square" ], "default": "round" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

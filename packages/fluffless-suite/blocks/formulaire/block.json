@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/formulaire",
+	"version": "0.2.1",
+	"title": "Form",
+	"example": {"attributes": {"submitLabel": "Send"}},
+	"category": "widgets",
+	"icon": "feedback",
+	"description": "A contact form made of field blocks. Sends an email to the site and a copy to the sender, blocks robots without a third party, works without JavaScript.",
+	"keywords": [ "form", "contact", "formulaire", "email", "courriel" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"formId": { "type": "string", "default": "" },
+		"recipients": { "type": "string", "default": "" },
+		"routeField": { "type": "string", "default": "" },
+		"routes": { "type": "object", "default": {} },
+		"subject": { "type": "string", "default": "" },
+		"confirm": { "type": "boolean", "default": true },
+		"keep": { "type": "boolean", "default": false },
+		"keepDays": { "type": "integer", "default": 0 },
+		"success": { "type": "string", "default": "" },
+		"submitLabel": { "type": "string", "default": "" },
+		"newsletter": { "type": "boolean", "default": false },
+		"newsletterList": { "type": "string", "default": "" },
+		"newsletterConsent": { "type": "string", "default": "" }
+	},
+	"providesContext": {
+		"fluffless/formId": "formId"
+	},
+	"supports": {
+		"html": false,
+		"reusable": true,
+		"anchor": true,
+		"customClassName": true,
+		"spacing": { "padding": true, "margin": true },
+		"color": { "background": true, "text": true }
+	},
+	"editorScript": "file:./index.js"
+}

@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/logos",
+	"version": "0.2.1",
+	"title": "Partner logos",
+	"category": "design",
+	"icon": "images-alt2",
+	"description": "One line of context and three to eight partner or client logos, on a grid or in a row, in colour or in greyscale until the pointer moves over them. The images stay regular image blocks.",
+	"keywords": [ "logos", "partners", "clients", "sponsors", "trust" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"arrangement": { "type": "string", "enum": [ "grid", "row" ], "default": "grid" },
+		"tone": { "type": "string", "enum": [ "mono", "color" ], "default": "mono" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

@@ -1,0 +1,35 @@
+/* Plan : filets durs d'un pixel dans la couleur du texte, coins carrés, ni dégradé ni ombre.
+   Le cadre entoure le groupe ou la rangée de colonnes ; une cloison sépare les colonnes, à la
+   verticale côte à côte et à l'horizontale une fois empilées (781 px et moins, comme le cœur),
+   donc jamais de filet double. Classe fl-plan-neon : filet en couleur d'accent et halo léger,
+   pensé pour un fond sombre. */
+:is(.wp-block-group, .wp-block-columns).is-style-plan,
+.is-style-plan .wp-block-columns {
+	gap: 0;
+	border: 1px solid var(--fl-plan, currentColor);
+	border-radius: 0;
+	box-shadow: 0 0 0.5rem var(--fl-plan, transparent);
+}
+
+.wp-block-group.is-style-plan,
+.is-style-plan .wp-block-column {
+	padding: var(--wp--preset--spacing--40, 1.5rem);
+}
+
+.is-style-plan .wp-block-column + .wp-block-column {
+	border-inline-start: 1px solid var(--fl-plan, currentColor);
+}
+
+@media (max-width: 781px) {
+	.is-style-plan .wp-block-column + .wp-block-column {
+		border-inline-start: 0;
+	}
+
+	:is(.is-style-plan, .is-style-plan .wp-block-columns):not(.is-not-stacked-on-mobile) > .wp-block-column + .wp-block-column {
+		border-block-start: 1px solid var(--fl-plan, currentColor);
+	}
+}
+
+.is-style-plan.fl-plan-neon {
+	--fl-plan: var(--wp--preset--color--accent);
+}

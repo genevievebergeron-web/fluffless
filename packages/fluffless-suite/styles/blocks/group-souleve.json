@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Lift on hover",
+	"slug": "souleve",
+	"blockTypes": [ "core/group", "core/columns", "core/column", "core/image" ],
+	"styles": {}
+}

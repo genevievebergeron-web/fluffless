@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/ressource",
+	"version": "0.2.1",
+	"title": "Resource download",
+	"category": "media",
+	"icon": "download",
+	"description": "A file from your media library to download, with a heading and a short text. The link shows the file format and size on its own, with a preview or an icon.",
+	"keywords": [ "download", "file", "pdf", "guide", "ressource" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"preview": { "type": "string", "enum": [ "image", "icon" ], "default": "image" },
+		"fileId": { "type": "number", "default": 0 },
+		"emailFirst": { "type": "boolean", "default": false },
+		"recipients": { "type": "string", "default": "" },
+		"consent": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

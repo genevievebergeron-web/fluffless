@@ -1,0 +1,571 @@
+/*
+ * Extensions de formulaires établies (Contact Form 7, WPForms, Fluent Forms, Formidable,
+ * Gravity Forms) : chacune arrive avec ses gris, son bleu, son rouge et sa police système,
+ * pensés pour un fond blanc. Ici, champs, libellés, aides, erreurs, cases, boutons et messages
+ * reprennent la palette, la police et les formes du thème, lisibles dans toutes les variations.
+ * Chargé seulement quand l'une des extensions est active et que la page porte un formulaire
+ * (voir functions.php, filtre fluffless_forms_styles).
+ *
+ * Les feuilles de ces extensions arrivent souvent après celle-ci (pied de page) : chaque
+ * sélecteur double la classe racine pour peser plus lourd que leurs règles, sans !important.
+ * Ordre des extensions : Contact Form 7, WPForms, Fluent Forms, Formidable, Gravity Forms.
+ */
+
+/* ---- Jetons communs, lus par toutes les règles ci-dessous. ---- */
+.wpcf7,
+.wpforms-container,
+.fluentform,
+.frm_forms,
+.gform_wrapper {
+	--fl-form-text: var(--wp--preset--color--contrast);
+	--fl-form-bg: var(--wp--preset--color--base);
+	--fl-form-border: var(--wp--preset--color--divider);
+	--fl-form-muted: var(--wp--preset--color--muted);
+	--fl-form-accent: var(--wp--preset--color--accent);
+	--fl-form-on-accent: var(--wp--preset--color--on-accent);
+	--fl-form-alert: var(--wp--preset--color--alert);
+	--fl-form-radius: var(--wp--custom--radius--soft, 0.5rem);
+	--fl-form-button-bg: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	--fl-form-small: var(--wp--preset--font-size--small, 0.9em);
+}
+
+/* ---- Champ refusé par la validation native du navigateur, après que la personne y a touché
+   (:user-invalid) : bordure d'alerte, même signal que les erreurs rendues par le serveur. ---- */
+:is(.wpcf7, .wpforms-container, .fluentform, .frm_forms, .gform_wrapper) :is(input, select, textarea):user-invalid {
+	border-color: var(--wp--preset--color--alert, #b00020);
+}
+
+/* ---- Contact Form 7 : aucun style de champ, tout vient du navigateur. ---- */
+.wpcf7.wpcf7 :is(input:not([type=submit], [type=button], [type=checkbox], [type=radio], [type=file], [type=hidden], [type=image]), select, textarea) {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.6em 0.8em;
+	font: inherit;
+	line-height: 1.4;
+	color: var(--fl-form-text);
+	background: var(--fl-form-bg);
+	border: 2px solid var(--fl-form-border);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.wpcf7.wpcf7 textarea {
+	min-height: 8em;
+	resize: vertical;
+}
+
+.wpcf7.wpcf7 :is(input, select, textarea, button):focus-visible {
+	outline: 2px solid var(--fl-form-text);
+	outline-offset: 2px;
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+.wpcf7.wpcf7 label {
+	font-weight: 700;
+	color: var(--fl-form-text);
+}
+
+.wpcf7.wpcf7 :is(.wpcf7-list-item-label, .wpcf7-acceptance label) {
+	font-weight: 400;
+}
+
+.wpcf7.wpcf7 :is(input[type=checkbox], input[type=radio]) {
+	width: 1.1em;
+	height: 1.1em;
+	accent-color: var(--fl-form-accent);
+}
+
+.wpcf7.wpcf7 .wpcf7-submit {
+	display: inline-block;
+	padding: var(--wp--preset--spacing--30, 0.75rem) var(--wp--preset--spacing--50, 1.5rem);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--base, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--fl-form-on-accent);
+	background: var(--fl-form-button-bg);
+	border: 2px solid transparent;
+	border-radius: var(--fl-form-radius);
+	cursor: pointer;
+	transition: background-color var(--wp--custom--transition, 200ms ease-out), color var(--wp--custom--transition, 200ms ease-out);
+}
+
+.wpcf7.wpcf7 .wpcf7-submit:hover {
+	color: var(--fl-form-bg);
+	background: var(--fl-form-text);
+	border-color: var(--fl-form-text);
+}
+
+.wpcf7.wpcf7 .wpcf7-not-valid-tip {
+	margin-top: 0.35em;
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-alert);
+}
+
+.wpcf7.wpcf7 .wpcf7-not-valid {
+	border-color: var(--fl-form-alert);
+}
+
+/* Fenêtre de réponse : bleu, vert, rouge, orange, jaune fixes. Ici, accent pour l'envoi réussi, alerte sinon. */
+.wpcf7.wpcf7 form .wpcf7-response-output {
+	margin: 1.5em 0 0;
+	padding: 1em 1.2em;
+	border: 2px solid var(--fl-form-alert);
+	border-radius: var(--fl-form-radius);
+}
+
+.wpcf7.wpcf7 form.sent .wpcf7-response-output {
+	border-color: var(--fl-form-accent);
+}
+
+.wpcf7.wpcf7 .wpcf7-spinner {
+	background-color: var(--fl-form-text);
+}
+
+.wpcf7.wpcf7 .wpcf7-spinner::before {
+	background-color: var(--fl-form-bg);
+}
+
+/* ---- WPForms (balisage moderne) : lit ses variables, écrites en ligne sur le conteneur
+   quand un style est choisi dans le constructeur. Les variables couvrent le reste
+   (listes déroulantes, dates) ; les règles directes pèsent plus lourd pour les champs,
+   libellés et boutons. ---- */
+div.wpforms-container-full.wpforms-container {
+	--wpforms-field-border-color: var(--fl-form-border);
+	--wpforms-field-border-size: 2px;
+	--wpforms-field-border-radius: var(--fl-form-radius);
+	--wpforms-field-background-color: var(--fl-form-bg);
+	--wpforms-field-text-color: var(--fl-form-text);
+	--wpforms-field-menu-color: var(--fl-form-bg);
+	--wpforms-label-color: var(--fl-form-text);
+	--wpforms-label-sublabel-color: var(--fl-form-muted);
+	--wpforms-label-error-color: var(--fl-form-alert);
+	--wpforms-button-background-color: var(--fl-form-button-bg);
+	--wpforms-button-text-color: var(--fl-form-on-accent);
+	--wpforms-button-border-color: transparent;
+	--wpforms-button-border-size: 2px;
+	--wpforms-button-border-radius: var(--fl-form-radius);
+	--wpforms-button-background-color-alt: var(--fl-form-text);
+	--wpforms-button-text-color-alt: var(--fl-form-bg);
+	--wpforms-page-break-color: var(--fl-form-accent);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(input:not([type=submit], [type=button], [type=checkbox], [type=radio], [type=file], [type=hidden], [type=image], [type=range]), select, textarea) {
+	height: auto;
+	padding: 0.6em 0.8em;
+	font: inherit;
+	line-height: 1.4;
+	color: var(--fl-form-text);
+	background-color: var(--fl-form-bg);
+	border: 2px solid var(--fl-form-border);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form textarea {
+	min-height: 8em;
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(input, select, textarea, button):focus-visible {
+	outline: 2px solid var(--fl-form-text);
+	outline-offset: 2px;
+	border-color: var(--fl-form-border);
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(.wpforms-field-label, legend.wpforms-field-label) {
+	font: inherit;
+	font-weight: 700;
+	color: var(--fl-form-text);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(.wpforms-field-sublabel, .wpforms-field-description) {
+	font: inherit;
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-muted);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form .wpforms-required-label {
+	color: var(--fl-form-alert);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(input[type=checkbox], input[type=radio]) {
+	accent-color: var(--fl-form-accent);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(button[type=submit], .wpforms-submit, .wpforms-page-button) {
+	padding: var(--wp--preset--spacing--30, 0.75rem) var(--wp--preset--spacing--50, 1.5rem);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--base, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--fl-form-on-accent);
+	background-color: var(--fl-form-button-bg);
+	border: 2px solid transparent;
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(button[type=submit], .wpforms-submit, .wpforms-page-button):hover {
+	color: var(--fl-form-bg);
+	background-color: var(--fl-form-text);
+	border-color: var(--fl-form-text);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form :is(label.wpforms-error, em.wpforms-error) {
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-alert);
+}
+
+div.wpforms-container-full.wpforms-container .wpforms-form .wpforms-field :is(input, textarea, select):is(.wpforms-error, .user-invalid) {
+	border-color: var(--fl-form-alert);
+	box-shadow: none;
+}
+
+div.wpforms-container-full.wpforms-container :is(.wpforms-confirmation-container-full, .wpforms-error-container, .wpforms-notice) {
+	margin: 0 0 1.5em;
+	padding: 1em 1.2em;
+	color: inherit;
+	background: transparent;
+	border: 2px solid var(--fl-form-accent);
+	border-radius: var(--fl-form-radius);
+}
+
+div.wpforms-container-full.wpforms-container :is(.wpforms-error-container, .wpforms-notice.wpforms-error) {
+	border-color: var(--fl-form-alert);
+}
+
+/* ---- Fluent Forms : ses variables sur :root, sa police système sur les champs. ---- */
+.fluentform.fluentform {
+	--fluentform-primary: var(--fl-form-accent);
+	--fluentform-secondary: var(--fl-form-text);
+	--fluentform-danger: var(--fl-form-alert);
+	--fluentform-border-color: var(--fl-form-border);
+	--fluentform-border-radius: var(--fl-form-radius);
+}
+
+.fluentform.fluentform .ff-el-form-control {
+	padding: 0.6em 0.8em;
+	font: inherit;
+	line-height: 1.4;
+	color: var(--fl-form-text);
+	background-color: var(--fl-form-bg);
+	border: 2px solid var(--fl-form-border);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.fluentform.fluentform textarea.ff-el-form-control {
+	min-height: 8em;
+	resize: vertical;
+}
+
+.fluentform.fluentform :is(.ff-el-form-control, input, select, textarea, button):focus-visible {
+	outline: 2px solid var(--fl-form-text);
+	outline-offset: 2px;
+	border-color: var(--fl-form-border);
+	background-color: var(--fl-form-bg);
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+.fluentform.fluentform .ff-el-input--label label {
+	font: inherit;
+	font-weight: 700;
+	color: var(--fl-form-text);
+}
+
+.fluentform.fluentform .ff-el-input--label.ff-el-is-required.asterisk-right label::after,
+.fluentform.fluentform .ff-el-input--label.ff-el-is-required.asterisk-left label::before {
+	color: var(--fl-form-alert);
+}
+
+.fluentform.fluentform .ff-el-help-message {
+	font: inherit;
+	font-size: var(--fl-form-small);
+	font-style: normal;
+	color: var(--fl-form-muted);
+}
+
+.fluentform.fluentform :is(input[type=checkbox], input[type=radio]) {
+	accent-color: var(--fl-form-accent);
+}
+
+.fluentform.fluentform .ff-el-form-check-label {
+	color: var(--fl-form-text);
+}
+
+.fluentform.fluentform .ff-btn.ff_btn_style {
+	padding: var(--wp--preset--spacing--30, 0.75rem) var(--wp--preset--spacing--50, 1.5rem);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--base, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--fl-form-on-accent);
+	background-color: var(--fl-form-button-bg);
+	border: 2px solid transparent;
+	border-radius: var(--fl-form-radius);
+	opacity: 1;
+}
+
+.fluentform.fluentform .ff-btn.ff_btn_style:hover {
+	color: var(--fl-form-bg);
+	background-color: var(--fl-form-text);
+	border-color: var(--fl-form-text);
+	opacity: 1;
+}
+
+.fluentform.fluentform .ff-el-is-error .ff-el-form-control {
+	border-color: var(--fl-form-alert);
+}
+
+.fluentform.fluentform .ff-el-is-error .text-danger,
+.fluentform.fluentform .ff-errors-in-stack .error {
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-alert);
+}
+
+.fluentform.fluentform .ff-message-success {
+	margin-top: 1.5em;
+	padding: 1em 1.2em;
+	border: 2px solid var(--fl-form-accent);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+/* ---- Formidable : une feuille générée à partir de ses réglages, presque toute en variables ;
+   le bouton du style par défaut a ses couleurs écrites en dur. ---- */
+.frm_forms.with_frm_style {
+	--font: inherit;
+	--font-size: inherit;
+	--field-font-size: inherit;
+	--label-color: var(--fl-form-text);
+	--weight: 700;
+	--required-color: var(--fl-form-alert);
+	--description-color: var(--fl-form-muted);
+	--description-font-size: var(--fl-form-small);
+	--text-color: var(--fl-form-text);
+	--border-color: var(--fl-form-border);
+	--field-border-width: 2px;
+	--border-radius: var(--fl-form-radius);
+	--bg-color: var(--fl-form-bg);
+	--bg-color-active: var(--fl-form-bg);
+	--border-color-active: var(--fl-form-border);
+	--text-color-error: var(--fl-form-text);
+	--bg-color-error: var(--fl-form-bg);
+	--border-color-error: var(--fl-form-alert);
+	--border-width-error: 2px;
+	--check-label-color: var(--fl-form-text);
+	--check-font-size: inherit;
+	--section-color: var(--fl-form-text);
+	--section-border-color: var(--fl-form-border);
+	--submit-bg-color: var(--fl-form-button-bg);
+	--submit-border-color: transparent;
+	--submit-text-color: var(--fl-form-on-accent);
+	--submit-border-radius: var(--fl-form-radius);
+	--submit-hover-bg-color: var(--fl-form-text);
+	--submit-hover-border-color: var(--fl-form-text);
+	--submit-hover-color: var(--fl-form-bg);
+	--submit-active-bg-color: var(--fl-form-text);
+	--submit-active-border-color: var(--fl-form-text);
+	--submit-active-color: var(--fl-form-bg);
+	--error-bg: transparent;
+	--error-border: var(--fl-form-alert);
+	--error-text: inherit;
+	--success-bg-color: transparent;
+	--success-border-color: var(--fl-form-accent);
+	--success-text-color: inherit;
+	--progress-color: var(--fl-form-accent);
+	--progress-bg-color: var(--fl-form-border);
+}
+
+.frm_forms.with_frm_style :is(input:not([type=submit], [type=button], [type=checkbox], [type=radio], [type=file], [type=hidden], [type=image], [type=range]), select, textarea) {
+	height: auto;
+	padding: 0.6em 0.8em;
+	font: inherit;
+	line-height: 1.4;
+	color: var(--fl-form-text);
+	background-color: var(--fl-form-bg);
+	border: 2px solid var(--fl-form-border);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.frm_forms.with_frm_style textarea {
+	min-height: 8em;
+}
+
+.frm_forms.with_frm_style :is(input, select, textarea, button):focus-visible {
+	outline: 2px solid var(--fl-form-text);
+	outline-offset: 2px;
+	border-color: var(--fl-form-border);
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+.frm_forms.with_frm_style :is(input[type=checkbox], input[type=radio]) {
+	accent-color: var(--fl-form-accent);
+}
+
+.frm_forms.with_frm_style :is(input[type=checkbox], input[type=radio]):focus-visible {
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+.frm_forms.with_frm_style .frm_submit :is(button, input[type=submit], input[type=button]) {
+	padding: var(--wp--preset--spacing--30, 0.75rem) var(--wp--preset--spacing--50, 1.5rem);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--base, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--fl-form-on-accent);
+	background: var(--fl-form-button-bg);
+	border: 2px solid transparent;
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.frm_forms.with_frm_style .frm_submit :is(button, input[type=submit], input[type=button]):is(:hover, :focus-visible) {
+	color: var(--fl-form-bg);
+	background: var(--fl-form-text);
+	border-color: var(--fl-form-text);
+}
+
+.frm_forms.with_frm_style :is(.frm_error, .frm_limit_error) {
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-alert);
+}
+
+/* Le style par défaut écrit 12px et un gris fixe sur les descriptions et sous-libellés (Prénom, Nom). */
+.frm_forms.with_frm_style.with_frm_style :is(.frm_form_field, .frm-show-form) :is(div.frm_description, p.description, div.description, .frm_pro_max_limit_desc) {
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-muted);
+}
+
+.frm_forms.with_frm_style :is(.frm_error_style, .frm_message) {
+	margin: 0 0 1.5em;
+	padding: 1em 1.2em;
+	color: inherit;
+	background: transparent;
+	border: 2px solid var(--fl-form-accent);
+	border-radius: var(--fl-form-radius);
+}
+
+.frm_forms.with_frm_style .frm_error_style {
+	border-color: var(--fl-form-alert);
+}
+
+/* ---- Gravity Forms : thème Orbital (2.7 et plus) par ses variables, thème « gravity » par
+   des règles directes. Extension payante, non mesurée ici : sélecteurs tirés de sa
+   documentation, à vérifier sur un site qui l'a. ---- */
+.gform_wrapper.gform_wrapper {
+	--gf-color-primary: var(--fl-form-accent);
+	--gf-color-primary-contrast: var(--fl-form-on-accent);
+	--gf-color-danger: var(--fl-form-alert);
+	--gf-ctrl-font-family: inherit;
+	--gf-ctrl-btn-font-family: inherit;
+	--gf-ctrl-color: var(--fl-form-text);
+	--gf-ctrl-bg-color: var(--fl-form-bg);
+	--gf-ctrl-border-color: var(--fl-form-border);
+	--gf-ctrl-border-width: 2px;
+	--gf-ctrl-radius: var(--fl-form-radius);
+	--gf-ctrl-label-color-primary: var(--fl-form-text);
+	--gf-ctrl-label-color-secondary: var(--fl-form-muted);
+	--gf-ctrl-label-color-required: var(--fl-form-alert);
+	--gf-ctrl-desc-color: var(--fl-form-muted);
+	--gf-ctrl-btn-bg-color-primary: var(--fl-form-button-bg);
+	--gf-ctrl-btn-color-primary: var(--fl-form-on-accent);
+	--gf-ctrl-btn-border-color-primary: transparent;
+	--gf-ctrl-btn-bg-color-hover-primary: var(--fl-form-text);
+	--gf-ctrl-btn-color-hover-primary: var(--fl-form-bg);
+	--gf-ctrl-btn-border-color-hover-primary: var(--fl-form-text);
+	--gf-ctrl-btn-radius: var(--fl-form-radius);
+	--gf-ctrl-checkbox-check-color: var(--fl-form-on-accent);
+	--gf-ctrl-checkbox-check-bg-color: var(--fl-form-accent);
+	--gf-ctrl-radio-check-bg-color: var(--fl-form-accent);
+}
+
+.gform_wrapper.gform_wrapper .gfield :is(input:not([type=submit], [type=button], [type=checkbox], [type=radio], [type=file], [type=hidden], [type=image], [type=range]), select, textarea) {
+	padding: 0.6em 0.8em;
+	font: inherit;
+	line-height: 1.4;
+	color: var(--fl-form-text);
+	background-color: var(--fl-form-bg);
+	border: 2px solid var(--fl-form-border);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.gform_wrapper.gform_wrapper textarea {
+	min-height: 8em;
+}
+
+.gform_wrapper.gform_wrapper :is(input, select, textarea, button):focus-visible {
+	outline: 2px solid var(--fl-form-text);
+	outline-offset: 2px;
+	border-color: var(--fl-form-border);
+	box-shadow: 0 0 0 2px var(--fl-form-bg);
+}
+
+.gform_wrapper.gform_wrapper :is(.gfield_label, legend.gfield_label) {
+	font: inherit;
+	font-weight: 700;
+	color: var(--fl-form-text);
+}
+
+.gform_wrapper.gform_wrapper :is(.gfield_description, .ginput_complex label, .gfield_sublabel) {
+	font: inherit;
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-muted);
+}
+
+.gform_wrapper.gform_wrapper .gfield_required {
+	color: var(--fl-form-alert);
+}
+
+.gform_wrapper.gform_wrapper :is(input[type=checkbox], input[type=radio]) {
+	accent-color: var(--fl-form-accent);
+}
+
+.gform_wrapper.gform_wrapper :is(.gform_button, .gform_next_button, .gform_previous_button, .gform_footer input[type=submit]) {
+	padding: var(--wp--preset--spacing--30, 0.75rem) var(--wp--preset--spacing--50, 1.5rem);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--base, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--fl-form-on-accent);
+	background: var(--fl-form-button-bg);
+	border: 2px solid transparent;
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.gform_wrapper.gform_wrapper :is(.gform_button, .gform_next_button, .gform_previous_button, .gform_footer input[type=submit]):hover {
+	color: var(--fl-form-bg);
+	background: var(--fl-form-text);
+	border-color: var(--fl-form-text);
+}
+
+.gform_wrapper.gform_wrapper :is(.gfield_validation_message, .validation_message) {
+	padding: 0;
+	font-size: var(--fl-form-small);
+	color: var(--fl-form-alert);
+	background: transparent;
+	border: 0;
+}
+
+.gform_wrapper.gform_wrapper .gfield_error :is(input, select, textarea) {
+	border-color: var(--fl-form-alert);
+}
+
+.gform_wrapper.gform_wrapper :is(.gform_validation_errors, .gform_confirmation_message) {
+	margin: 0 0 1.5em;
+	padding: 1em 1.2em;
+	color: inherit;
+	background: transparent;
+	border: 2px solid var(--fl-form-accent);
+	border-radius: var(--fl-form-radius);
+	box-shadow: none;
+}
+
+.gform_wrapper.gform_wrapper .gform_validation_errors {
+	border-color: var(--fl-form-alert);
+}

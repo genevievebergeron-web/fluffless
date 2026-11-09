@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Technical",
+	"description": "Monospace headings on a grotesque body. System fonts, nothing to download.",
+	"slug": "typo-mono",
+	"styles": {
+		"typography": { "fontFamily": "var:preset|font-family|sans" },
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var:preset|font-family|mono", "fontWeight": "700", "letterSpacing": "-0.02em" }
+			}
+		}
+	}
+}

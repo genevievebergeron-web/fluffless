@@ -1,0 +1,5 @@
+.wp-block-heading.is-style-bandeau {
+	width: fit-content;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+}

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/prix",
+	"version": "0.2.1",
+	"title": "Price",
+	"category": "design",
+	"icon": "tag",
+	"description": "The price of a Product block: amount, currency and availability, written as an offer for search engines.",
+	"keywords": [ "price", "prix", "offer" ],
+	"textdomain": "fluffless-suite",
+	"parent": [ "fluffless/produit" ],
+	"attributes": {
+		"price": { "type": "string", "default": "" },
+		"currency": { "type": "string", "enum": [ "CAD", "USD", "EUR" ], "default": "CAD" },
+		"availability": { "type": "string", "enum": [ "available", "soldout", "preorder" ], "default": "available" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": false,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

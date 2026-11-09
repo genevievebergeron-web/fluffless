@@ -1,0 +1,10 @@
+/* Mot manuscrit : le mot en <em> passe en cursive du système. Aucune police chargée : la pile
+   prend ce que l’appareil a (macOS, Windows). Sans cursive installée, il retombe sur le serif
+   du thème plutôt que sur la cursive générique, dont le rendu change trop d’un appareil à l’autre. */
+.is-style-mot-manuscrit em {
+	font-family: "Snell Roundhand", "Segoe Script", "Apple Chancery", "Brush Script MT", var(--wp--preset--font-family--serif, serif);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.15em;
+	letter-spacing: 0;
+}

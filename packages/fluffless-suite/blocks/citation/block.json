@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/citation",
+	"version": "0.2.1",
+	"title": "Quote",
+	"category": "design",
+	"icon": "format-quote",
+	"description": "A quote set large or compact, marked by a fine rule or quotation marks, with or without the author’s name. The content stays in regular blocks.",
+	"keywords": [ "quote", "pull quote", "citation", "words", "exergue" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"size": { "type": "string", "enum": [ "large", "compact" ], "default": "large" },
+		"mark": { "type": "string", "enum": [ "rule", "quotes" ], "default": "rule" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

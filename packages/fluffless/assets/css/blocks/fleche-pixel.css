@@ -1,0 +1,17 @@
+/* Flèche pixel : voir contour-pixel.css pour la grille. */
+.wp-block-button.is-style-fleche-pixel .wp-block-button__link::after {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-inline-start: 0.5em;
+	vertical-align: -0.15em;
+	background-color: currentColor;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20d%3D%22M1%205h10v2H1zM11%205h1v2h-1zM9%204h2v1H9zM8%203h2v1H8zM7%202h2v1H7zM6%201h2v1H6zM9%207h2v1H9zM8%208h2v1H8zM7%209h2v1H7zM6%2010h2v1H6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
+	mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20d%3D%22M1%205h10v2H1zM11%205h1v2h-1zM9%204h2v1H9zM8%203h2v1H8zM7%202h2v1H7zM6%201h2v1H6zM9%207h2v1H9zM8%208h2v1H8zM7%209h2v1H7zM6%2010h2v1H6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
+	transition: transform var(--wp--custom--transition);
+}
+
+.wp-block-button.is-style-fleche-pixel .wp-block-button__link:hover::after {
+	transform: translateX(0.25em);
+}

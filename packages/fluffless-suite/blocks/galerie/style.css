@@ -1,0 +1,7 @@
+/* Grille : celle de la galerie native. Mosaïque : grille dense, une photo sur cinq en double. */
+.fluffless-galerie.is-captions-hidden .wp-block-gallery .wp-element-caption{display:none}
+.fluffless-galerie.is-arrangement-mosaic .wp-block-gallery.has-nested-images{--c:2;display:grid;grid-template-columns:repeat(var(--c),1fr);grid-auto-rows:10rem;grid-auto-flow:dense}
+@media (min-width:600px){.fluffless-galerie .wp-block-gallery.columns-3{--c:3}.fluffless-galerie .wp-block-gallery.columns-4{--c:4}}
+.fluffless-galerie.is-arrangement-mosaic .wp-block-gallery.has-nested-images figure.wp-block-image:not(#m){inline-size:auto;margin:0}
+.fluffless-galerie.is-arrangement-mosaic .wp-block-gallery.has-nested-images figure.wp-block-image:nth-child(5n+1):not(#m){grid-column:span 2;grid-row:span 2}
+.fluffless-galerie.is-arrangement-mosaic .wp-block-gallery figure.wp-block-image img{block-size:100%;object-fit:cover}

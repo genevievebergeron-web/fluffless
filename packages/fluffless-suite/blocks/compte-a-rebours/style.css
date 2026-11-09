@@ -1,0 +1,5 @@
+/* Le nombre de jours en grand, la date en dessous ; tout vient du serveur. */
+.fluffless-compte-a-rebours__figure{margin-block:var(--wp--preset--spacing--30,1rem) 0}
+.fluffless-compte-a-rebours__number{display:block;font-size:var(--wp--preset--font-size--giant);font-weight:900;line-height:.95;letter-spacing:-.02em;color:var(--wp--preset--color--accent)}
+.fluffless-compte-a-rebours.is-size-compact .fluffless-compte-a-rebours__number{font-size:var(--wp--preset--font-size--xx-large)}
+.fluffless-compte-a-rebours__date{margin-block:.25rem 0;color:var(--wp--preset--color--muted)}

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Offset corners",
+	"slug": "coins-decales",
+	"blockTypes": [
+		"core/image",
+		"core/post-featured-image",
+		"fluffless/texte-photo"
+	],
+	"styles": {}
+}

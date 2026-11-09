@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless-seo/fil-ariane",
+	"version": "0.2.1",
+	"title": "Breadcrumb with structured data",
+	"category": "theme",
+	"icon": "arrow-right-alt2",
+	"description": "Path from the home page to the current page, with matching structured data. Rendered on the server, no script.",
+	"keywords": [ "breadcrumb", "path", "navigation", "fil d'Ariane" ],
+	"textdomain": "fluffless-seo",
+	"attributes": {
+		"separator": {
+			"type": "string",
+			"default": "›"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"color": { "text": true, "link": true, "background": false },
+		"spacing": { "margin": true, "padding": true },
+		"typography": { "fontSize": true }
+	},
+	"editorScript": "file:./index.js"
+}

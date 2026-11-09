@@ -1,0 +1,6 @@
+/* Une liste en ligne ; le séparateur est un pseudo-élément, remplaçable par le thème. Son texte de
+   remplacement vide, après la barre oblique, fait qu'un lecteur d'écran ne lit pas le chevron. */
+.fluffless-fil-ariane ol{display:flex;flex-wrap:wrap;gap:.25em .5em;margin:0;padding:0;list-style:none;font-size:var(--wp--preset--font-size--small)}
+.fluffless-fil-ariane li+li::before{content:"\203A";margin-inline-end:.5em;color:var(--wp--preset--color--muted)}
+@supports (content:"x" / ""){.fluffless-fil-ariane li+li::before{content:"\203A" / ""}}
+.fluffless-fil-ariane [aria-current]{color:var(--wp--preset--color--muted)}

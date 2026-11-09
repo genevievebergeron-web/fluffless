@@ -1,0 +1,70 @@
+# WordPress local de développement et de mesure pour Fluffless WP.
+# Démarrer : cp .env.example .env && docker compose up -d
+# Retrait complet : docker compose down -v
+name: fluffless-wp
+
+x-db-env: &db-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: wordpress
+  WORDPRESS_DB_PASSWORD: ${DB_PASSWORD:?Définir DB_PASSWORD dans .env}
+  WORDPRESS_DB_NAME: wordpress
+
+x-code-volumes: &code-volumes
+  - wp:/var/www/html
+  - ./packages/fluffless:/var/www/html/wp-content/themes/fluffless
+  - ./packages/fluffless-suite:/var/www/html/wp-content/plugins/fluffless-suite
+  - ./packages/fluffless-seo:/var/www/html/wp-content/plugins/fluffless-seo
+  - ./packages/fluffless-consent:/var/www/html/wp-content/plugins/fluffless-consent
+  - ./references:/references:ro
+
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  wordpress:
+    image: wordpress:7.1-php8.3-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8882:80"   # localhost seulement
+    environment:
+      <<: *db-env
+      WORDPRESS_DEBUG: "1"
+      # Désactive le cache des patterns et de theme.json pendant le développement.
+      WORDPRESS_CONFIG_EXTRA: "define( 'WP_DEVELOPMENT_MODE', 'theme' );"
+    volumes: *code-volumes
+
+  cli:
+    image: wordpress:cli-2-php8.3
+    profiles: ["cli"]
+    user: "33:33"             # www-data de l'image Apache
+    depends_on:
+      - wordpress
+    environment:
+      <<: *db-env
+    volumes: *code-volumes
+
+  # Outils PHP (PHPCS, PHPStan, PHPUnit) sans installer PHP sur le Mac.
+  php-tools:
+    image: composer:2
+    profiles: ["tools"]
+    working_dir: /app
+    volumes:
+      - .:/app
+
+volumes:
+  db:
+  wp:

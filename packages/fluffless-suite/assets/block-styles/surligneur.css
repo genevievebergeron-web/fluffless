@@ -1,0 +1,13 @@
+/* Surligneur : trait de marqueur derrière le mot en <em> ou <mark>, sur la moitié basse. Le texte
+   garde sa couleur ; l'accent est fondu à 40 % dans le fond pour que le contraste du texte tienne
+   (accent plein : de 1,6:1 à 2,9:1 selon la palette du thème ; fondu : 4,9:1 au moins). Sans color-mix : pas de trait. */
+@supports (color: color-mix(in srgb, red, red)) {
+	.is-style-surligneur :is(em, mark) {
+		padding-inline: 0.1em;
+		font-style: normal;
+		color: inherit;
+		background: linear-gradient(transparent 50%, color-mix(in srgb, var(--wp--preset--color--accent) 40%, transparent) 0);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+}

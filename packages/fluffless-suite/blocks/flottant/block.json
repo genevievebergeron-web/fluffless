@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/flottant",
+	"version": "0.2.1",
+	"title": "Floating element",
+	"category": "design",
+	"icon": "sticky",
+	"description": "One element fixed in a corner of the screen on every page that holds it: a pill button, a seal whose text turns slowly, or a status dot with a short text. Colour from your theme with a readable text colour picked for you, hidden in print, still under reduced motion. One per page. No JavaScript on the site.",
+	"keywords": [ "floating", "sticky", "button", "seal", "badge", "status", "flottant" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"mode": { "type": "string", "enum": [ "bouton", "sceau", "pastille" ], "default": "bouton" },
+		"text": { "type": "string", "default": "" },
+		"url": { "type": "string", "default": "" },
+		"newTab": { "type": "boolean", "default": false },
+		"icon": { "type": "string", "enum": [ "", "calendar", "phone", "bubble", "arrow" ], "default": "" },
+		"mobileBar": { "type": "boolean", "default": false },
+		"corner": { "type": "string", "enum": [ "bottom-right", "bottom-left", "top-right", "top-left" ], "default": "bottom-right" },
+		"colour": { "type": "string", "default": "accent" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"multiple": false,
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

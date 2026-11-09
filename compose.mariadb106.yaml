@@ -1,0 +1,9 @@
+# Surcharge pour tools/test-mariadb106.sh : MariaDB 10.6, la version des projets
+# PlanetHoster World (réponse du 14 sept. 2026), et port 8886 (8882 : dev, 8883 : bench).
+services:
+  db:
+    image: mariadb:10.6
+
+  wordpress:
+    ports: !override
+      - "127.0.0.1:8886:80"   # localhost seulement

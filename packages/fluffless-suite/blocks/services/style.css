@@ -1,0 +1,7 @@
+/* Cartes : un cadre par service. En liste : une colonne, l'icône à gauche du nom, de la ligne et du bouton. */
+.fluffless-services.is-display-cards .fluffless-services__item{border:1px solid var(--wp--preset--color--divider);padding:var(--wp--preset--spacing--50,2rem)}
+.fluffless-services.is-display-list .wp-block-group.is-layout-grid{grid-template-columns:1fr;max-inline-size:48rem}
+.fluffless-services.is-display-list .fluffless-services__item:has(>.wp-block-fluffless-icone){display:grid;grid-template-columns:auto 1fr;column-gap:var(--wp--preset--spacing--40,1.5rem);row-gap:var(--wp--preset--spacing--20,.5rem);align-items:start}
+.fluffless-services.is-display-list .fluffless-services__item:has(>.wp-block-fluffless-icone)>*{margin-block:0}
+.fluffless-services.is-display-list .fluffless-services__item>:not(.wp-block-fluffless-icone){grid-column:2}
+.fluffless-services.is-display-list .fluffless-services__item>.wp-block-fluffless-icone{grid-row:1/span 3}

@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/graphique",
+	"version": "0.2.1",
+	"title": "Chart",
+	"category": "design",
+	"icon": "chart-pie",
+	"description": "A pie, donut or bar chart drawn in CSS from two to eight rows, in the colours of your theme. The figures stay in a real table that doubles as the legend, read by screen readers and kept in print. No JavaScript on the site, no library.",
+	"keywords": [ "chart", "pie", "donut", "bars", "graph", "statistics", "graphique" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"type": { "type": "string", "enum": [ "donut", "pie", "bars" ], "default": "donut" },
+		"title": { "type": "string", "default": "" },
+		"rows": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"label": { "type": "string" },
+					"value": { "type": "number" }
+				}
+			},
+			"default": []
+		},
+		"unit": { "type": "string", "default": "" },
+		"showValues": { "type": "boolean", "default": true },
+		"size": { "type": "string", "enum": [ "small", "medium", "large" ], "default": "medium" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

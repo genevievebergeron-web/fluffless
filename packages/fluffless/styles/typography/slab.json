@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Sturdy",
+	"description": "Slab headings on a humanist body. System fonts, nothing to download.",
+	"slug": "typo-slab",
+	"styles": {
+		"typography": { "fontFamily": "var:preset|font-family|humanist" },
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var:preset|font-family|slab", "fontWeight": "700", "letterSpacing": "0" }
+			}
+		}
+	}
+}

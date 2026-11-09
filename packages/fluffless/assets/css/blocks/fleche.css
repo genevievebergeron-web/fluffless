@@ -1,0 +1,10 @@
+.wp-block-button.is-style-fleche .wp-block-button__link::after {
+	content: "\2192";
+	display: inline-block;
+	margin-inline-start: 0.5em;
+	transition: transform var(--wp--custom--transition);
+}
+
+.wp-block-button.is-style-fleche .wp-block-button__link:hover::after {
+	transform: translateX(0.25em);
+}

@@ -1,0 +1,33 @@
+/* Dégradé dans le texte : accent vers accent 2, horizontal par défaut ; fl-degrade-diagonal et
+   fl-degrade-vertical changent l'angle. Sans background-clip: text, en couleurs forcées et à
+   l'impression : texte plein, dans sa couleur normale. */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+	.is-style-degrade-texte {
+		background: linear-gradient(var(--fl-degrade, 90deg), var(--wp--preset--color--accent), var(--wp--preset--color--accent-2));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.is-style-degrade-texte.fl-degrade-diagonal {
+		--fl-degrade: 135deg;
+	}
+
+	.is-style-degrade-texte.fl-degrade-vertical {
+		--fl-degrade: 180deg;
+	}
+
+	@media (forced-colors: active) {
+		.is-style-degrade-texte {
+			background: none;
+			-webkit-text-fill-color: currentColor;
+		}
+	}
+
+	@media print {
+		.is-style-degrade-texte {
+			background: none;
+			-webkit-text-fill-color: currentColor;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "fluffless-wp/suite",
+	"description": "Fluffless : thème Fluffless, extensions Fluffless Suite et Fluffless SEO.",
+	"type": "project",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=8.2"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"szepeviktor/phpstan-wordpress": "^2.0",
+		"phpstan/extension-installer": "^1.4"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"phpstan/extension-installer": true
+		},
+		"platform": {
+			"php": "8.2"
+		}
+	},
+	"scripts": {
+		"lint:php": "phpcs",
+		"analyse": "phpstan analyse --memory-limit=1G"
+	}
+}

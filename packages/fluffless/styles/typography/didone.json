@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Classic",
+	"description": "Didone headings on a transitional serif body. System fonts, nothing to download.",
+	"slug": "typo-didone",
+	"styles": {
+		"typography": { "fontFamily": "var:preset|font-family|serif", "lineHeight": "1.65" },
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var:preset|font-family|didone", "fontWeight": "700", "letterSpacing": "0" }
+			}
+		}
+	}
+}

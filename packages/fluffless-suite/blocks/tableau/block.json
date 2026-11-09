@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/tableau",
+	"version": "0.2.1",
+	"title": "Data table",
+	"category": "design",
+	"icon": "editor-table",
+	"description": "A heading and a native table with seven adjustments: density, lines, stripes, header row, first column, number alignment and how rows behave on small screens (scroll or stack). The cells stay in the core Table block, no script for the visitor.",
+	"keywords": [ "table", "data", "rows", "columns", "comparison", "tableau" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"density": { "type": "string", "enum": [ "comfortable", "compact" ], "default": "comfortable" },
+		"lines": { "type": "string", "enum": [ "rows", "grid", "none" ], "default": "rows" },
+		"stripes": { "type": "string", "enum": [ "plain", "striped" ], "default": "plain" },
+		"header": { "type": "string", "enum": [ "plain", "accent", "sticky" ], "default": "plain" },
+		"heads": { "type": "string", "enum": [ "plain", "bold" ], "default": "plain" },
+		"numbers": { "type": "string", "enum": [ "right", "left" ], "default": "right" },
+		"mobile": { "type": "string", "enum": [ "scroll", "stack" ], "default": "scroll" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

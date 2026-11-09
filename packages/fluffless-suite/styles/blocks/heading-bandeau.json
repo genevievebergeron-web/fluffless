@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Banner",
+	"slug": "bandeau",
+	"blockTypes": [ "core/heading" ],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|accent",
+			"text": "var:preset|color|on-accent"
+		},
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|20",
+				"bottom": "var:preset|spacing|20",
+				"left": "var:preset|spacing|30",
+				"right": "var:preset|spacing|30"
+			}
+		}
+	}
+}

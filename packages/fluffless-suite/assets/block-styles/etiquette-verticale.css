@@ -1,0 +1,35 @@
+/* Étiquette verticale : le premier paragraphe du groupe devient une étiquette à chasse fixe.
+   À partir de 782 px, elle se lit à la verticale dans une colonne de grille à gauche : sa place
+   est réservée, rien n'est recouvert. En dessous, elle reste à l'horizontale au-dessus.
+   La mise en page contrainte centre ses enfants par des marges auto en !important : dans la
+   grille, elles les rétréciraient et les décaleraient de l'étiquette, d'où le !important ici. */
+.is-style-etiquette-verticale > p:first-child {
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size: var(--wp--preset--font-size--small, 0.875rem);
+	line-height: 1.4;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+@media (min-width: 782px) {
+	.is-style-etiquette-verticale {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		column-gap: var(--wp--preset--spacing--50, 2rem);
+	}
+
+	.wp-block-group.is-style-etiquette-verticale > * {
+		grid-column: 2;
+		margin-inline: 0 !important;
+	}
+
+	.wp-block-group.is-style-etiquette-verticale > p:first-child {
+		grid-area: 1 / 1 / span 99;
+		margin: 0;
+		writing-mode: vertical-rl;
+	}
+
+	.is-style-etiquette-verticale > p:first-child + * {
+		margin-block-start: 0;
+	}
+}

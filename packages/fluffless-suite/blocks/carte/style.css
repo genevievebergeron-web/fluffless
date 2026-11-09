@@ -1,0 +1,4 @@
+/* Image et texte côte à côte sur écran large, empilés sinon ou sur demande. */
+.fluffless-carte__image img{inline-size:100%;aspect-ratio:4/3;object-fit:cover}
+@media (min-width:48em){.fluffless-carte.is-layout-side{display:grid;grid-template-columns:1fr 1fr;gap:var(--wp--preset--spacing--50,2rem);align-items:center}
+.fluffless-carte.is-layout-side>.fluffless-carte__image{margin-block:0}}

@@ -1,0 +1,9 @@
+/* Liste de définitions native ; deux colonnes CSS (lues de haut en bas) dès 782 px, une entrée jamais coupée ; filet sous chaque entrée sauf la dernière, pour que le haut des deux colonnes s'aligne. */
+.fluffless-glossaire dl{margin:0}
+.fluffless-glossaire .fluffless-terme{break-inside:avoid;padding-block:var(--wp--preset--spacing--30,1rem)}
+.fluffless-glossaire .fluffless-terme:not(:last-child){border-block-end:1px solid var(--wp--preset--color--divider,currentColor)}
+.fluffless-glossaire dt{font-weight:700}
+.fluffless-glossaire dd{margin:0}
+.fluffless-glossaire :is(dt,dd)>p{margin:0}
+.fluffless-glossaire dt+dd{margin-block-start:.25em}
+@media (min-width:782px){.fluffless-glossaire.is-columns-2 dl{columns:2;column-gap:var(--wp--preset--spacing--50,2rem)}}

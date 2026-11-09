@@ -1,0 +1,1224 @@
+# Copyright (C) 2026 Geneviève Bergeron
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fluffless SEO 0.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fluffless-seo\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-04T19:19:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: fluffless-seo\n"
+
+#. Plugin Name of the plugin
+#: fluffless-seo.php
+#: src/Admin/SettingsScreen.php:87
+#: src/Admin/SettingsScreen.php:119
+msgid "Fluffless SEO"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: fluffless-seo.php
+msgid "https://fluffless.dev"
+msgstr ""
+
+#. Description of the plugin
+#: fluffless-seo.php
+msgid "Complete, server-side SEO for any theme: titles, social tags, structured data, breadcrumbs, redirects and sitemaps. No JavaScript for visitors."
+msgstr ""
+
+#. Author of the plugin
+#: fluffless-seo.php
+msgid "Geneviève Bergeron"
+msgstr ""
+
+#. Author URI of the plugin
+#: fluffless-seo.php
+msgid "https://genevievebergeron.ca"
+msgstr ""
+
+#. translators: %s: number of redirect rules.
+#: src/Admin/SettingsScreen.php:71
+#, php-format
+msgid "Deleting this plugin permanently erases %s redirect rule, the not found log and the SEO settings. Turn on “Keep my data when the plugin is deleted” to keep them."
+msgid_plural "Deleting this plugin permanently erases %s redirect rules, the not found log and the SEO settings. Turn on “Keep my data when the plugin is deleted” to keep them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/SettingsScreen.php:81
+msgid "Open the SEO settings"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:119
+msgid "Titles, sharing, structured data and redirects, written on the server. Your visitors download no script for it."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:121
+msgid "Fluffless SEO sections"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:123
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:124
+msgid "Redirects and not found"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:125
+#: src/Admin/SettingsScreen.php:549
+#: src/Admin/SettingsScreen.php:601
+msgid "Import"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:152
+#: src/Admin/SettingsScreen.php:443
+#: src/Breadcrumbs.php:76
+msgid "Search results"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:153
+msgid "What search engines show for each page."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:157
+msgid "Titles and descriptions"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:158
+msgid "Title tag, meta description and canonical address, from each page’s fields or the templates below."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:163
+msgid "Keyword analysis in the editor"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:164
+msgid "Checks run in the writer’s browser. Nothing is sent anywhere."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:170
+#: assets/editor.js:220
+msgid "Sharing"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:171
+msgid "The card shown when a page is shared on social networks and messaging apps."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:175
+msgid "Open Graph and X cards"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:176
+msgid "Title, description and image for sharing."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:182
+msgid "Structured data"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:183
+msgid "One JSON-LD graph per page, describing who publishes the site and what the page is."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:187
+msgid "Identity and page types"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:188
+msgid "The type of each page is chosen in the editor; articles are described automatically."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:193
+msgid "Local business details"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:194
+msgid "Used when this site represents a local business."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:199
+msgid "FAQ page data"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:200
+msgid "Describes the Details blocks of a page as questions and answers. Turn off when the questions are not a real FAQ."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:205
+msgid "Breadcrumbs"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:206
+msgid "Adds the Breadcrumb block and its structured data."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:212
+msgid "Crawlers"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:213
+msgid "Files and signals read by search engines and other robots."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:217
+msgid "Sitemap"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:218
+msgid "Adjusts the sitemap built into WordPress. Pages set to noindex are left out."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:223
+msgid "Custom robots.txt"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:224
+msgid "Served on the fly; no file is written on the server."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:229
+msgid "llms.txt"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:230
+msgid "A plain text summary of the site for language model tools."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:235
+msgid "IndexNow"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:236
+msgid "Tells Bing, Yandex and others when a page is published. Sends one request to api.indexnow.org per publication, without waiting for the answer. Allow this host in the Fluffless Suite outgoing requests list if it is filtered."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:241
+msgid "Webmaster tools verification"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:242
+msgid "Written on the home page only."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:247
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:248
+msgid "WordPress asks no confirmation before deleting a plugin. Turn this on to keep your redirects and settings."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:254
+msgid "Moved pages"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:255
+msgid "Rules and the not found log are managed in the Redirects tab."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:259
+msgid "Redirects"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:260
+msgid "301, 302, 307 and 410, with optional regular expressions."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:265
+msgid "Not found log"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:266
+msgid "Keeps the path, a counter and the last visit date for 90 days. No IP address, no browser details."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:272
+msgid "Languages"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:273
+msgid "With Polylang, each page points to its translations."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:277
+msgid "hreflang and og:locale"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:278
+msgid "Alternate language links and sharing locale. Without Polylang, only the site language is written."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:289
+msgid "Setting groups"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:293
+#: src/Admin/SettingsScreen.php:450
+msgid "Templates"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:311
+msgid "Save changes"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:426
+msgid "Home page"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:427
+msgid "Posts page"
+msgstr ""
+
+#. translators: %s: content type name.
+#: src/Admin/SettingsScreen.php:434
+#, php-format
+msgid "%s archive"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:441
+#: src/Settings.php:228
+msgid "Author archives"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:442
+#: src/Settings.php:229
+msgid "Date archives"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:444
+#: src/Breadcrumbs.php:78
+#: src/Context.php:94
+msgid "Page not found"
+msgstr ""
+
+#. translators: %s: list of variables.
+#: src/Admin/SettingsScreen.php:454
+#, php-format
+msgid "Empty fields use the default shown in grey. Variables: %s."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:466
+msgid "Title"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:474
+msgid "Description"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:488
+msgid "Redirects are off: rules below are kept but not applied. Turn them on in the Settings tab."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:491
+msgid "Deleting the plugin from the Plugins screen erases these rules and the not found log. To keep them, turn on “Keep my data when the plugin is deleted” in the Settings tab."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:493
+msgid "Add a redirect"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:496
+#: src/Admin/SettingsScreen.php:517
+msgid "From"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:496
+msgid "A path such as /old-page, or a pattern such as ^/blog/(.*)$ with the option below."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:497
+#: src/Admin/SettingsScreen.php:517
+msgid "To"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:497
+msgid "A path such as /new-page or a full address. $1, $2 reuse pattern groups. Empty for 410."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:498
+#: src/Admin/SettingsScreen.php:517
+msgid "Type"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:500
+msgid "301 moved permanently"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:501
+msgid "302 moved temporarily"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:502
+msgid "307 temporary, same method"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:503
+msgid "410 gone for good"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:508
+msgid "The source is a regular expression"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:509
+msgid "Add redirect"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:513
+msgid "Rules"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:515
+msgid "No redirect yet."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:517
+msgid "Uses"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:517
+#: src/Admin/SettingsScreen.php:557
+msgid "Actions"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:522
+msgid "regex"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:530
+msgid "Delete"
+msgstr ""
+
+#. translators: %s: redirect source.
+#: src/Admin/SettingsScreen.php:537
+#, php-format
+msgid "Delete the redirect from %s"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:546
+msgid "Import a CSV file"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:546
+msgid "One rule per line: source,target,code,regex. Up to 5,000 lines and 1 MB. Existing sources are replaced."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:548
+msgid "CSV file"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:553
+msgid "Not found addresses"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:553
+msgid "Kept 90 days: path, count and last visit only."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:555
+msgid "Nothing logged yet."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:555
+msgid "The log is off."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Path"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Visits"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Last visit (UTC)"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:565
+msgid "Redirect"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:570
+msgid "Clear the log"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:578
+msgid "Import from another SEO plugin"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:579
+msgid "Copies titles, descriptions, canonical addresses, sharing fields, robots directives and keywords. Run a simulation first. Fields already filled here are never replaced, and the original data is never deleted."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:589
+msgid "Simulate"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: src/Admin/SettingsScreen.php:596
+#, php-format
+msgid "Simulate the import from %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: src/Admin/SettingsScreen.php:608
+#, php-format
+msgid "Import from %s"
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:648
+msgid "You are not allowed to change SEO settings."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:689
+msgid "Redirect saved."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:696
+msgid "Redirect deleted."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:696
+msgid "This redirect no longer exists. Reload the page."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:706
+msgid "No valid CSV file received. Choose a file of 1 MB or less and try again."
+msgstr ""
+
+#. translators: %d: number of redirects.
+#: src/Admin/SettingsScreen.php:714
+#: src/Cli.php:183
+#, php-format
+msgid "%d redirect imported."
+msgid_plural "%d redirects imported."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of entries.
+#: src/Admin/SettingsScreen.php:723
+#: src/Cli.php:207
+#, php-format
+msgid "%d entry deleted."
+msgid_plural "%d entries deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: posts scanned, 2: fields written or to write, 3: fields kept because already filled.
+#: src/Admin/SettingsScreen.php:737
+#: src/Cli.php:228
+#, php-format
+msgid "%1$d posts scanned, %2$d fields, %3$d kept as they were already filled."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:742
+msgid "Import done."
+msgstr ""
+
+#: src/Admin/SettingsScreen.php:742
+msgid "Simulation: nothing was written."
+msgstr ""
+
+#: src/Breadcrumbs.php:60
+msgid "Home"
+msgstr ""
+
+#: src/Breadcrumbs.php:192
+#: blocks/fil-ariane/index.js:22
+msgid "Breadcrumb"
+msgstr ""
+
+#: src/Cli.php:23
+msgid "List redirects, newest first."
+msgstr ""
+
+#: src/Cli.php:24
+msgid "Add or replace a redirect."
+msgstr ""
+
+#: src/Cli.php:25
+msgid "Delete a redirect by ID."
+msgstr ""
+
+#: src/Cli.php:26
+msgid "Import redirects from a CSV file: source,target,code,regex."
+msgstr ""
+
+#: src/Cli.php:27
+msgid "List not found addresses, most frequent first."
+msgstr ""
+
+#: src/Cli.php:28
+msgid "Delete entries older than 90 days, or all with --all."
+msgstr ""
+
+#: src/Cli.php:29
+msgid "Copy SEO fields from Yoast SEO, SEOPress or Rank Math. Dry run unless --apply."
+msgstr ""
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:150
+#, php-format
+msgid "Redirect %d saved."
+msgstr ""
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:162
+#, php-format
+msgid "No redirect with ID %d."
+msgstr ""
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:165
+#, php-format
+msgid "Redirect %d deleted."
+msgstr ""
+
+#: src/Cli.php:236
+msgid "Dry run: nothing was written. Add --apply to import."
+msgstr ""
+
+#. translators: %s: the search variable, keep it as is.
+#: src/Context.php:96
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#. translators: 1: current page number, 2: total pages.
+#: src/Context.php:326
+#, php-format
+msgid "Page %1$d of %2$d"
+msgstr ""
+
+#. translators: %d: current page number.
+#: src/Context.php:328
+#, php-format
+msgid "Page %d"
+msgstr ""
+
+#. translators: 1: source received, 2: accepted sources.
+#: src/Importer.php:123
+#, php-format
+msgid "Unknown source %1$s. Use one of: %2$s."
+msgstr ""
+
+#: src/Plugin.php:142
+msgid "Rank Math is active but its setup is not finished, and Fluffless SEO stays quiet while Rank Math is active. Finish the Rank Math setup, or deactivate Rank Math to let Fluffless SEO handle your search tags."
+msgstr ""
+
+#: src/Plugin.php:148
+msgid "Fluffless SEO needs Fluffless Suite. Activate Fluffless Suite to turn search features back on."
+msgstr ""
+
+#: src/Robots.php:134
+msgid "Pages"
+msgstr ""
+
+#: src/Robots.php:227
+msgid "IndexNow (Fluffless SEO)"
+msgstr ""
+
+#: src/Robots.php:230
+msgid "The address of the published page and the IndexNow key of your site"
+msgstr ""
+
+#: src/Settings.php:221
+msgid "Title separator"
+msgstr ""
+
+#: src/Settings.php:226
+msgid "Keep out of search results"
+msgstr ""
+
+#: src/Settings.php:230
+msgid "Media attachment pages"
+msgstr ""
+
+#: src/Settings.php:235
+msgid "Taxonomies kept out of search results"
+msgstr ""
+
+#: src/Settings.php:240
+msgid "Default sharing image (media ID)"
+msgstr ""
+
+#: src/Settings.php:241
+msgid "Used when a page has no featured image. 0: the logo is used."
+msgstr ""
+
+#: src/Settings.php:247
+msgid "X account of the site"
+msgstr ""
+
+#: src/Settings.php:248
+msgid "Written as @name. Empty: no twitter:site tag."
+msgstr ""
+
+#: src/Settings.php:252
+msgid "This site represents"
+msgstr ""
+
+#: src/Settings.php:254
+msgid "An organization"
+msgstr ""
+
+#: src/Settings.php:255
+msgid "A local business"
+msgstr ""
+
+#: src/Settings.php:256
+msgid "A person"
+msgstr ""
+
+#: src/Settings.php:261
+msgid "Name"
+msgstr ""
+
+#: src/Settings.php:262
+msgid "Empty: the site title."
+msgstr ""
+
+#: src/Settings.php:266
+msgid "Logo or photo address"
+msgstr ""
+
+#: src/Settings.php:267
+msgid "https only. Empty: the site logo, then the site icon."
+msgstr ""
+
+#: src/Settings.php:272
+msgid "Profiles elsewhere"
+msgstr ""
+
+#: src/Settings.php:273
+msgid "One https address per line: LinkedIn, Mastodon, directory listings."
+msgstr ""
+
+#: src/Settings.php:277
+msgid "Kind of business"
+msgstr ""
+
+#: src/Settings.php:279
+msgid "General local business"
+msgstr ""
+
+#: src/Settings.php:280
+msgid "Professional services"
+msgstr ""
+
+#: src/Settings.php:281
+msgid "Store"
+msgstr ""
+
+#: src/Settings.php:282
+msgid "Restaurant or café"
+msgstr ""
+
+#: src/Settings.php:283
+msgid "Health and beauty"
+msgstr ""
+
+#: src/Settings.php:284
+msgid "Home and construction"
+msgstr ""
+
+#: src/Settings.php:285
+msgid "Legal services"
+msgstr ""
+
+#: src/Settings.php:286
+msgid "Financial services"
+msgstr ""
+
+#: src/Settings.php:291
+msgid "Street address"
+msgstr ""
+
+#: src/Settings.php:295
+msgid "City"
+msgstr ""
+
+#: src/Settings.php:299
+msgid "Province or state"
+msgstr ""
+
+#: src/Settings.php:300
+msgid "Two-letter code, e.g. QC."
+msgstr ""
+
+#: src/Settings.php:304
+msgid "Postal code"
+msgstr ""
+
+#: src/Settings.php:308
+msgid "Country"
+msgstr ""
+
+#: src/Settings.php:309
+msgid "Two-letter code, e.g. CA."
+msgstr ""
+
+#: src/Settings.php:313
+msgid "Phone"
+msgstr ""
+
+#: src/Settings.php:317
+msgid "Price range"
+msgstr ""
+
+#: src/Settings.php:318
+msgid "e.g. $$ or 80 to 150 CAD."
+msgstr ""
+
+#: src/Settings.php:322
+msgid "Opening hours"
+msgstr ""
+
+#: src/Settings.php:323
+msgid "One range per line, in schema.org form: Mo-Fr 09:00-17:00"
+msgstr ""
+
+#: src/Settings.php:327
+#: assets/editor.js:338
+msgid "Area served"
+msgstr ""
+
+#: src/Settings.php:328
+msgid "One place per line: city, region or country."
+msgstr ""
+
+#: src/Settings.php:332
+msgid "First breadcrumb label"
+msgstr ""
+
+#: src/Settings.php:333
+msgid "Empty: Home, translated."
+msgstr ""
+
+#: src/Settings.php:337
+msgid "Default language for x-default"
+msgstr ""
+
+#: src/Settings.php:338
+msgid "Page shown to people whose language has no translation. Written only when the page exists in this language."
+msgstr ""
+
+#: src/Settings.php:339
+#: assets/editor.js:292
+#: assets/editor.js:302
+msgid "None"
+msgstr ""
+
+#: src/Settings.php:343
+msgid "Content types left out of the sitemap"
+msgstr ""
+
+#: src/Settings.php:348
+msgid "Taxonomies left out of the sitemap"
+msgstr ""
+
+#: src/Settings.php:353
+msgid "List author pages in the sitemap"
+msgstr ""
+
+#: src/Settings.php:357
+msgid "Add the last modified date"
+msgstr ""
+
+#: src/Settings.php:361
+msgid "Check redirects on every page"
+msgstr ""
+
+#: src/Settings.php:362
+msgid "Off: only addresses that would show a not found page are checked, at no cost for other pages. On: one database query per page, to redirect addresses that still exist."
+msgstr ""
+
+#: src/Settings.php:366
+msgid "robots.txt content"
+msgstr ""
+
+#: src/Settings.php:367
+msgid "Replaces the file WordPress generates. The sitemap line is added if missing."
+msgstr ""
+
+#: src/Settings.php:371
+msgid "llms.txt content"
+msgstr ""
+
+#: src/Settings.php:372
+msgid "Empty: a summary is built from the site title, tagline and main pages."
+msgstr ""
+
+#: src/Settings.php:376
+msgid "Google Search Console code"
+msgstr ""
+
+#: src/Settings.php:377
+msgid "The content value of the verification tag, not the whole tag."
+msgstr ""
+
+#: src/Settings.php:381
+msgid "Bing Webmaster Tools code"
+msgstr ""
+
+#: src/Settings.php:385
+msgid "Keep my data when the plugin is deleted"
+msgstr ""
+
+#: src/Settings.php:386
+msgid "Off: deleting the plugin erases its settings, the redirect rules, the not found log and the fields written on each page. On: all of it stays in the database."
+msgstr ""
+
+#. translators: %d: HTTP status code received.
+#: src/Store.php:129
+#, php-format
+msgid "Status code %d is not supported. Use 301, 302, 307 or 410."
+msgstr ""
+
+#: src/Store.php:170
+msgid "The pattern must hold 1 to 255 characters."
+msgstr ""
+
+#. translators: %s: regular expression received.
+#: src/Store.php:175
+#, php-format
+msgid "The pattern %s is not a valid regular expression."
+msgstr ""
+
+#. translators: %s: target received.
+#: src/Store.php:203
+#, php-format
+msgid "The target %s must be a path starting with / or an http(s) address."
+msgstr ""
+
+#. translators: %s: file path.
+#: src/Store.php:340
+#, php-format
+msgid "Cannot read %s."
+msgstr ""
+
+#. translators: 1: CSV line number, 2: error message.
+#: src/Store.php:360
+#, php-format
+msgid "Line %1$d: %2$s"
+msgstr ""
+
+#: assets/editor.js:42
+msgid "Good"
+msgstr ""
+
+#: assets/editor.js:43
+msgid "To improve"
+msgstr ""
+
+#: assets/editor.js:44
+msgid "Problem"
+msgstr ""
+
+#. translators: 1: width in pixels, 2: limit in pixels.
+#: assets/editor.js:53
+#, js-format
+msgid "Title width: about %1$d of %2$d px."
+msgstr ""
+
+#. translators: 1: width in pixels, 2: limit in pixels.
+#: assets/editor.js:56
+#, js-format
+msgid "Description width: about %1$d of %2$d px."
+msgstr ""
+
+#. translators: 1: word count, 2: suggested minimum.
+#: assets/editor.js:59
+#, js-format
+msgid "%1$d words (suggested: %2$d or more)."
+msgstr ""
+
+#: assets/editor.js:63
+msgid "More than one level 1 heading: keep one per page."
+msgstr ""
+
+#: assets/editor.js:64
+msgid "No level 1 heading: this template does not show the page title, so the content needs one."
+msgstr ""
+
+#: assets/editor.js:67
+msgid "The content holds a level 1 heading: the page title already is one."
+msgstr ""
+
+#: assets/editor.js:70
+msgid "A heading level is skipped (for example, level 2 then level 4)."
+msgstr ""
+
+#: assets/editor.js:72
+msgid "Heading levels follow each other."
+msgstr ""
+
+#: assets/editor.js:72
+msgid "No level 2 heading to structure a long text."
+msgstr ""
+
+#. translators: %d: number of links.
+#: assets/editor.js:75
+#, js-format
+msgid "Links to this site: %d."
+msgstr ""
+
+#. translators: %d: number of links.
+#: assets/editor.js:78
+#, js-format
+msgid "Links to other sites: %d."
+msgstr ""
+
+#: assets/editor.js:80
+msgid "Keyword in the SEO title."
+msgstr ""
+
+#: assets/editor.js:82
+msgid "Keyword in the description."
+msgstr ""
+
+#: assets/editor.js:84
+msgid "Keyword in the first paragraph."
+msgstr ""
+
+#: assets/editor.js:86
+msgid "Keyword in a level 2 heading."
+msgstr ""
+
+#: assets/editor.js:88
+msgid "Keyword in the address (slug)."
+msgstr ""
+
+#: assets/editor.js:90
+msgid "Keyword in an image text alternative."
+msgstr ""
+
+#: assets/editor.js:90
+msgid "No image in the content."
+msgstr ""
+
+#. translators: 1: number of occurrences, 2: density in percent.
+#: assets/editor.js:93
+#, js-format
+msgid "Keyword found %1$d times (%2$s %% of words)."
+msgstr ""
+
+#. translators: 1: width in pixels, 2: limit in pixels, 3: state label.
+#: assets/editor.js:113
+#, js-format
+msgid "About %1$d of %2$d px. %3$s"
+msgstr ""
+
+#: assets/editor.js:191
+msgid "Search appearance"
+msgstr ""
+
+#: assets/editor.js:200
+msgid "SEO title"
+msgstr ""
+
+#: assets/editor.js:208
+msgid "Meta description"
+msgstr ""
+
+#: assets/editor.js:215
+msgid "Variables: %%title%%, %%sitename%%, %%sep%%, %%excerpt%%. Widths are estimates."
+msgstr ""
+
+#: assets/editor.js:222
+msgid "Title when shared"
+msgstr ""
+
+#: assets/editor.js:229
+msgid "Description when shared"
+msgstr ""
+
+#: assets/editor.js:237
+msgid "Image when shared"
+msgstr ""
+
+#: assets/editor.js:237
+msgid "Empty: the featured image, then the default image."
+msgstr ""
+
+#: assets/editor.js:249
+msgid "Replace image"
+msgstr ""
+
+#: assets/editor.js:249
+msgid "Choose image"
+msgstr ""
+
+#: assets/editor.js:250
+msgid "Remove image"
+msgstr ""
+
+#: assets/editor.js:258
+msgid "Advanced"
+msgstr ""
+
+#: assets/editor.js:260
+msgid "Canonical address"
+msgstr ""
+
+#: assets/editor.js:263
+msgid "Empty: this page’s own address. https only."
+msgstr ""
+
+#: assets/editor.js:270
+msgid "Search engine directives"
+msgstr ""
+
+#: assets/editor.js:272
+msgid "Keep out of search results (noindex)"
+msgstr ""
+
+#: assets/editor.js:273
+msgid "Do not follow links (nofollow)"
+msgstr ""
+
+#: assets/editor.js:274
+msgid "No cached copy (noarchive)"
+msgstr ""
+
+#: assets/editor.js:275
+msgid "No text snippet (nosnippet)"
+msgstr ""
+
+#: assets/editor.js:287
+msgid "Image preview size"
+msgstr ""
+
+#: assets/editor.js:290
+msgid "Large (default)"
+msgstr ""
+
+#: assets/editor.js:291
+msgid "Standard"
+msgstr ""
+
+#: assets/editor.js:299
+msgid "Structured data type"
+msgstr ""
+
+#: assets/editor.js:301
+msgid "Automatic"
+msgstr ""
+
+#: assets/editor.js:308
+msgid "Start (date and time)"
+msgstr ""
+
+#: assets/editor.js:309
+msgid "End (date and time)"
+msgstr ""
+
+#: assets/editor.js:310
+msgid "Venue name"
+msgstr ""
+
+#: assets/editor.js:311
+msgid "Venue address"
+msgstr ""
+
+#: assets/editor.js:314
+msgid "Online event"
+msgstr ""
+
+#: assets/editor.js:321
+msgid "Price"
+msgstr ""
+
+#: assets/editor.js:322
+msgid "Currency (e.g. CAD)"
+msgstr ""
+
+#: assets/editor.js:325
+msgid "SKU"
+msgstr ""
+
+#: assets/editor.js:326
+msgid "Brand"
+msgstr ""
+
+#: assets/editor.js:329
+msgid "Availability"
+msgstr ""
+
+#: assets/editor.js:337
+msgid "Kind of service"
+msgstr ""
+
+#: assets/editor.js:341
+msgid "Application category (e.g. WebApplication)"
+msgstr ""
+
+#: assets/editor.js:342
+msgid "Operating system or platform (e.g. WordPress)"
+msgstr ""
+
+#: assets/editor.js:344
+msgid "Job title"
+msgstr ""
+
+#: assets/editor.js:349
+msgid "Analysis"
+msgstr ""
+
+#: assets/editor.js:351
+msgid "Target keyword"
+msgstr ""
+
+#: assets/editor.js:353
+msgid "Checked in this browser only: nothing is sent anywhere."
+msgstr ""
+
+#: assets/editor.js:379
+#: assets/editor.js:380
+msgid "SEO"
+msgstr ""
+
+#: blocks/fil-ariane/index.js:24
+msgid "Separator"
+msgstr ""
+
+#: blocks/fil-ariane/index.js:25
+msgid "Three characters at most. Hidden from screen readers."
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block title"
+msgid "Breadcrumb with structured data"
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block description"
+msgid "Path from the home page to the current page, with matching structured data. Rendered on the server, no script."
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "breadcrumb"
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "path"
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "navigation"
+msgstr ""
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "fil d'Ariane"
+msgstr ""

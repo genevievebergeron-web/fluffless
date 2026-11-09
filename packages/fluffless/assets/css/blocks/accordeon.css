@@ -1,0 +1,6 @@
+/* Question d'un accordéon : cible de 44 px de haut (WCAG 2.5.5), le menu mobile garde la sienne. */
+.wp-block-details:not(.fluffless-nav-mobile) > summary {
+	min-block-size: 44px;
+	padding-block: 0.5rem;
+	box-sizing: border-box;
+}

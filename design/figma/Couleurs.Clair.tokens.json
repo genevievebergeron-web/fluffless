@@ -1,0 +1,40 @@
+{
+	"couleur": {
+		"base": {
+			"$type": "color",
+			"$value": "#f6f8f9"
+		},
+		"surface": {
+			"$type": "color",
+			"$value": "#e6ecef"
+		},
+		"contrast": {
+			"$type": "color",
+			"$value": "#14202b"
+		},
+		"muted": {
+			"$type": "color",
+			"$value": "#4a5a68"
+		},
+		"divider": {
+			"$type": "color",
+			"$value": "#6f8290"
+		},
+		"accent": {
+			"$type": "color",
+			"$value": "#0b6b7d"
+		},
+		"on-accent": {
+			"$type": "color",
+			"$value": "#f6f8f9"
+		},
+		"accent-2": {
+			"$type": "color",
+			"$value": "#7b3f99"
+		},
+		"alert": {
+			"$type": "color",
+			"$value": "#b3261e"
+		}
+	}
+}

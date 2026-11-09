@@ -1,0 +1,8 @@
+.wp-block-fluffless-icone{display:flex;width:fit-content;line-height:1;font-size:2rem}
+.wp-block-fluffless-icone svg{display:block;width:1em;height:1em;flex:none}
+.wp-block-fluffless-icone.aligncenter{margin-inline:auto}
+.wp-block-fluffless-icone.alignright{margin-inline-start:auto}
+.wp-block-fluffless-icone.has-background{padding:.4em;border-radius:50%}
+.wp-block-fluffless-icone.is-size-small{font-size:1.25rem}
+.wp-block-fluffless-icone.is-size-large{font-size:3rem}
+.wp-block-fluffless-icone.is-size-xl{font-size:4.5rem}

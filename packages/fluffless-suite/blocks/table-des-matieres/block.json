@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/table-des-matieres",
+	"version": "0.2.1",
+	"title": "Table of contents",
+	"category": "design",
+	"icon": "list-view",
+	"description": "Links to the headings of the page, computed by the server on every display. Headings get their anchors automatically. No script.",
+	"keywords": [
+		"table of contents",
+		"toc",
+		"headings",
+		"anchors",
+		"sommaire"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"levels": {
+			"type": "string",
+			"enum": [
+				"h2",
+				"h2-h3"
+			],
+			"default": "h2"
+		},
+		"numbering": {
+			"type": "string",
+			"enum": [
+				"plain",
+				"numbered"
+			],
+			"default": "plain"
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

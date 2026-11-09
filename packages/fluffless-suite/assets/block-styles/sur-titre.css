@@ -1,0 +1,14 @@
+/* Sur-titre : petite ligne en capitales à chasse fixe, espacées, à poser au-dessus d'un titre.
+   Le titre qui suit se rapproche pour que les deux se lisent ensemble. */
+.is-style-sur-titre {
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size: var(--wp--preset--font-size--small, 0.875rem);
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.is-style-sur-titre + :is(h1, h2, h3, h4, h5, h6) {
+	margin-block-start: 0.4em;
+}

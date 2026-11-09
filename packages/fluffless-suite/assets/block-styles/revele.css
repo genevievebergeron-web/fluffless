@@ -1,0 +1,22 @@
+/* Révéler au défilement : CSS seul, amélioration progressive.
+   Sans support ou avec mouvement réduit, le contenu reste visible et immobile. */
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.is-style-revele {
+			animation: fluffless-revele linear both;
+			animation-timeline: view();
+			animation-range: entry 0% entry 60%;
+		}
+	}
+}
+
+@keyframes fluffless-revele {
+	from {
+		opacity: 0;
+		transform: translateY(1.5rem);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}

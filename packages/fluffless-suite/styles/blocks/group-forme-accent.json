@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Accent shape",
+	"slug": "forme-accent",
+	"blockTypes": [
+		"core/group",
+		"fluffless/texte-photo",
+		"fluffless/liste",
+		"fluffless/colonnes",
+		"fluffless/appel-action",
+		"fluffless/temoignages",
+		"fluffless/citation",
+		"fluffless/chiffres",
+		"fluffless/tarifs",
+		"fluffless/coordonnees"
+	],
+	"styles": {}
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/mode-couleur",
+	"version": "0.2.1",
+	"title": "Dark mode button",
+	"category": "design",
+	"icon": "lightbulb",
+	"description": "A button that lets visitors switch between the light and dark versions of your palette. It appears only when Follow the device light or dark setting is on, under Fluffless, Palette, and the site adds it after the header menu for you. Shown only to browsers that can apply it.",
+	"keywords": [ "dark", "light", "mode", "theme" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"multiple": false,
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

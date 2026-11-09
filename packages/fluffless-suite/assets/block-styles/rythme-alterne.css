@@ -1,0 +1,28 @@
+/* Rythme alterné : dans une grille, le premier élément de chaque cycle de quatre prend toute la
+   largeur et les trois suivants forment une rangée de trois. Une seule colonne sous 600 px.
+   Le cœur fixe la largeur des images d'une galerie par un sélecteur à identifiant, d'où le
+   !important sur width. */
+:is(.is-style-rythme-alterne:not(.fluffless-section), .is-style-rythme-alterne .wp-block-gallery) {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--wp--style--block-gap, 1rem);
+}
+
+:is(.is-style-rythme-alterne:not(.fluffless-section), .is-style-rythme-alterne .wp-block-gallery) > * {
+	width: auto !important;
+	margin: 0;
+}
+
+:is(.is-style-rythme-alterne:not(.fluffless-section), .is-style-rythme-alterne .wp-block-gallery) > :nth-child(4n + 1) {
+	grid-column: 1 / -1;
+}
+
+.is-style-rythme-alterne .wp-block-gallery > :nth-child(4n + 1) img {
+	aspect-ratio: 2;
+}
+
+@media (max-width: 599px) {
+	:is(.is-style-rythme-alterne:not(.fluffless-section), .is-style-rythme-alterne .wp-block-gallery) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

@@ -1,0 +1,73 @@
+/* Bande défilante : les enfants du groupe glissent en continu de droite à gauche, CSS seul.
+   Pause au survol, au focus clavier et par un bouton Pause sans script (case à cocher posée en
+   premier enfant au rendu, libellé en dernier, comme le bloc Bandeau) ; avec mouvement réduit,
+   la bande reste immobile, le bouton disparaît et les enfants s'enroulent comme dans un groupe
+   ordinaire. */
+.fl-bande-box,
+.fl-bande-pause {
+	display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wp-block-group.is-style-bande {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		padding-block-end: 44px;
+		white-space: nowrap;
+	}
+
+	.wp-block-group.is-style-bande > :not(.fl-bande-box, .fl-bande-pause) {
+		flex: 0 0 auto;
+		max-width: none;
+		animation: fluffless-bande 24s linear infinite;
+	}
+
+	.wp-block-group.is-style-bande:hover > *,
+	.wp-block-group.is-style-bande:focus-within > *,
+	.fl-bande-box:checked ~ * {
+		animation-play-state: paused;
+	}
+
+	.fl-bande-box {
+		display: block;
+		position: absolute;
+		opacity: 0;
+	}
+
+	.fl-bande-pause {
+		display: flex;
+		position: absolute;
+		inset-block-end: 0;
+		inset-inline-end: 1rem;
+		align-items: center;
+		gap: 0.5em;
+		min-height: 44px;
+		font-size: 0.8rem;
+	}
+
+	.fl-bande-pause::before {
+		content: "";
+		padding: 0.3em;
+		border: 2px solid;
+	}
+
+	.fl-bande-box:checked ~ .fl-bande-pause::before {
+		background: currentColor;
+	}
+
+	.fl-bande-box:focus-visible ~ .fl-bande-pause {
+		outline: 2px solid;
+	}
+}
+
+@keyframes fluffless-bande {
+	from {
+		transform: translateX(100vw);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}

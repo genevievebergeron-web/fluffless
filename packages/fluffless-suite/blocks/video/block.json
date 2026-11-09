@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/video",
+	"version": "0.2.1",
+	"title": "Video",
+	"category": "design",
+	"icon": "video-alt3",
+	"description": "A YouTube or Vimeo video, or a video file from the media library, behind a still poster. Nothing loads before the click: a platform player without cookies then replaces the poster, only if embedded content is allowed; a hosted file plays in the browser’s own player.",
+	"keywords": [
+		"video",
+		"youtube",
+		"vimeo",
+		"embed",
+		"mp4",
+		"facade"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"ratio": {
+			"type": "string",
+			"enum": [
+				"16-9",
+				"4-3",
+				"1-1"
+			],
+			"default": "16-9"
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"posterId": {
+			"type": "integer",
+			"default": 0
+		},
+		"videoId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"viewScriptModule": "file:./view.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

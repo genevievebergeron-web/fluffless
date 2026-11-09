@@ -1,0 +1,45 @@
+/* Texte contour : lettres en contour, le mot en <em> reste plein, un lien se remplit au survol
+   et au focus. Les polices variables du système (SF, Segoe UI) ont des tracés qui se chevauchent :
+   avec un remplissage transparent, le contour dessine des traits à l'intérieur des lettres. Le
+   remplissage prend donc la couleur du fond (--fl-contour-fond : base, ou la couleur de fond du
+   groupe parent pour surface, accent et contraste, ou celui de l'alternance de la Palette,
+   --fl-alt-fond) et se peint par-dessus la moitié intérieure
+   du contour (paint-order). Le contour suit la couleur du titre. Sans @supports, en couleurs
+   forcées et à l'impression : texte plein. */
+@supports (-webkit-text-stroke: 1px currentColor) and (paint-order: stroke) {
+	.is-style-texte-contour {
+		-webkit-text-fill-color: var(--fl-contour-fond, var(--wp--preset--color--base));
+		-webkit-text-stroke: max(2px, 0.05em) currentColor;
+		paint-order: stroke fill;
+	}
+
+	.is-fl-alt-1,
+	.is-fl-alt-2 {
+		--fl-contour-fond: var(--fl-alt-fond);
+	}
+
+	.has-surface-background-color {
+		--fl-contour-fond: var(--wp--preset--color--surface);
+	}
+
+	.has-accent-background-color {
+		--fl-contour-fond: var(--wp--preset--color--accent);
+	}
+
+	.has-contrast-background-color {
+		--fl-contour-fond: var(--wp--preset--color--contrast);
+	}
+
+	.is-style-texte-contour em,
+	.is-style-texte-contour a:hover,
+	.is-style-texte-contour a:focus-visible {
+		-webkit-text-fill-color: currentColor;
+	}
+
+	@media print, (forced-colors: active) {
+		.is-style-texte-contour {
+			-webkit-text-fill-color: currentColor;
+			-webkit-text-stroke: 0;
+		}
+	}
+}

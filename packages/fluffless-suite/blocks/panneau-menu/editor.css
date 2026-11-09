@@ -1,0 +1,3 @@
+/* Éditeur seulement : le panneau est posé en flux, sur toute la rangée du menu, pour être modifié. */
+.editor-styles-wrapper .fluffless-panneau-menu{flex-basis:100%}
+.editor-styles-wrapper .fluffless-panneau-menu__panel{position:static;min-inline-size:0;max-inline-size:none;margin-block-start:var(--wp--preset--spacing--30);border:1px dashed var(--wp--preset--color--divider);box-shadow:none}

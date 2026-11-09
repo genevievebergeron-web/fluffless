@@ -1,0 +1,30 @@
+/* Flèche de défilement : un bouton qui pointe vers le bas et invite à descendre, pour un lien
+   d'ancre sous une ouverture. La flèche oscille doucement, CSS seul ; elle reste immobile sous
+   mouvement réduit. */
+.wp-block-button.is-style-fleche-defilement .wp-block-button__link::after {
+	content: "\2193";
+	display: inline-block;
+	margin-inline-start: 0.4em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wp-block-button.is-style-fleche-defilement .wp-block-button__link::after {
+		animation: fluffless-fleche-defilement 1.8s ease-in-out infinite;
+	}
+
+	.wp-block-button.is-style-fleche-defilement .wp-block-button__link:hover::after,
+	.wp-block-button.is-style-fleche-defilement .wp-block-button__link:focus-visible::after {
+		animation-play-state: paused;
+	}
+}
+
+@keyframes fluffless-fleche-defilement {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(0.3em);
+	}
+}

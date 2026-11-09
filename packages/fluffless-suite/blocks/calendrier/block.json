@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/calendrier",
+	"version": "0.2.1",
+	"title": "Event calendar",
+	"category": "widgets",
+	"icon": "calendar-alt",
+	"description": "One month of events, drawn on the server: a grid on wide screens, a list of the days with events on narrow ones. Previous and next month are plain links. No JavaScript on the site.",
+	"keywords": [ "calendar", "events", "month", "agenda", "calendrier", "événements" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"level": { "type": "integer", "enum": [ 2, 3, 4 ], "default": 2 }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"multiple": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

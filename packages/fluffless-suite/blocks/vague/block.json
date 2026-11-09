@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/vague",
+	"version": "0.2.1",
+	"title": "Wave divider",
+	"example": {},
+	"category": "design",
+	"icon": "chart-area",
+	"description": "A shape between two sections: wave, soft curve, peaks or slant, a thin line, dots, three dots or a centred ornament, or an accent mark (disc, half-moon, ring, drop, dot grid) with a transparency level, in a colour from your theme. Inline SVG, no JavaScript on the site.",
+	"keywords": [ "wave", "divider", "shape", "separator", "line", "accent", "vague" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"shape": { "type": "string", "enum": [ "wave", "soft", "peaks", "tilt", "line", "dots", "three-dots", "ornament", "disc", "half-moon", "ring", "drop", "dot-grid" ], "default": "wave" },
+		"position": { "type": "string", "enum": [ "bottom", "top", "both" ], "default": "bottom" },
+		"height": { "type": "number", "default": 64 },
+		"flip": { "type": "boolean", "default": false },
+		"colour": { "type": "string", "default": "surface" },
+		"opacity": { "type": "number", "enum": [ 10, 25, 50, 100 ], "default": 100 },
+		"align": { "type": "string", "default": "full" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

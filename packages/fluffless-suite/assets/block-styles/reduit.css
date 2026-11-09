@@ -1,0 +1,38 @@
+/* En-tête collant qui se resserre au défilement : le groupe racine de l'en-tête porte le style,
+   <header> colle (le cœur ne pose sticky que sur le groupe, invisible dans un <header> de même
+   hauteur). Le resserrement suit le défilement de la page sans script ; sans prise en charge ou
+   avec mouvement réduit, l'en-tête colle sans bouger. */
+header.wp-block-template-part:has(> .is-style-reduit) {
+	position: sticky;
+	top: 0;
+	z-index: 30;
+}
+
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.is-style-reduit {
+			animation: fluffless-reduit linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 12rem;
+		}
+
+		.is-style-reduit .wp-block-site-logo img {
+			animation: fluffless-reduit-logo linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 12rem;
+		}
+
+		@keyframes fluffless-reduit {
+			to {
+				padding-block: var(--wp--preset--spacing--20);
+				box-shadow: var(--wp--preset--shadow--soft, 0 0.25rem 1rem -0.5rem color-mix(in srgb, var(--wp--preset--color--contrast) 25%, transparent));
+			}
+		}
+
+		@keyframes fluffless-reduit-logo {
+			to {
+				scale: 0.8;
+			}
+		}
+	}
+}

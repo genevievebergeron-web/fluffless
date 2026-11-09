@@ -1,0 +1,63 @@
+/*
+ * Sensei LMS : le mode d'apprentissage lit le fond, le texte et l'accent du thème,
+ * mais garde des gris foncés et un vert fixes pensés pour un fond blanc. Ici, chaque
+ * couleur fixe reprend une couleur de la palette : lisible dans toutes les variations.
+ * Chargé seulement quand Sensei est actif.
+ */
+body.sensei {
+	/* Sensei cherche les noms de couleur les plus répandus, avec un repli clair. */
+	--wp--preset--color--foreground: var(--wp--preset--color--contrast);
+	--wp--preset--color--background: var(--wp--preset--color--base);
+	--wp--preset--color--text: var(--wp--preset--color--contrast);
+	--wp--preset--color--primary: var(--wp--preset--color--accent);
+	--sensei-module-lesson-color: var(--wp--preset--color--contrast);
+	--sensei-locked-lesson-color: var(--wp--preset--color--muted);
+	--sensei-lesson-meta-color: var(--wp--preset--color--muted);
+	--sensei-pagination-color: var(--wp--preset--color--contrast);
+	--sensei-secondary-color: var(--wp--preset--color--accent);
+	--sensei-button-text-color: var(--wp--preset--color--on-accent);
+	--sensei-button-fill-hover-color: var(--wp--preset--color--contrast);
+	--sensei-button-outline-hover-color: var(--wp--preset--color--surface);
+	--sensei-course-progress-bar-color: var(--wp--preset--color--divider);
+	--sensei-course-progress-bar-inner-color: var(--wp--preset--color--accent);
+	--border-color: var(--wp--preset--color--divider);
+	--wp--preset--font-family--system: var(--wp--preset--font-family--sans);
+	--wp--preset--font-family--body: var(--wp--preset--font-family--sans);
+}
+
+/* Le mode d'apprentissage impose sa propre pile système : on rend la police du thème. */
+body.sensei-course-theme {
+	--wp--preset--font-family--body-font: var(--wp--preset--font-family--sans);
+}
+
+/* Titres du mode d'apprentissage : même graisse que les titres du thème. */
+body.sensei-course-theme :is(h1, h2, h3, .wp-block-post-title) {
+	font-weight: 800;
+	letter-spacing: -0.015em;
+}
+
+/* Avis (« leçon réservée », messages) : fond blanc codé en dur, où l'accent devient illisible. */
+body.sensei .sensei-lms-notice {
+	background-color: var(--wp--preset--color--surface);
+	color: var(--wp--preset--color--contrast);
+	border: 1px solid var(--wp--preset--color--divider);
+}
+
+/* Questionnaires : texte, réponses et champs gardent un gris quasi noir sans ce relais. */
+body.sensei-course-theme.quiz form #sensei-quiz-list {
+	color: inherit;
+}
+
+body.sensei-course-theme.quiz form #sensei-quiz-list :is(input:not([type="radio"], [type="checkbox"]), textarea) {
+	color: var(--wp--preset--color--contrast);
+	background-color: var(--wp--preset--color--surface);
+	border-color: var(--wp--preset--color--divider);
+}
+
+body.sensei :is(.wp-block-sensei-lms-question-answers__filename, .wp-block-sensei-lms-question-answers__answer) {
+	color: var(--wp--preset--color--muted);
+}
+
+body.sensei .wp-block-sensei-lms-question-answers__filename a {
+	color: var(--wp--preset--color--accent);
+}

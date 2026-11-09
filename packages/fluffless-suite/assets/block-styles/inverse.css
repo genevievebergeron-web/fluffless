@@ -1,0 +1,12 @@
+/* Bouton inversé au survol : les couleurs par défaut du bouton (fond accent, texte on-accent)
+   s'échangent au survol et au clavier, avec une bordure de la couleur de fond pour garder la
+   forme. Une couleur choisie à la main sur le bloc garde la priorité de WordPress. */
+.wp-block-button.is-style-inverse .wp-block-button__link {
+	border-color: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	transition: background-color var(--wp--custom--transition), color var(--wp--custom--transition);
+}
+
+.wp-block-button.is-style-inverse .wp-block-button__link:is(:hover, :focus-visible) {
+	background-color: var(--wp--preset--color--on-accent);
+	color: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+}

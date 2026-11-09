@@ -1,0 +1,7 @@
+/* Aperçu à gauche dès 600 px ; aperçu et icône décoratifs, le lien porte titre, format et taille. */
+.fluffless-ressource{display:grid;gap:var(--wp--preset--spacing--40,1.5rem);align-items:start}
+@media (min-width:600px){.fluffless-ressource:has(>.fluffless-ressource__preview,>.fluffless-ressource__icon){grid-template-columns:auto 1fr}}
+.fluffless-ressource__preview{inline-size:8rem;block-size:auto;border:1px solid var(--wp--preset--color--divider)}
+.fluffless-ressource__icon{display:grid;place-items:center;inline-size:4rem;block-size:4rem}
+.fluffless-ressource__icon svg{inline-size:2.5rem;block-size:2.5rem}
+.fluffless-ressource__body>*{margin-block:0 var(--wp--preset--spacing--30,1rem)}

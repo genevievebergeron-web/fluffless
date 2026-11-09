@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Soft",
+	"description": "Pastel lavender ground, plum text, indigo accent, rounded headings and generous corners.",
+	"settings": {
+		"color": {
+			"duotone": [
+				{ "slug": "contraste", "name": "Contrast on base", "colors": [ "#29223b", "#efe9f7" ] },
+				{ "slug": "accent", "name": "Accent on base", "colors": [ "#5a48c8", "#efe9f7" ] }
+			],
+			"palette": [
+				{ "slug": "base", "name": "Base", "color": "#efe9f7" },
+				{ "slug": "surface", "name": "Surface", "color": "#e2d9f0" },
+				{ "slug": "contrast", "name": "Contrast", "color": "#29223b" },
+				{ "slug": "muted", "name": "Secondary text", "color": "#5c5273" },
+				{ "slug": "divider", "name": "Line", "color": "#7d7299" },
+				{ "slug": "accent", "name": "Accent", "color": "#5a48c8" },
+				{ "slug": "on-accent", "name": "Text on accent", "color": "#efe9f7" },
+				{ "slug": "accent-2", "name": "Second accent", "color": "#2f6a5e" },
+				{ "slug": "alert", "name": "Alert", "color": "#a3302b" }
+			]
+		},
+		"custom": {
+			"radius": { "none": "0", "soft": "1.25rem", "round": "999px", "large": "1.5rem", "small": "0.25rem" },
+			"cut": "0.5rem"
+		}
+	},
+	"styles": {
+		"typography": { "fontFamily": "var:preset|font-family|humanist" },
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var:preset|font-family|rounded", "fontWeight": "700", "letterSpacing": "0" }
+			},
+			"button": {
+				"border": { "radius": "var:custom|radius|round" },
+				"shadow": "var:preset|shadow|soft"
+			}
+		},
+		"spacing": { "blockGap": "var:preset|spacing|50" },
+		"blocks": {
+			"core/group": {
+				"variations": {
+					"carte": {
+						"border": { "radius": "1.75rem", "width": "0" },
+						"shadow": "var:preset|shadow|soft",
+						"spacing": { "padding": { "top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60", "left": "var:preset|spacing|60", "right": "var:preset|spacing|60" } }
+					},
+					"bordure-brute": {
+						"border": { "radius": "1.75rem", "width": "2px", "color": "var:preset|color|divider" },
+						"shadow": "none"
+					},
+					"inverse": {
+						"border": { "radius": "clamp(1.25rem, 3vw, 2.5rem)" }
+					}
+				}
+			},
+			"core/column": {
+				"variations": {
+					"carte": { "border": { "radius": "1.75rem", "width": "0" }, "shadow": "var:preset|shadow|soft" },
+					"bordure-brute": { "border": { "radius": "1.75rem", "width": "2px", "color": "var:preset|color|divider" }, "shadow": "none" }
+				}
+			},
+			"core/image": { "border": { "radius": "1.75rem" } },
+			"core/columns": { "spacing": { "blockGap": { "top": "var:preset|spacing|50", "left": "var:preset|spacing|60" } } },
+			"core/separator": { "border": { "radius": "999px" } }
+		}
+	}
+}

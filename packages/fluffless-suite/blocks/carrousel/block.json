@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/carrousel",
+	"version": "0.2.1",
+	"title": "Carousel",
+	"category": "design",
+	"icon": "slides",
+	"description": "A heading and two to eight slides that scroll sideways and snap into place, one, two or three at a time on wide screens. Native scrolling only: no library, no script, works with the keyboard and the trackpad.",
+	"keywords": [ "carousel", "slider", "slides", "carrousel", "scroll" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"width": { "type": "string", "enum": [ "third", "half", "full" ], "default": "third" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

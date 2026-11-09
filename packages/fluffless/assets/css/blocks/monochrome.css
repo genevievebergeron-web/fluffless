@@ -1,0 +1,3 @@
+.wp-block-image.is-style-monochrome img {
+	filter: grayscale(1) contrast(1.1);
+}

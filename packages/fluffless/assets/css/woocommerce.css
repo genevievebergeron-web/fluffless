@@ -1,0 +1,148 @@
+/*
+ * WooCommerce : ses couleurs fixes (champs blancs, rouge d'erreur, pastille de promotion)
+ * supposent un fond blanc. Ici, chacune reprend une couleur de la palette : lisible dans
+ * toutes les variations, sombres comme claires. Injecté en ligne, seulement sur les pages
+ * de boutique (voir functions.php).
+ */
+
+/*
+ * Champs de la caisse et du panier : WooCommerce les peint en blanc avec un texte gris foncé,
+ * mais leurs étiquettes flottantes héritent de la couleur du texte du thème (1,2:1 sur la
+ * palette sombre). Ici, le champ laisse voir le fond de la page et suit sa couleur de texte :
+ * étiquette, saisie et bordure restent lisibles dans chaque variation. Le body en tête passe
+ * devant les sélecteurs de WooCommerce, focus compris, sans !important.
+ */
+body .wc-block-components-form .wc-block-components-text-input input:not([type="checkbox"], [type="radio"]),
+body .wc-block-components-form .wc-block-components-text-input input:not([type="checkbox"], [type="radio"]):focus,
+body .wc-block-components-text-input.wc-block-components-text-input input:not([type="checkbox"], [type="radio"]),
+body .wc-block-components-text-input.wc-block-components-text-input input:not([type="checkbox"], [type="radio"]):focus,
+body .wc-block-components-textarea.wc-block-components-textarea,
+body .wc-blocks-components-select .wc-blocks-components-select__container,
+body .wc-blocks-components-select .wc-blocks-components-select__select {
+	background-color: transparent;
+	color: inherit;
+}
+
+body .wc-block-components-textarea.wc-block-components-textarea {
+	border-color: color-mix(in srgb, currentColor 80%, transparent);
+}
+
+body .wc-block-components-textarea.wc-block-components-textarea:focus {
+	border-color: currentColor;
+	box-shadow: inset 0 0 0 0.5px currentColor;
+}
+
+body .wc-blocks-components-select .wc-blocks-components-select__expand {
+	fill: currentColor;
+}
+
+body .wc-block-components-form .wc-block-components-text-input .wc-block-components-text-input__date-icon,
+body .wc-block-components-text-input .wc-block-components-text-input__date-icon {
+	color: inherit;
+}
+
+/* Liste d'un menu déroulant : certains systèmes la peignent avec le fond et le texte du champ. */
+body .wc-blocks-components-select__select option {
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+}
+
+/* Remplissage automatique : le fond pâle du navigateur cacherait l'étiquette claire. */
+body .wc-block-components-text-input input:-webkit-autofill,
+body .wc-blocks-components-select .wc-blocks-components-select__select:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 100px var(--wp--preset--color--base) inset;
+	-webkit-text-fill-color: var(--wp--preset--color--contrast);
+}
+
+/*
+ * Cases à cocher : WooCommerce les dessine blanches, bordure et contour de focus noirs à 48 et
+ * 80 % ; le focus tombe à 1,1:1 sur une palette sombre. Elles reprennent le texte de la palette.
+ */
+body .wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"],
+body .wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"]:checked {
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+body .wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"]:focus {
+	outline-color: currentColor;
+}
+
+body .wc-block-components-checkbox .wc-block-components-checkbox__mark {
+	fill: currentColor;
+}
+
+/* Erreurs de champ à la caisse : le rouge de WooCommerce fait 3,3 sur un fond sombre. */
+.wc-block-components-validation-error,
+.wc-block-components-validation-error p,
+.wc-block-components-validation-error svg {
+	color: var(--wp--preset--color--alert);
+	fill: var(--wp--preset--color--alert);
+}
+
+body .wc-block-components-form .wc-block-components-text-input.has-error input,
+body .wc-block-components-form .wc-block-components-text-input.has-error input:focus,
+body .wc-block-components-text-input.wc-block-components-text-input.has-error input,
+body .wc-block-components-text-input.wc-block-components-text-input.has-error input:focus,
+body .wc-block-components-form .wc-block-components-text-input.has-error label,
+body .wc-block-components-text-input.wc-block-components-text-input.has-error label,
+body .wc-block-components-combobox.has-error .components-combobox-control__input,
+body .wc-block-components-checkbox.has-error,
+body .wc-block-components-checkbox.has-error a,
+body .wc-block-components-checkbox.has-error .wc-block-components-checkbox__input[type="checkbox"] {
+	border-color: var(--wp--preset--color--alert);
+	color: var(--wp--preset--color--alert);
+}
+
+body .wc-block-components-form .wc-block-components-text-input.has-error input:focus,
+body .wc-block-components-text-input.wc-block-components-text-input.has-error input:focus {
+	box-shadow: 0 0 0 0.5px var(--wp--preset--color--alert);
+}
+
+body .wc-block-components-checkbox.has-error .wc-block-components-checkbox__input:focus {
+	outline-color: var(--wp--preset--color--alert);
+}
+
+/* Astérisque des champs requis (formulaires classiques, connexion au compte) : 2,4 sur la palette Sobre. */
+body .woocommerce form .form-row .required {
+	color: var(--wp--preset--color--alert);
+}
+
+/*
+ * Boutons + et - de la quantité : WooCommerce les éclaircit à 60 % d'opacité (3,9:1 sur les
+ * palettes claires). Pleine opacité quand ils servent ; un bouton désactivé reste pâle,
+ * comme le permet WCAG pour un composant inactif.
+ */
+body .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button:not(:disabled) {
+	opacity: 1;
+}
+
+/*
+ * Onglets de la fiche produit (style minimal) : WooCommerce pâlit l'onglet inactif à 65 %
+ * d'opacité, 4,4:1 sur la palette Doux. Ici, il prend le texte secondaire de la palette ;
+ * l'onglet actif garde son soulignement.
+ */
+html body .wp-block-woocommerce-product-details.is-style-minimal ul.tabs.wc-tabs li:not(.active) {
+	color: var(--wp--preset--color--muted);
+	opacity: 1;
+}
+
+/* Avis classiques (fiche produit, compte) : la bordure marque l'état, le texte reste lisible. */
+.woocommerce-error {
+	border-left: 4px solid var(--wp--preset--color--alert);
+}
+
+/* Pastille de promotion : fond olive et texte blanc à 3,4 sur la fiche classique. */
+.woocommerce span.onsale,
+.wc-block-components-product-sale-badge,
+.wc-block-grid__product-onsale {
+	background-color: var(--wp--preset--color--accent);
+	border: 0;
+	color: var(--wp--preset--color--on-accent);
+	font-weight: 600;
+}
+
+.wc-block-components-product-sale-badge__text {
+	color: inherit;
+}

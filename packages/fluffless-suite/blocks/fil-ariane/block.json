@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/fil-ariane",
+	"version": "0.2.1",
+	"title": "Breadcrumb path",
+	"category": "design",
+	"icon": "arrow-right-alt",
+	"description": "The path to the current page: Home, the parent pages, then the page itself as plain text. Nothing on the front page. One list in a named navigation landmark, no script.",
+	"keywords": [ "breadcrumb", "path", "navigation", "ariane" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"home": { "type": "string", "enum": [ "shown", "hidden" ], "default": "shown" },
+		"current": { "type": "string", "enum": [ "shown", "hidden" ], "default": "shown" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css"
+}

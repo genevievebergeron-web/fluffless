@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/colonnes",
+	"version": "0.2.1",
+	"title": "Heading, text and columns",
+	"category": "design",
+	"icon": "columns",
+	"description": "A heading, a short text and 2, 3 or 4 columns. Each column has a heading and a text, with an icon or an image, and a button if you want one. The content stays in regular blocks.",
+	"keywords": [ "columns", "services", "features", "grid", "colonnes" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": "fluffless-sections"
+}

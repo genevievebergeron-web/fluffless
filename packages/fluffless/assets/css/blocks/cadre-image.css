@@ -1,0 +1,8 @@
+/* Cadre d'image des compositions : tant que l'image n'est pas choisie (le cœur retire alors la
+   figure), un même cadre visible partout, fond Surface et filet Divider, d'au moins 10rem. */
+.wp-block-group.fluffless-cadre-image:not(:has(img)) {
+	box-sizing: border-box;
+	min-block-size: 10rem;
+	border: 1px solid var(--wp--preset--color--divider);
+	background-color: var(--wp--preset--color--surface);
+}

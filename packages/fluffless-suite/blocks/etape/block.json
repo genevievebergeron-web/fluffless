@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/etape",
+	"version": "0.2.1",
+	"title": "Form step",
+	"category": "widgets",
+	"icon": "editor-ol",
+	"description": "One step of a form. The visitor sees one step at a time, with Previous and Next buttons, without JavaScript.",
+	"keywords": [ "step", "étape", "form", "formulaire", "wizard" ],
+	"textdomain": "fluffless-suite",
+	"parent": [ "fluffless/formulaire" ],
+	"usesContext": [ "fluffless/formId" ],
+	"attributes": {
+		"title": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": false,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

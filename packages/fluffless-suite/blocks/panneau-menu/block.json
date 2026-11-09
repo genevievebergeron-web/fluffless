@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/panneau-menu",
+	"version": "0.2.1",
+	"title": "Menu panel",
+	"category": "design",
+	"icon": "menu-alt",
+	"description": "A menu entry that opens a panel of any blocks under the header: columns of links, an image, a call to action. Built on the native Details element, one panel open at a time, no script. On phones it stacks inside the menu.",
+	"keywords": [
+		"mega menu",
+		"menu",
+		"panel",
+		"navigation",
+		"méga-menu"
+	],
+	"textdomain": "fluffless-suite",
+	"parent": [
+		"core/navigation"
+	],
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"width": {
+			"type": "string",
+			"enum": [
+				"full",
+				"content"
+			],
+			"default": "full"
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": false,
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

@@ -1,0 +1,12 @@
+/* Pilule : image recadrée en 3:2 aux bouts ronds ; fl-pilule-haute la dresse en portrait 2:3.
+   Le style « Arrondi » du cœur arrondit sans recadrer ; celui-ci fixe la proportion. */
+.is-style-pilule img {
+	height: auto;
+	aspect-ratio: 3 / 2;
+	border-radius: 9999px;
+	object-fit: cover;
+}
+
+.is-style-pilule.fl-pilule-haute img {
+	aspect-ratio: 2 / 3;
+}

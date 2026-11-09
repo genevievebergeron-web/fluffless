@@ -1,0 +1,30 @@
+/* Liste numérotée : gros numéros alignés et filets entre les points. Le numéro dessiné est
+   masqué des lecteurs d'écran (texte de remplacement vide) : la liste <ol> l'annonce déjà. */
+.wp-block-list.is-style-numeros {
+	list-style: none;
+	padding-inline-start: 0;
+	counter-reset: fluffless-numero;
+}
+
+.wp-block-list.is-style-numeros > li {
+	counter-increment: fluffless-numero;
+	position: relative;
+	padding-block: var(--wp--preset--spacing--40);
+	padding-inline-start: 3.2em;
+	border-top: 1px solid currentcolor;
+}
+
+.wp-block-list.is-style-numeros > li::before {
+	content: counter(fluffless-numero, decimal-leading-zero) / "";
+	position: absolute;
+	inset-inline-start: 0;
+	top: var(--wp--preset--spacing--40);
+	font-size: 1.6em;
+	font-weight: 900;
+	line-height: 1;
+	color: var(--wp--preset--color--accent);
+}
+
+.is-style-inverse .wp-block-list.is-style-numeros > li::before {
+	color: inherit;
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/legal",
+	"version": "0.2.1",
+	"title": "Legal bar",
+	"example": {},
+	"category": "widgets",
+	"icon": "editor-justify",
+	"description": "Copyright with the current year, privacy policy, Manage my cookies, language switcher, land acknowledgement and credit, each shown only when turned on and filled in.",
+	"keywords": [ "footer" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": false,
+		"color": { "text": true, "background": false, "gradients": false, "link": true, "customColor": false },
+		"typography": { "fontSize": true },
+		"spacing": { "margin": true }
+	},
+	"editorScript": "fluffless-footer-blocks-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,86 @@
+{
+	"taille": {
+		"small": {
+			"$type": "number",
+			"$value": 14,
+			"$description": "Small"
+		},
+		"base": {
+			"$type": "number",
+			"$value": 16,
+			"$description": "Regular"
+		},
+		"medium": {
+			"$type": "number",
+			"$value": 19.2,
+			"$description": "Medium"
+		},
+		"large": {
+			"$type": "number",
+			"$value": 23.2,
+			"$description": "Large"
+		},
+		"x-large": {
+			"$type": "number",
+			"$value": 30.4,
+			"$description": "Extra large"
+		},
+		"xx-large": {
+			"$type": "number",
+			"$value": 40,
+			"$description": "Huge"
+		},
+		"giant": {
+			"$type": "number",
+			"$value": 52,
+			"$description": "Giant"
+		}
+	},
+	"espace": {
+		"20": {
+			"$type": "number",
+			"$value": 6,
+			"$description": "Tiny"
+		},
+		"30": {
+			"$type": "number",
+			"$value": 10,
+			"$description": "Extra small"
+		},
+		"40": {
+			"$type": "number",
+			"$value": 16,
+			"$description": "Small"
+		},
+		"50": {
+			"$type": "number",
+			"$value": 24,
+			"$description": "Medium"
+		},
+		"60": {
+			"$type": "number",
+			"$value": 36,
+			"$description": "Large"
+		},
+		"70": {
+			"$type": "number",
+			"$value": 52,
+			"$description": "Extra large"
+		},
+		"80": {
+			"$type": "number",
+			"$value": 72,
+			"$description": "Massive"
+		}
+	},
+	"mise": {
+		"contenu": {
+			"$type": "number",
+			"$value": 672
+		},
+		"large": {
+			"$type": "number",
+			"$value": 1280
+		}
+	}
+}

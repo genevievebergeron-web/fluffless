@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/valeurs",
+	"version": "0.2.1",
+	"title": "Values",
+	"category": "design",
+	"icon": "heart",
+	"description": "Three to six values, each with a short heading and one line on what it changes in practice, in columns or as a list, with or without an icon. The content stays in regular blocks.",
+	"keywords": [ "values", "principles", "mission", "commitments", "valeurs" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"display": { "type": "string", "enum": [ "columns", "list" ], "default": "columns" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

@@ -1,0 +1,10 @@
+/* Ligne et marqueurs en CSS seulement. */
+.fluffless-frise{--d:1rem;&.is-marker-number{--d:1.75rem}
+& .fluffless-frise__list{position:relative;counter-reset:s;
+&::before{content:"";position:absolute;inset:0 auto 0 calc(var(--d)/2 - 1px);inline-size:2px;background:var(--wp--preset--color--divider)}
+&>*{position:relative;padding-inline-start:calc(var(--d) + 1rem);counter-increment:s;
+&::before{content:counter(s);position:absolute;top:0;left:0;inline-size:var(--d);line-height:var(--d);text-align:center;border-radius:50%;background:var(--wp--preset--color--accent);color:transparent;font-size:var(--wp--preset--font-size--small)}}}
+&.is-marker-number .fluffless-frise__list>*::before{color:var(--wp--preset--color--on-accent)}}
+@media (min-width:48em){.is-direction-horizontal .fluffless-frise__list{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.5rem;
+&::before{inset:calc(var(--d)/2 - 1px) 0 auto;inline-size:auto;block-size:2px}
+&>*{padding:calc(var(--d) + 1rem) 0 0;margin-block-start:0}}}

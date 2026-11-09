@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Slanted top edge",
+	"slug": "bord-oblique-haut",
+	"blockTypes": [ "core/group", "core/cover" ],
+	"styles": {}
+}

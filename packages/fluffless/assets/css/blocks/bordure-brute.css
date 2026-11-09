@@ -1,0 +1,10 @@
+/* Tuiles cliquables : la bordure brute se soulève, la carte durcit son trait. */
+.wp-block-group.is-style-bordure-brute:has(a) {
+	transition: transform var(--wp--custom--transition), box-shadow var(--wp--custom--transition);
+}
+
+.wp-block-group.is-style-bordure-brute:has(a):hover,
+.wp-block-group.is-style-bordure-brute:focus-within {
+	transform: translate(-0.125rem, -0.125rem);
+	box-shadow: 0.5rem 0.5rem 0 var(--wp--preset--color--contrast);
+}

@@ -1,0 +1,14 @@
+/* Piste qui défile de côté et s'aimante sur chaque diapositive (scroll-snap natif). Une diapositive à 85 % sur téléphone ; un tiers, la moitié ou toute la largeur sur écran large. */
+.fluffless-carrousel .fluffless-carrousel__track{display:flex;gap:var(--wp--preset--spacing--40,1.5rem);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-block-end:var(--wp--preset--spacing--30,.75rem);scrollbar-color:var(--wp--preset--color--accent) transparent}
+.fluffless-carrousel .fluffless-carrousel__track>*{flex:0 0 var(--fl-slide,85%);margin:0;scroll-snap-align:start}
+.fluffless-carrousel__item img{inline-size:100%;block-size:auto;aspect-ratio:4/3;object-fit:cover}
+@media (min-width:48em){
+.fluffless-carrousel.is-width-third{--fl-slide:calc((100% - 2*var(--wp--preset--spacing--40,1.5rem))/3)}
+.fluffless-carrousel.is-width-half{--fl-slide:calc((100% - var(--wp--preset--spacing--40,1.5rem))/2)}
+.fluffless-carrousel.is-width-full{--fl-slide:100%}
+}
+.fluffless-carrousel .fluffless-carrousel__track{padding-inline:6px;padding-block-start:6px;scroll-padding-inline:6px}
+:root .fluffless-carrousel .fluffless-carrousel__track:focus-visible{outline-offset:-4px;box-shadow:inset 0 0 0 6px var(--wp--preset--color--base)}
+@media (forced-colors:active){:root .fluffless-carrousel .fluffless-carrousel__track:focus-visible{outline-color:Highlight}}
+.fluffless-carrousel__nav ul{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.fluffless-carrousel__nav a{display:inline-block;min-inline-size:2.75rem;padding:.5rem;border:1px solid currentcolor;border-radius:var(--wp--custom--radius--small,.25rem);text-align:center;text-decoration:none}

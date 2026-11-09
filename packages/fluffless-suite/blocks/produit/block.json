@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/produit",
+	"version": "0.2.1",
+	"title": "Product",
+	"category": "design",
+	"icon": "cart",
+	"description": "One product or service for sale, without a cart: photo, name, price, description and a button to a hosted payment link (Helcim, Square, Stripe, PayPal). No script, no customer data on this site; the price is written as Product data for search engines.",
+	"keywords": [ "product", "sale", "price", "buy", "produit", "vente" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"photo": { "type": "string", "enum": [ "side", "top" ], "default": "side" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

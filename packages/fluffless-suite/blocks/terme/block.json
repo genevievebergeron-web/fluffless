@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/terme",
+	"version": "0.2.1",
+	"title": "Term",
+	"category": "design",
+	"icon": "editor-textcolor",
+	"description": "One entry of a Glossary: the term, then its definition in one paragraph. Only inside a Glossary.",
+	"keywords": [ "term", "definition", "terme", "définition" ],
+	"textdomain": "fluffless-suite",
+	"ancestor": [ "fluffless/glossaire" ],
+	"usesContext": [ "fluffless/glossaire" ],
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

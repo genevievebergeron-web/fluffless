@@ -1,0 +1,1224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fluffless SEO 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fluffless-seo\n"
+"Last-Translator: Geneviève Bergeron\n"
+"Language-Team: Français (Canada)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-13T02:13:26+00:00\n"
+"PO-Revision-Date: 2026-09-13T02:13:26+00:00\n"
+"Language: fr_CA\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: fluffless-seo\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: fluffless-seo.php
+#: src/Admin/SettingsScreen.php:87
+#: src/Admin/SettingsScreen.php:119
+msgid "Fluffless SEO"
+msgstr "Fluffless SEO"
+
+#. Plugin URI of the plugin
+#: fluffless-seo.php
+msgid "https://fluffless.dev"
+msgstr "https://fluffless.dev"
+
+#. Description of the plugin
+#: fluffless-seo.php
+msgid "Complete, server-side SEO for any theme: titles, social tags, structured data, breadcrumbs, redirects and sitemaps. No JavaScript for visitors."
+msgstr "Référencement complet, côté serveur, pour tout thème : titres, balises de partage, données structurées, fil d’Ariane, redirections et plans du site. Aucun JavaScript pour les gens qui visitent le site."
+
+#. Author of the plugin
+#: fluffless-seo.php
+msgid "Geneviève Bergeron"
+msgstr "Geneviève Bergeron"
+
+#. Author URI of the plugin
+#: fluffless-seo.php
+msgid "https://genevievebergeron.ca"
+msgstr "https://genevievebergeron.ca"
+
+#: src/Admin/SettingsScreen.php:119
+msgid "Titles, sharing, structured data and redirects, written on the server. Your visitors download no script for it."
+msgstr "Titres, partage, données structurées et redirections, écrits par le serveur. Les gens qui visitent ton site ne téléchargent aucun script pour ça."
+
+#: src/Admin/SettingsScreen.php:121
+msgid "Fluffless SEO sections"
+msgstr "Sections de Fluffless SEO"
+
+#: src/Admin/SettingsScreen.php:123
+msgid "Settings"
+msgstr "Réglages"
+
+#: src/Admin/SettingsScreen.php:124
+msgid "Redirects and not found"
+msgstr "Redirections et pages introuvables"
+
+#: src/Admin/SettingsScreen.php:125
+#: src/Admin/SettingsScreen.php:549
+#: src/Admin/SettingsScreen.php:601
+msgid "Import"
+msgstr "Importation"
+
+#: src/Admin/SettingsScreen.php:152
+#: src/Admin/SettingsScreen.php:443
+#: src/Breadcrumbs.php:76
+msgid "Search results"
+msgstr "Résultats de recherche"
+
+#: src/Admin/SettingsScreen.php:153
+msgid "What search engines show for each page."
+msgstr "Ce que les moteurs de recherche affichent pour chaque page."
+
+#: src/Admin/SettingsScreen.php:157
+msgid "Titles and descriptions"
+msgstr "Titres et descriptions"
+
+#: src/Admin/SettingsScreen.php:158
+msgid "Title tag, meta description and canonical address, from each page’s fields or the templates below."
+msgstr "Balise titre, méta-description et URL canonique, tirées des champs de chaque page ou des modèles ci-dessous."
+
+#: src/Admin/SettingsScreen.php:163
+msgid "Keyword analysis in the editor"
+msgstr "Analyse du mot-clé dans l’éditeur"
+
+#: src/Admin/SettingsScreen.php:164
+msgid "Checks run in the writer’s browser. Nothing is sent anywhere."
+msgstr "Les vérifications se font dans le navigateur de la personne qui rédige. Rien n’est envoyé nulle part."
+
+#: src/Admin/SettingsScreen.php:170
+#: assets/editor.js:220
+msgid "Sharing"
+msgstr "Partage"
+
+#: src/Admin/SettingsScreen.php:171
+msgid "The card shown when a page is shared on social networks and messaging apps."
+msgstr "La carte affichée quand une page est partagée sur les réseaux sociaux et dans les applications de messagerie."
+
+#: src/Admin/SettingsScreen.php:175
+msgid "Open Graph and X cards"
+msgstr "Open Graph et cartes X"
+
+#: src/Admin/SettingsScreen.php:176
+msgid "Title, description and image for sharing."
+msgstr "Titre, description et image pour le partage."
+
+#: src/Admin/SettingsScreen.php:182
+msgid "Structured data"
+msgstr "Données structurées"
+
+#: src/Admin/SettingsScreen.php:183
+msgid "One JSON-LD graph per page, describing who publishes the site and what the page is."
+msgstr "Un graphe JSON-LD par page, qui décrit qui publie le site et ce qu’est la page."
+
+#: src/Admin/SettingsScreen.php:187
+msgid "Identity and page types"
+msgstr "Identité et types de pages"
+
+#: src/Admin/SettingsScreen.php:188
+msgid "The type of each page is chosen in the editor; articles are described automatically."
+msgstr "Le type de chaque page se choisit dans l’éditeur ; les articles sont décrits automatiquement."
+
+#: src/Admin/SettingsScreen.php:193
+msgid "Local business details"
+msgstr "Renseignements sur l’entreprise locale"
+
+#: src/Admin/SettingsScreen.php:194
+msgid "Used when this site represents a local business."
+msgstr "Utilisés quand ce site représente une entreprise locale."
+
+#: src/Admin/SettingsScreen.php:205
+msgid "Breadcrumbs"
+msgstr "Fil d’Ariane"
+
+#: src/Admin/SettingsScreen.php:206
+msgid "Adds the Breadcrumb block and its structured data."
+msgstr "Ajoute le bloc Fil d’Ariane et ses données structurées."
+
+#: src/Admin/SettingsScreen.php:212
+msgid "Crawlers"
+msgstr "Robots d’indexation"
+
+#: src/Admin/SettingsScreen.php:213
+msgid "Files and signals read by search engines and other robots."
+msgstr "Fichiers et signaux lus par les moteurs de recherche et les autres robots."
+
+#: src/Admin/SettingsScreen.php:217
+msgid "Sitemap"
+msgstr "Plan du site"
+
+#: src/Admin/SettingsScreen.php:218
+msgid "Adjusts the sitemap built into WordPress. Pages set to noindex are left out."
+msgstr "Ajuste le plan du site intégré à WordPress. Les pages réglées en noindex en sont exclues."
+
+#: src/Admin/SettingsScreen.php:223
+msgid "Custom robots.txt"
+msgstr "robots.txt personnalisé"
+
+#: src/Admin/SettingsScreen.php:224
+msgid "Served on the fly; no file is written on the server."
+msgstr "Servi à la volée ; aucun fichier n’est écrit sur le serveur."
+
+#: src/Admin/SettingsScreen.php:229
+msgid "llms.txt"
+msgstr "llms.txt"
+
+#: src/Admin/SettingsScreen.php:230
+msgid "A plain text summary of the site for language model tools."
+msgstr "Un résumé du site en texte brut pour les outils fondés sur des modèles de langage."
+
+#: src/Admin/SettingsScreen.php:235
+msgid "IndexNow"
+msgstr "IndexNow"
+
+#: src/Admin/SettingsScreen.php:236
+msgid "Tells Bing, Yandex and others when a page is published. Sends one request to api.indexnow.org per publication, without waiting for the answer. Allow this host in the Fluffless Suite outgoing requests list if it is filtered."
+msgstr "Avertit Bing, Yandex et d’autres quand une page est publiée. Envoie une requête à api.indexnow.org par publication, sans attendre la réponse. Autorise ce domaine dans la liste des requêtes sortantes de Fluffless Suite si elle est filtrée."
+
+#: src/Admin/SettingsScreen.php:241
+msgid "Webmaster tools verification"
+msgstr "Validation des outils pour webmestres"
+
+#: src/Admin/SettingsScreen.php:242
+msgid "Written on the home page only."
+msgstr "Écrite sur la page d’accueil seulement."
+
+#: src/Admin/SettingsScreen.php:254
+msgid "Moved pages"
+msgstr "Pages déplacées"
+
+#: src/Admin/SettingsScreen.php:255
+msgid "Rules and the not found log are managed in the Redirects tab."
+msgstr "Les règles et le journal des pages introuvables se gèrent dans l’onglet Redirections."
+
+#: src/Admin/SettingsScreen.php:259
+msgid "Redirects"
+msgstr "Redirections"
+
+#: src/Admin/SettingsScreen.php:260
+msgid "301, 302, 307 and 410, with optional regular expressions."
+msgstr "301, 302, 307 et 410, avec expressions régulières au besoin."
+
+#: src/Admin/SettingsScreen.php:265
+msgid "Not found log"
+msgstr "Journal des pages introuvables"
+
+#: src/Admin/SettingsScreen.php:266
+msgid "Keeps the path, a counter and the last visit date for 90 days. No IP address, no browser details."
+msgstr "Conserve le chemin, un compteur et la date de la dernière visite pendant 90 jours. Aucune adresse IP, aucun détail sur le navigateur."
+
+#: src/Admin/SettingsScreen.php:272
+msgid "Languages"
+msgstr "Langues"
+
+#: src/Admin/SettingsScreen.php:273
+msgid "With Polylang, each page points to its translations."
+msgstr "Avec Polylang, chaque page renvoie à ses traductions."
+
+#: src/Admin/SettingsScreen.php:277
+msgid "hreflang and og:locale"
+msgstr "hreflang et og:locale"
+
+#: src/Admin/SettingsScreen.php:278
+msgid "Alternate language links and sharing locale. Without Polylang, only the site language is written."
+msgstr "Liens vers les versions dans d’autres langues et paramètres régionaux de partage. Sans Polylang, seule la langue du site est écrite."
+
+#: src/Admin/SettingsScreen.php:289
+msgid "Setting groups"
+msgstr "Groupes de réglages"
+
+#: src/Admin/SettingsScreen.php:293
+#: src/Admin/SettingsScreen.php:450
+msgid "Templates"
+msgstr "Modèles"
+
+#: src/Admin/SettingsScreen.php:311
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: src/Admin/SettingsScreen.php:426
+msgid "Home page"
+msgstr "Page d’accueil"
+
+#: src/Admin/SettingsScreen.php:427
+msgid "Posts page"
+msgstr "Page des articles"
+
+#. translators: %s: content type name.
+#: src/Admin/SettingsScreen.php:434
+#, php-format
+msgid "%s archive"
+msgstr "Archive : %s"
+
+#: src/Admin/SettingsScreen.php:441
+#: src/Settings.php:228
+msgid "Author archives"
+msgstr "Archives par auteur ou autrice"
+
+#: src/Admin/SettingsScreen.php:442
+#: src/Settings.php:229
+msgid "Date archives"
+msgstr "Archives par date"
+
+#: src/Admin/SettingsScreen.php:444
+#: src/Breadcrumbs.php:78
+#: src/Context.php:94
+msgid "Page not found"
+msgstr "Page introuvable"
+
+#. translators: %s: list of variables.
+#: src/Admin/SettingsScreen.php:454
+#, php-format
+msgid "Empty fields use the default shown in grey. Variables: %s."
+msgstr "Les champs vides reprennent la valeur par défaut affichée en gris. Variables : %s."
+
+#: src/Admin/SettingsScreen.php:466
+msgid "Title"
+msgstr "Titre"
+
+#: src/Admin/SettingsScreen.php:474
+msgid "Description"
+msgstr "Description"
+
+#: src/Admin/SettingsScreen.php:488
+msgid "Redirects are off: rules below are kept but not applied. Turn them on in the Settings tab."
+msgstr "Les redirections sont désactivées : les règles ci-dessous sont conservées, mais pas appliquées. Active-les dans l’onglet Réglages."
+
+#: src/Admin/SettingsScreen.php:493
+msgid "Add a redirect"
+msgstr "Ajouter une redirection"
+
+#: src/Admin/SettingsScreen.php:496
+#: src/Admin/SettingsScreen.php:517
+msgid "From"
+msgstr "Source"
+
+#: src/Admin/SettingsScreen.php:496
+msgid "A path such as /old-page, or a pattern such as ^/blog/(.*)$ with the option below."
+msgstr "Un chemin comme /ancienne-page, ou un motif comme ^/blog/(.*)$ avec l’option ci-dessous."
+
+#: src/Admin/SettingsScreen.php:497
+#: src/Admin/SettingsScreen.php:517
+msgid "To"
+msgstr "Destination"
+
+#: src/Admin/SettingsScreen.php:497
+msgid "A path such as /new-page or a full address. $1, $2 reuse pattern groups. Empty for 410."
+msgstr "Un chemin comme /nouvelle-page ou une adresse complète. $1, $2 reprennent les groupes du motif. Vide pour un code 410."
+
+#: src/Admin/SettingsScreen.php:498
+#: src/Admin/SettingsScreen.php:517
+msgid "Type"
+msgstr "Type"
+
+#: src/Admin/SettingsScreen.php:500
+msgid "301 moved permanently"
+msgstr "301 déplacée de façon permanente"
+
+#: src/Admin/SettingsScreen.php:501
+msgid "302 moved temporarily"
+msgstr "302 déplacée temporairement"
+
+#: src/Admin/SettingsScreen.php:502
+msgid "307 temporary, same method"
+msgstr "307 temporaire, même méthode"
+
+#: src/Admin/SettingsScreen.php:503
+msgid "410 gone for good"
+msgstr "410 supprimée définitivement"
+
+#: src/Admin/SettingsScreen.php:508
+msgid "The source is a regular expression"
+msgstr "La source est une expression régulière"
+
+#: src/Admin/SettingsScreen.php:509
+msgid "Add redirect"
+msgstr "Ajouter la redirection"
+
+#: src/Admin/SettingsScreen.php:513
+msgid "Rules"
+msgstr "Règles"
+
+#: src/Admin/SettingsScreen.php:515
+msgid "No redirect yet."
+msgstr "Aucune redirection pour l’instant."
+
+#: src/Admin/SettingsScreen.php:517
+msgid "Uses"
+msgstr "Utilisations"
+
+#: src/Admin/SettingsScreen.php:517
+#: src/Admin/SettingsScreen.php:557
+msgid "Actions"
+msgstr "Actions"
+
+#: src/Admin/SettingsScreen.php:522
+msgid "regex"
+msgstr "regex"
+
+#: src/Admin/SettingsScreen.php:530
+msgid "Delete"
+msgstr "Supprimer"
+
+#. translators: %s: redirect source.
+#: src/Admin/SettingsScreen.php:537
+#, php-format
+msgid "Delete the redirect from %s"
+msgstr "Supprimer la redirection depuis %s"
+
+#: src/Admin/SettingsScreen.php:546
+msgid "Import a CSV file"
+msgstr "Importer un fichier CSV"
+
+#: src/Admin/SettingsScreen.php:546
+msgid "One rule per line: source,target,code,regex. Up to 5,000 lines and 1 MB. Existing sources are replaced."
+msgstr "Une règle par ligne : source,target,code,regex. Jusqu’à 5 000 lignes et 1 Mo. Les sources existantes sont remplacées."
+
+#: src/Admin/SettingsScreen.php:548
+msgid "CSV file"
+msgstr "Fichier CSV"
+
+#: src/Admin/SettingsScreen.php:553
+msgid "Not found addresses"
+msgstr "Adresses introuvables"
+
+#: src/Admin/SettingsScreen.php:553
+msgid "Kept 90 days: path, count and last visit only."
+msgstr "Conservées 90 jours : chemin, nombre de visites et dernière visite seulement."
+
+#: src/Admin/SettingsScreen.php:555
+msgid "Nothing logged yet."
+msgstr "Rien de consigné pour l’instant."
+
+#: src/Admin/SettingsScreen.php:555
+msgid "The log is off."
+msgstr "Le journal est désactivé."
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Path"
+msgstr "Chemin"
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Visits"
+msgstr "Visites"
+
+#: src/Admin/SettingsScreen.php:557
+msgid "Last visit (UTC)"
+msgstr "Dernière visite (UTC)"
+
+#: src/Admin/SettingsScreen.php:565
+msgid "Redirect"
+msgstr "Rediriger"
+
+#: src/Admin/SettingsScreen.php:570
+msgid "Clear the log"
+msgstr "Vider le journal"
+
+#: src/Admin/SettingsScreen.php:578
+msgid "Import from another SEO plugin"
+msgstr "Importer depuis une autre extension de référencement"
+
+#: src/Admin/SettingsScreen.php:579
+msgid "Copies titles, descriptions, canonical addresses, sharing fields, robots directives and keywords. Run a simulation first. Fields already filled here are never replaced, and the original data is never deleted."
+msgstr "Copie les titres, les descriptions, les URL canoniques, les champs de partage, les directives pour les robots et les mots-clés. Lance d’abord une simulation. Les champs déjà remplis ici ne sont jamais remplacés, et les données d’origine ne sont jamais supprimées."
+
+#: src/Admin/SettingsScreen.php:589
+msgid "Simulate"
+msgstr "Simuler"
+
+#. translators: %s: plugin name.
+#: src/Admin/SettingsScreen.php:596
+#, php-format
+msgid "Simulate the import from %s"
+msgstr "Simuler l’importation depuis %s"
+
+#. translators: %s: plugin name.
+#: src/Admin/SettingsScreen.php:608
+#, php-format
+msgid "Import from %s"
+msgstr "Importer depuis %s"
+
+#: src/Admin/SettingsScreen.php:648
+msgid "You are not allowed to change SEO settings."
+msgstr "Tu n’as pas l’autorisation de modifier les réglages de référencement."
+
+#: src/Admin/SettingsScreen.php:689
+msgid "Redirect saved."
+msgstr "Redirection enregistrée."
+
+#: src/Admin/SettingsScreen.php:696
+msgid "Redirect deleted."
+msgstr "Redirection supprimée."
+
+#: src/Admin/SettingsScreen.php:696
+msgid "This redirect no longer exists. Reload the page."
+msgstr "Cette redirection n’existe plus. Recharge la page."
+
+#: src/Admin/SettingsScreen.php:706
+msgid "No valid CSV file received. Choose a file of 1 MB or less and try again."
+msgstr "Aucun fichier CSV valide reçu. Choisis un fichier de 1 Mo ou moins et réessaie."
+
+#. translators: %d: number of redirects.
+#: src/Admin/SettingsScreen.php:714
+#: src/Cli.php:183
+#, php-format
+msgid "%d redirect imported."
+msgid_plural "%d redirects imported."
+msgstr[0] "%d redirection importée."
+msgstr[1] "%d redirections importées."
+
+#. translators: %d: number of entries.
+#: src/Admin/SettingsScreen.php:723
+#: src/Cli.php:207
+#, php-format
+msgid "%d entry deleted."
+msgid_plural "%d entries deleted."
+msgstr[0] "%d entrée supprimée."
+msgstr[1] "%d entrées supprimées."
+
+#. translators: 1: posts scanned, 2: fields written or to write, 3: fields kept because already filled.
+#: src/Admin/SettingsScreen.php:737
+#: src/Cli.php:228
+#, php-format
+msgid "%1$d posts scanned, %2$d fields, %3$d kept as they were already filled."
+msgstr "%1$d publications analysées, %2$d champs, %3$d conservés parce qu’ils étaient déjà remplis."
+
+#: src/Admin/SettingsScreen.php:742
+msgid "Import done."
+msgstr "Importation terminée."
+
+#: src/Admin/SettingsScreen.php:742
+msgid "Simulation: nothing was written."
+msgstr "Simulation : rien n’a été écrit."
+
+#: src/Breadcrumbs.php:60
+msgid "Home"
+msgstr "Accueil"
+
+#: src/Breadcrumbs.php:192
+#: blocks/fil-ariane/index.js:22
+msgid "Breadcrumb"
+msgstr "Fil d’Ariane"
+
+#: src/Cli.php:23
+msgid "List redirects, newest first."
+msgstr "Liste les redirections, les plus récentes en premier."
+
+#: src/Cli.php:24
+msgid "Add or replace a redirect."
+msgstr "Ajoute ou remplace une redirection."
+
+#: src/Cli.php:25
+msgid "Delete a redirect by ID."
+msgstr "Supprime une redirection d’après son identifiant."
+
+#: src/Cli.php:26
+msgid "Import redirects from a CSV file: source,target,code,regex."
+msgstr "Importe des redirections depuis un fichier CSV : source,target,code,regex."
+
+#: src/Cli.php:27
+msgid "List not found addresses, most frequent first."
+msgstr "Liste les adresses introuvables, les plus fréquentes en premier."
+
+#: src/Cli.php:28
+msgid "Delete entries older than 90 days, or all with --all."
+msgstr "Supprime les entrées de plus de 90 jours, ou toutes avec --all."
+
+#: src/Cli.php:29
+msgid "Copy SEO fields from Yoast SEO, SEOPress or Rank Math. Dry run unless --apply."
+msgstr "Copie les champs de référencement de Yoast SEO, SEOPress ou Rank Math. Simulation, sauf avec --apply."
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:150
+#, php-format
+msgid "Redirect %d saved."
+msgstr "Redirection %d enregistrée."
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:162
+#, php-format
+msgid "No redirect with ID %d."
+msgstr "Aucune redirection avec l’identifiant %d."
+
+#. translators: %d: redirect ID.
+#: src/Cli.php:165
+#, php-format
+msgid "Redirect %d deleted."
+msgstr "Redirection %d supprimée."
+
+#: src/Cli.php:236
+msgid "Dry run: nothing was written. Add --apply to import."
+msgstr "Simulation : rien n’a été écrit. Ajoute --apply pour importer."
+
+#. translators: %s: the search variable, keep it as is.
+#: src/Context.php:96
+#, php-format
+msgid "Search results for %s"
+msgstr "Résultats de recherche pour %s"
+
+#. translators: 1: current page number, 2: total pages.
+#: src/Context.php:326
+#, php-format
+msgid "Page %1$d of %2$d"
+msgstr "Page %1$d sur %2$d"
+
+#. translators: %d: current page number.
+#: src/Context.php:328
+#, php-format
+msgid "Page %d"
+msgstr "Page %d"
+
+#. translators: 1: source received, 2: accepted sources.
+#: src/Importer.php:123
+#, php-format
+msgid "Unknown source %1$s. Use one of: %2$s."
+msgstr "Source inconnue : %1$s. Utilise l’une de celles-ci : %2$s."
+
+#: src/Plugin.php:148
+msgid "Fluffless SEO needs Fluffless Suite. Activate Fluffless Suite to turn search features back on."
+msgstr "Fluffless SEO a besoin de Fluffless Suite. Active Fluffless Suite pour réactiver les fonctions de référencement."
+
+#: src/Robots.php:134
+msgid "Pages"
+msgstr "Pages"
+
+#: src/Settings.php:221
+msgid "Title separator"
+msgstr "Séparateur de titre"
+
+#: src/Settings.php:226
+msgid "Keep out of search results"
+msgstr "Exclure des résultats de recherche"
+
+#: src/Settings.php:230
+msgid "Media attachment pages"
+msgstr "Pages des fichiers joints"
+
+#: src/Settings.php:235
+msgid "Taxonomies kept out of search results"
+msgstr "Taxonomies exclues des résultats de recherche"
+
+#: src/Settings.php:240
+msgid "Default sharing image (media ID)"
+msgstr "Image de partage par défaut (identifiant du média)"
+
+#: src/Settings.php:241
+msgid "Used when a page has no featured image. 0: the logo is used."
+msgstr "Utilisée quand une page n’a pas d’image mise en avant. 0 : le logo est utilisé."
+
+#: src/Settings.php:247
+msgid "X account of the site"
+msgstr "Compte X du site"
+
+#: src/Settings.php:248
+msgid "Written as @name. Empty: no twitter:site tag."
+msgstr "Sous la forme @nom. Vide : aucune balise twitter:site."
+
+#: src/Settings.php:252
+msgid "This site represents"
+msgstr "Ce site représente"
+
+#: src/Settings.php:254
+msgid "An organization"
+msgstr "Une organisation"
+
+#: src/Settings.php:255
+msgid "A local business"
+msgstr "Une entreprise locale"
+
+#: src/Settings.php:256
+msgid "A person"
+msgstr "Une personne"
+
+#: src/Settings.php:261
+msgid "Name"
+msgstr "Nom"
+
+#: src/Settings.php:262
+msgid "Empty: the site title."
+msgstr "Vide : le titre du site."
+
+#: src/Settings.php:266
+msgid "Logo or photo address"
+msgstr "Adresse du logo ou de la photo"
+
+#: src/Settings.php:267
+msgid "https only. Empty: the site logo, then the site icon."
+msgstr "https seulement. Vide : le logo du site, sinon l’icône du site."
+
+#: src/Settings.php:272
+msgid "Profiles elsewhere"
+msgstr "Profils ailleurs"
+
+#: src/Settings.php:273
+msgid "One https address per line: LinkedIn, Mastodon, directory listings."
+msgstr "Une adresse https par ligne : LinkedIn, Mastodon, fiches d’annuaires."
+
+#: src/Settings.php:277
+msgid "Kind of business"
+msgstr "Genre d’entreprise"
+
+#: src/Settings.php:279
+msgid "General local business"
+msgstr "Entreprise locale (général)"
+
+#: src/Settings.php:280
+msgid "Professional services"
+msgstr "Services professionnels"
+
+#: src/Settings.php:281
+msgid "Store"
+msgstr "Magasin"
+
+#: src/Settings.php:282
+msgid "Restaurant or café"
+msgstr "Restaurant ou café"
+
+#: src/Settings.php:283
+msgid "Health and beauty"
+msgstr "Santé et beauté"
+
+#: src/Settings.php:284
+msgid "Home and construction"
+msgstr "Habitation et construction"
+
+#: src/Settings.php:285
+msgid "Legal services"
+msgstr "Services juridiques"
+
+#: src/Settings.php:286
+msgid "Financial services"
+msgstr "Services financiers"
+
+#: src/Settings.php:291
+msgid "Street address"
+msgstr "Adresse municipale"
+
+#: src/Settings.php:295
+msgid "City"
+msgstr "Ville"
+
+#: src/Settings.php:299
+msgid "Province or state"
+msgstr "Province ou État"
+
+#: src/Settings.php:300
+msgid "Two-letter code, e.g. QC."
+msgstr "Code à deux lettres, par exemple QC."
+
+#: src/Settings.php:304
+msgid "Postal code"
+msgstr "Code postal"
+
+#: src/Settings.php:308
+msgid "Country"
+msgstr "Pays"
+
+#: src/Settings.php:309
+msgid "Two-letter code, e.g. CA."
+msgstr "Code à deux lettres, par exemple CA."
+
+#: src/Settings.php:313
+msgid "Phone"
+msgstr "Téléphone"
+
+#: src/Settings.php:317
+msgid "Price range"
+msgstr "Gamme de prix"
+
+#: src/Settings.php:318
+msgid "e.g. $$ or 80 to 150 CAD."
+msgstr "Par exemple $$ ou 80 à 150 CAD."
+
+#: src/Settings.php:322
+msgid "Opening hours"
+msgstr "Heures d’ouverture"
+
+#: src/Settings.php:323
+msgid "One range per line, in schema.org form: Mo-Fr 09:00-17:00"
+msgstr "Une plage par ligne, au format schema.org : Mo-Fr 09:00-17:00"
+
+#: src/Settings.php:327
+#: assets/editor.js:338
+msgid "Area served"
+msgstr "Territoire desservi"
+
+#: src/Settings.php:328
+msgid "One place per line: city, region or country."
+msgstr "Un lieu par ligne : ville, région ou pays."
+
+#: src/Settings.php:332
+msgid "First breadcrumb label"
+msgstr "Libellé du premier élément du fil d’Ariane"
+
+#: src/Settings.php:333
+msgid "Empty: Home, translated."
+msgstr "Vide : Accueil, traduit."
+
+#: src/Settings.php:343
+msgid "Content types left out of the sitemap"
+msgstr "Types de contenu exclus du plan du site"
+
+#: src/Settings.php:348
+msgid "Taxonomies left out of the sitemap"
+msgstr "Taxonomies exclues du plan du site"
+
+#: src/Settings.php:353
+msgid "List author pages in the sitemap"
+msgstr "Inclure les pages d’auteur ou d’autrice dans le plan du site"
+
+#: src/Settings.php:357
+msgid "Add the last modified date"
+msgstr "Ajouter la date de dernière modification"
+
+#: src/Settings.php:361
+msgid "Check redirects on every page"
+msgstr "Vérifier les redirections sur chaque page"
+
+#: src/Settings.php:362
+msgid "Off: only addresses that would show a not found page are checked, at no cost for other pages. On: one database query per page, to redirect addresses that still exist."
+msgstr "Désactivé : seules les adresses qui mèneraient à une page introuvable sont vérifiées, sans coût pour les autres pages. Activé : une requête à la base de données par page, pour rediriger des adresses qui existent encore."
+
+#: src/Settings.php:366
+msgid "robots.txt content"
+msgstr "Contenu du fichier robots.txt"
+
+#: src/Settings.php:367
+msgid "Replaces the file WordPress generates. The sitemap line is added if missing."
+msgstr "Remplace le fichier généré par WordPress. La ligne du plan du site est ajoutée si elle manque."
+
+#: src/Settings.php:371
+msgid "llms.txt content"
+msgstr "Contenu du fichier llms.txt"
+
+#: src/Settings.php:372
+msgid "Empty: a summary is built from the site title, tagline and main pages."
+msgstr "Vide : un résumé est construit à partir du titre du site, de son slogan et de ses pages principales."
+
+#: src/Settings.php:376
+msgid "Google Search Console code"
+msgstr "Code Google Search Console"
+
+#: src/Settings.php:377
+msgid "The content value of the verification tag, not the whole tag."
+msgstr "La valeur de l’attribut content de la balise de validation, pas la balise entière."
+
+#: src/Settings.php:381
+msgid "Bing Webmaster Tools code"
+msgstr "Code Bing Webmaster Tools"
+
+#. translators: %d: HTTP status code received.
+#: src/Store.php:129
+#, php-format
+msgid "Status code %d is not supported. Use 301, 302, 307 or 410."
+msgstr "Le code d’état %d n’est pas pris en charge. Utilise 301, 302, 307 ou 410."
+
+#: src/Store.php:170
+msgid "The pattern must hold 1 to 255 characters."
+msgstr "Le motif doit compter de 1 à 255 caractères."
+
+#. translators: %s: regular expression received.
+#: src/Store.php:175
+#, php-format
+msgid "The pattern %s is not a valid regular expression."
+msgstr "Le motif %s n’est pas une expression régulière valide."
+
+#. translators: %s: target received.
+#: src/Store.php:203
+#, php-format
+msgid "The target %s must be a path starting with / or an http(s) address."
+msgstr "La destination %s doit être un chemin commençant par / ou une adresse http(s)."
+
+#. translators: %s: file path.
+#: src/Store.php:340
+#, php-format
+msgid "Cannot read %s."
+msgstr "Impossible de lire %s."
+
+#. translators: 1: CSV line number, 2: error message.
+#: src/Store.php:360
+#, php-format
+msgid "Line %1$d: %2$s"
+msgstr "Ligne %1$d : %2$s"
+
+#: assets/editor.js:42
+msgid "Good"
+msgstr "Bon"
+
+#: assets/editor.js:43
+msgid "To improve"
+msgstr "À améliorer"
+
+#: assets/editor.js:44
+msgid "Problem"
+msgstr "Problème"
+
+#. translators: 1: width in pixels, 2: limit in pixels.
+#: assets/editor.js:53
+#, js-format
+msgid "Title width: about %1$d of %2$d px."
+msgstr "Largeur du titre : environ %1$d px sur %2$d."
+
+#. translators: 1: width in pixels, 2: limit in pixels.
+#: assets/editor.js:56
+#, js-format
+msgid "Description width: about %1$d of %2$d px."
+msgstr "Largeur de la description : environ %1$d px sur %2$d."
+
+#. translators: 1: word count, 2: suggested minimum.
+#: assets/editor.js:59
+#, js-format
+msgid "%1$d words (suggested: %2$d or more)."
+msgstr "%1$d mots (suggestion : %2$d ou plus)."
+
+#: assets/editor.js:67
+msgid "The content holds a level 1 heading: the page title already is one."
+msgstr "Le contenu comporte un intertitre de niveau 1 : le titre de la page en est déjà un."
+
+#: assets/editor.js:70
+msgid "A heading level is skipped (for example, level 2 then level 4)."
+msgstr "Un niveau d’intertitre est sauté (par exemple, niveau 2 puis niveau 4)."
+
+#: assets/editor.js:72
+msgid "Heading levels follow each other."
+msgstr "Les niveaux d’intertitres se suivent."
+
+#: assets/editor.js:72
+msgid "No level 2 heading to structure a long text."
+msgstr "Aucun intertitre de niveau 2 pour structurer un long texte."
+
+#. translators: %d: number of links.
+#: assets/editor.js:75
+#, js-format
+msgid "Links to this site: %d."
+msgstr "Liens vers ce site : %d."
+
+#. translators: %d: number of links.
+#: assets/editor.js:78
+#, js-format
+msgid "Links to other sites: %d."
+msgstr "Liens vers d’autres sites : %d."
+
+#: assets/editor.js:80
+msgid "Keyword in the SEO title."
+msgstr "Mot-clé dans la balise titre."
+
+#: assets/editor.js:82
+msgid "Keyword in the description."
+msgstr "Mot-clé dans la description."
+
+#: assets/editor.js:84
+msgid "Keyword in the first paragraph."
+msgstr "Mot-clé dans le premier paragraphe."
+
+#: assets/editor.js:86
+msgid "Keyword in a level 2 heading."
+msgstr "Mot-clé dans un intertitre de niveau 2."
+
+#: assets/editor.js:88
+msgid "Keyword in the address (slug)."
+msgstr "Mot-clé dans l’adresse (identifiant d’URL)."
+
+#: assets/editor.js:90
+msgid "Keyword in an image text alternative."
+msgstr "Mot-clé dans le texte de remplacement d’une image."
+
+#: assets/editor.js:90
+msgid "No image in the content."
+msgstr "Aucune image dans le contenu."
+
+#. translators: 1: number of occurrences, 2: density in percent.
+#: assets/editor.js:93
+#, js-format
+msgid "Keyword found %1$d times (%2$s %% of words)."
+msgstr "Mot-clé trouvé %1$d fois (%2$s %% des mots)."
+
+#. translators: 1: width in pixels, 2: limit in pixels, 3: state label.
+#: assets/editor.js:113
+#, js-format
+msgid "About %1$d of %2$d px. %3$s"
+msgstr "Environ %1$d px sur %2$d. %3$s"
+
+#: assets/editor.js:191
+msgid "Search appearance"
+msgstr "Apparence dans les résultats de recherche"
+
+#: assets/editor.js:200
+msgid "SEO title"
+msgstr "Balise titre"
+
+#: assets/editor.js:208
+msgid "Meta description"
+msgstr "Méta-description"
+
+#: assets/editor.js:215
+msgid "Variables: %%title%%, %%sitename%%, %%sep%%, %%excerpt%%. Widths are estimates."
+msgstr "Variables : %%title%%, %%sitename%%, %%sep%%, %%excerpt%%. Les largeurs sont des estimations."
+
+#: assets/editor.js:222
+msgid "Title when shared"
+msgstr "Titre au partage"
+
+#: assets/editor.js:229
+msgid "Description when shared"
+msgstr "Description au partage"
+
+#: assets/editor.js:237
+msgid "Image when shared"
+msgstr "Image au partage"
+
+#: assets/editor.js:237
+msgid "Empty: the featured image, then the default image."
+msgstr "Vide : l’image mise en avant, sinon l’image par défaut."
+
+#: assets/editor.js:249
+msgid "Replace image"
+msgstr "Remplacer l’image"
+
+#: assets/editor.js:249
+msgid "Choose image"
+msgstr "Choisir une image"
+
+#: assets/editor.js:250
+msgid "Remove image"
+msgstr "Retirer l’image"
+
+#: assets/editor.js:258
+msgid "Advanced"
+msgstr "Avancé"
+
+#: assets/editor.js:260
+msgid "Canonical address"
+msgstr "URL canonique"
+
+#: assets/editor.js:263
+msgid "Empty: this page’s own address. https only."
+msgstr "Vide : l’adresse de cette page. https seulement."
+
+#: assets/editor.js:270
+msgid "Search engine directives"
+msgstr "Directives pour les moteurs de recherche"
+
+#: assets/editor.js:272
+msgid "Keep out of search results (noindex)"
+msgstr "Exclure des résultats de recherche (noindex)"
+
+#: assets/editor.js:273
+msgid "Do not follow links (nofollow)"
+msgstr "Ne pas suivre les liens (nofollow)"
+
+#: assets/editor.js:274
+msgid "No cached copy (noarchive)"
+msgstr "Aucune copie en cache (noarchive)"
+
+#: assets/editor.js:275
+msgid "No text snippet (nosnippet)"
+msgstr "Aucun extrait textuel (nosnippet)"
+
+#: assets/editor.js:287
+msgid "Image preview size"
+msgstr "Taille de l’aperçu d’image"
+
+#: assets/editor.js:290
+msgid "Large (default)"
+msgstr "Grande (par défaut)"
+
+#: assets/editor.js:291
+msgid "Standard"
+msgstr "Standard"
+
+#: src/Settings.php:339
+#: assets/editor.js:292
+#: assets/editor.js:302
+msgid "None"
+msgstr "Aucune"
+
+#: assets/editor.js:299
+msgid "Structured data type"
+msgstr "Type de données structurées"
+
+#: assets/editor.js:301
+msgid "Automatic"
+msgstr "Automatique"
+
+#: assets/editor.js:308
+msgid "Start (date and time)"
+msgstr "Début (date et heure)"
+
+#: assets/editor.js:309
+msgid "End (date and time)"
+msgstr "Fin (date et heure)"
+
+#: assets/editor.js:310
+msgid "Venue name"
+msgstr "Nom du lieu"
+
+#: assets/editor.js:311
+msgid "Venue address"
+msgstr "Adresse du lieu"
+
+#: assets/editor.js:314
+msgid "Online event"
+msgstr "Événement en ligne"
+
+#: assets/editor.js:321
+msgid "Price"
+msgstr "Prix"
+
+#: assets/editor.js:322
+msgid "Currency (e.g. CAD)"
+msgstr "Devise (par exemple CAD)"
+
+#: assets/editor.js:325
+msgid "SKU"
+msgstr "UGS"
+
+#: assets/editor.js:326
+msgid "Brand"
+msgstr "Marque"
+
+#: assets/editor.js:329
+msgid "Availability"
+msgstr "Disponibilité"
+
+#: assets/editor.js:337
+msgid "Kind of service"
+msgstr "Genre de service"
+
+#: assets/editor.js:344
+msgid "Job title"
+msgstr "Titre du poste"
+
+#: assets/editor.js:349
+msgid "Analysis"
+msgstr "Analyse"
+
+#: assets/editor.js:351
+msgid "Target keyword"
+msgstr "Mot-clé cible"
+
+#: assets/editor.js:353
+msgid "Checked in this browser only: nothing is sent anywhere."
+msgstr "Vérifié dans ce navigateur seulement : rien n’est envoyé nulle part."
+
+#: assets/editor.js:379
+#: assets/editor.js:380
+msgid "SEO"
+msgstr "Référencement"
+
+#: blocks/fil-ariane/index.js:24
+msgid "Separator"
+msgstr "Séparateur"
+
+#: blocks/fil-ariane/index.js:25
+msgid "Three characters at most. Hidden from screen readers."
+msgstr "Trois caractères au maximum. Masqué pour les lecteurs d’écran."
+
+#: blocks/fil-ariane/block.json
+msgctxt "block description"
+msgid "Path from the home page to the current page, with matching structured data. Rendered on the server, no script."
+msgstr "Chemin de la page d’accueil jusqu’à la page actuelle, avec les données structurées correspondantes. Rendu par le serveur, aucun script."
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "breadcrumb"
+msgstr "fil d’Ariane"
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "path"
+msgstr "chemin"
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "navigation"
+msgstr "navigation"
+
+#: blocks/fil-ariane/block.json
+msgctxt "block keyword"
+msgid "fil d'Ariane"
+msgstr "fil d’Ariane"
+
+#: src/Admin/SettingsScreen.php:199
+msgid "FAQ page data"
+msgstr "Données de FAQ de la page"
+
+#: src/Admin/SettingsScreen.php:200
+msgid "Describes the Details blocks of a page as questions and answers. Turn off when the questions are not a real FAQ."
+msgstr "Décrit les blocs Détails d’une page comme des questions et des réponses. À désactiver si les questions ne forment pas une vraie FAQ."
+
+#. translators: %s: number of redirect rules.
+#: src/Admin/SettingsScreen.php:71
+#, php-format
+msgid "Deleting this plugin permanently erases %s redirect rule, the not found log and the SEO settings. Turn on “Keep my data when the plugin is deleted” to keep them."
+msgid_plural "Deleting this plugin permanently erases %s redirect rules, the not found log and the SEO settings. Turn on “Keep my data when the plugin is deleted” to keep them."
+msgstr[0] "Supprimer cette extension efface définitivement %s règle de redirection, le journal des pages introuvables et les réglages SEO. Active « Conserver mes données quand l’extension est supprimée » pour les garder."
+msgstr[1] "Supprimer cette extension efface définitivement %s règles de redirection, le journal des pages introuvables et les réglages SEO. Active « Conserver mes données quand l’extension est supprimée » pour les garder."
+
+#: src/Admin/SettingsScreen.php:81
+msgid "Open the SEO settings"
+msgstr "Ouvrir les réglages SEO"
+
+#: src/Admin/SettingsScreen.php:247
+msgid "When the plugin is deleted"
+msgstr "Quand l’extension est supprimée"
+
+#: src/Admin/SettingsScreen.php:248
+msgid "WordPress asks no confirmation before deleting a plugin. Turn this on to keep your redirects and settings."
+msgstr "WordPress ne demande aucune confirmation avant de supprimer une extension. Active cette option pour conserver tes redirections et tes réglages."
+
+#: src/Admin/SettingsScreen.php:491
+msgid "Deleting the plugin from the Plugins screen erases these rules and the not found log. To keep them, turn on “Keep my data when the plugin is deleted” in the Settings tab."
+msgstr "Supprimer l’extension depuis l’écran Extensions efface ces règles et le journal des pages introuvables. Pour les conserver, active « Conserver mes données quand l’extension est supprimée » dans l’onglet Réglages."
+
+#: src/Plugin.php:142
+msgid "Rank Math is active but its setup is not finished, and Fluffless SEO stays quiet while Rank Math is active. Finish the Rank Math setup, or deactivate Rank Math to let Fluffless SEO handle your search tags."
+msgstr "Rank Math est actif, mais sa configuration n’est pas terminée, et Fluffless SEO reste silencieux tant que Rank Math est actif. Termine la configuration de Rank Math, ou désactive Rank Math pour laisser Fluffless SEO gérer tes balises de recherche."
+
+#: src/Settings.php:385
+msgid "Keep my data when the plugin is deleted"
+msgstr "Conserver mes données quand l’extension est supprimée"
+
+#: src/Settings.php:386
+msgid "Off: deleting the plugin erases its settings, the redirect rules, the not found log and the fields written on each page. On: all of it stays in the database."
+msgstr "Désactivé : supprimer l’extension efface ses réglages, les règles de redirection, le journal des pages introuvables et les champs écrits sur chaque page. Activé : tout reste dans la base de données."
+
+#: blocks/fil-ariane/block.json
+msgctxt "block title"
+msgid "Breadcrumb with structured data"
+msgstr "Fil d’Ariane avec données structurées"
+
+#: src/Robots.php:227
+msgid "IndexNow (Fluffless SEO)"
+msgstr "IndexNow (Fluffless SEO)"
+
+#: src/Robots.php:230
+msgid "The address of the published page and the IndexNow key of your site"
+msgstr "L’adresse de la page publiée et la clé IndexNow de votre site"
+
+#: assets/editor.js:63
+msgid "More than one level 1 heading: keep one per page."
+msgstr "Plus d’un intertitre de niveau 1 : n’en gardez qu’un par page."
+
+#: assets/editor.js:64
+msgid "No level 1 heading: this template does not show the page title, so the content needs one."
+msgstr "Aucun intertitre de niveau 1 : ce gabarit n’affiche pas le titre de la page, le contenu doit donc en comporter un."
+
+#: src/Settings.php:337
+msgid "Default language for x-default"
+msgstr "Langue par défaut pour x-default"
+
+#: src/Settings.php:338
+msgid "Page shown to people whose language has no translation. Written only when the page exists in this language."
+msgstr "Page montrée aux gens dont la langue n’a pas de traduction. Écrite seulement quand la page existe dans cette langue."
+
+#: assets/editor.js:341
+msgid "Application category (e.g. WebApplication)"
+msgstr "Catégorie d’application (par exemple WebApplication)"
+
+#: assets/editor.js:342
+msgid "Operating system or platform (e.g. WordPress)"
+msgstr "Système d’exploitation ou plateforme (par exemple WordPress)"

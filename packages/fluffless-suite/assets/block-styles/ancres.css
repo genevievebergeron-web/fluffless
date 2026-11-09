@@ -1,0 +1,36 @@
+/* Index d'ancres : une liste de liens vers les sections de la page, en pastilles sur une ligne,
+   qui reste collée en haut de l'écran pendant la lecture. Sans script : les ancres sont celles
+   des titres (attribut « Ancre HTML » du bloc Titre). */
+.wp-block-list.is-style-ancres {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0;
+	padding: 0.75rem 0;
+	list-style: none;
+	background: var(--wp--preset--color--base);
+}
+
+.wp-block-list.is-style-ancres li {
+	margin: 0;
+}
+
+.wp-block-list.is-style-ancres a {
+	display: inline-block;
+	padding: 0.35em 0.9em;
+	border: 1px solid var(--wp--preset--color--divider);
+	border-radius: var(--wp--custom--radius--round, 999px);
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+	min-height: 44px;
+	line-height: 2.2;
+}
+
+.wp-block-list.is-style-ancres a:hover,
+.wp-block-list.is-style-ancres a:focus-visible {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}

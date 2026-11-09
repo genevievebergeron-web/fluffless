@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/onglets",
+	"version": "0.2.1",
+	"title": "Tabbed panels",
+	"category": "design",
+	"icon": "index-card",
+	"description": "Two to six panels, one visible at a time: tabs on wide screens, an accordion on phones or on request. Built on the core Details block, without any JavaScript for visitors.",
+	"keywords": [ "tabs", "accordion", "panels", "onglets", "toggle" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"display": { "type": "string", "enum": [ "tabs", "accordion" ], "default": "tabs" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

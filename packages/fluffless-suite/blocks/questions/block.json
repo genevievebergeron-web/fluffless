@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/questions",
+	"version": "0.2.1",
+	"title": "Frequently asked questions",
+	"category": "design",
+	"icon": "editor-help",
+	"description": "A heading and a list of questions that open one by one: native HTML accordions, no JavaScript for the visitor, keyboard ready. Add a question in one click. The SEO module reads them for the FAQ structured data.",
+	"keywords": [ "faq", "questions", "answers", "accordion", "details" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

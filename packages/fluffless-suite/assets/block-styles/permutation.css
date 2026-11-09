@@ -1,0 +1,38 @@
+/* Permutation du libellé : au survol et au clavier, le libellé glisse vers le haut et une copie
+   prend sa place. La copie vient de data-fl-label (posé par LabelSwap au rendu) ; son texte de
+   remplacement vide, après la barre oblique, fait qu'un lecteur d'écran lit le libellé réel une
+   seule fois. Sans cette syntaxe, sous mouvement réduit ou en couleurs forcées, rien ne change :
+   le texte réel reste visible. Un lien à sous-menu (.has-child) garde son chevron en ::after : il
+   est laissé tel quel. */
+@supports (content: "x" / "") {
+	@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+		.is-style-permutation [data-fl-label]:not(.has-child > *) {
+			position: relative;
+			overflow: hidden;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.is-style-permutation [data-fl-label]:not(.has-child > *)::before,
+		.is-style-permutation [data-fl-label]:not(.has-child > *)::after {
+			content: attr(data-fl-label) / "";
+			position: absolute;
+			inset: 0;
+			box-sizing: border-box;
+			padding: inherit;
+			-webkit-text-fill-color: currentColor;
+			transition: translate var(--wp--custom--transition);
+		}
+
+		.is-style-permutation [data-fl-label]:not(.has-child > *):is(:hover, :focus-visible)::before {
+			translate: 0 -100%;
+		}
+
+		.is-style-permutation [data-fl-label]:not(.has-child > *)::after {
+			translate: 0 100%;
+		}
+
+		.is-style-permutation [data-fl-label]:not(.has-child > *):is(:hover, :focus-visible)::after {
+			translate: 0 0;
+		}
+	}
+}

@@ -1,0 +1,191 @@
+/*
+ * Page de connexion aux couleurs du site : palette, police, rayon et logo du site sur
+ * wp-login.php, sans réglage ni script. Les variables viennent des styles globaux
+ * (variation choisie, écrans Palette et Polices de la Suite compris) et sont posées en
+ * ligne juste avant cette feuille (voir functions.php). Aucune couleur fixe ici.
+ */
+
+body.login {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+}
+
+/* Titre : le nom du site en texte ; functions.php pose le logo par-dessus quand il y en a un. */
+.login h1 a {
+	background: none;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0 auto 1.5rem;
+	overflow: visible;
+	text-indent: 0;
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 700;
+	line-height: var(--wp--custom--line-height--snug);
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+}
+
+.login h1 a:hover,
+.login h1 a:focus {
+	color: var(--wp--preset--color--accent);
+}
+
+/* Formulaire et avis : une carte sur la surface du thème. */
+.login form,
+.login .message,
+.login .success,
+.login .notice,
+.login #login_error {
+	background: var(--wp--preset--color--surface);
+	color: var(--wp--preset--color--contrast);
+	border: 1px solid var(--wp--preset--color--divider);
+	border-radius: var(--wp--custom--radius--soft);
+	box-shadow: none;
+}
+
+.login .message,
+.login .success,
+.login .notice-info,
+.login .notice-success {
+	border-left: 4px solid var(--wp--preset--color--accent);
+}
+
+.login #login_error,
+.login .notice-error,
+.login .notice-warning {
+	border-left: 4px solid var(--wp--preset--color--alert);
+}
+
+.login label {
+	color: var(--wp--preset--color--contrast);
+}
+
+/* Champs : fond de la page, bordure du thème, accent au focus. */
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"],
+.login input.input,
+.login select {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	border: 1px solid var(--wp--preset--color--divider);
+	border-radius: var(--wp--custom--radius--small);
+	box-shadow: none;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="email"]:focus,
+.login input.input:focus,
+.login select:focus {
+	border-color: var(--wp--preset--color--accent);
+	box-shadow: 0 0 0 1px var(--wp--preset--color--accent);
+	outline: none;
+}
+
+/* Case à cocher native, teintée à l'accent : rien à redessiner. */
+.login input[type="checkbox"] {
+	appearance: auto;
+	-webkit-appearance: auto;
+	accent-color: var(--wp--preset--color--accent);
+	width: 1rem;
+	height: 1rem;
+	margin: 0.15rem 0.5rem 0 0;
+	border: 0;
+	background: none;
+	box-shadow: none;
+}
+
+.login input[type="checkbox"]:checked::before {
+	content: none;
+}
+
+/* Bouton principal : même recette que les boutons du site. */
+.login.wp-core-ui .button-primary {
+	background: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	color: var(--wp--preset--color--on-accent);
+	border: 2px solid transparent;
+	border-radius: var(--wp--custom--radius--soft);
+	font-weight: 700;
+	text-shadow: none;
+	box-shadow: none;
+}
+
+.login.wp-core-ui .button-primary:hover,
+.login.wp-core-ui .button-primary:active {
+	background: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	color: var(--wp--preset--color--on-accent);
+	border-color: var(--wp--preset--color--contrast);
+}
+
+.login.wp-core-ui .button-primary:focus,
+.login.wp-core-ui .button-primary:focus-visible {
+	background: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	color: var(--wp--preset--color--on-accent);
+	box-shadow: none;
+	outline: 2px solid var(--wp--preset--color--accent-2);
+	outline-offset: 2px;
+}
+
+/* Boutons secondaires : voir le mot de passe, changer de langue. */
+.login.wp-core-ui .button.wp-hide-pw,
+.login.wp-core-ui .language-switcher .button {
+	background: transparent;
+	color: var(--wp--preset--color--muted);
+	border-color: transparent;
+	border-radius: var(--wp--custom--radius--small);
+	box-shadow: none;
+}
+
+.login.wp-core-ui .language-switcher .button {
+	border-color: var(--wp--preset--color--divider);
+	color: var(--wp--preset--color--contrast);
+}
+
+.login.wp-core-ui .button.wp-hide-pw:hover,
+.login.wp-core-ui .button.wp-hide-pw:focus,
+.login.wp-core-ui .language-switcher .button:hover,
+.login.wp-core-ui .language-switcher .button:focus {
+	color: var(--wp--preset--color--accent);
+	background: transparent;
+	box-shadow: none;
+}
+
+.login.wp-core-ui .button.wp-hide-pw:focus-visible,
+.login.wp-core-ui .language-switcher .button:focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent-2);
+	outline-offset: 2px;
+}
+
+/* Liens sous le formulaire. */
+.login #nav,
+.login #backtoblog,
+.login .privacy-policy-page-link {
+	color: var(--wp--preset--color--muted);
+}
+
+.login #nav a,
+.login #backtoblog a,
+.login .privacy-policy-page-link a,
+.login form a {
+	color: var(--wp--preset--color--accent);
+	text-decoration: underline;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover,
+.login .privacy-policy-page-link a:hover,
+.login form a:hover {
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+}
+
+.login #nav a:focus-visible,
+.login #backtoblog a:focus-visible,
+.login .privacy-policy-page-link a:focus-visible,
+.login form a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent-2);
+	outline-offset: 2px;
+	box-shadow: none;
+}

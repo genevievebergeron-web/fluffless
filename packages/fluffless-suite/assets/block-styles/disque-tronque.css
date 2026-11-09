@@ -1,0 +1,43 @@
+/* Disque tronqué : un disque en couleur d'accent derrière l'image, coupé à plat en bas. L'image,
+   recadrée en 3:4, dépasse le haut du disque et le haut de la carte, dont le rembourrage du haut est
+   retiré : la marge négative de la figure est rendue en marge au-dessus du bloc, donc rien n'est recouvert. Le disque passe
+   derrière l'image (z-index -1 dans le contexte isolé de la figure). Masqué à l'impression.
+   Les marges du flux et de la Carte en côte à côte passent par des sélecteurs plus lourds, d'où
+   les deux !important. */
+.is-style-disque-tronque {
+	overflow: visible;
+	padding-block-start: 0;
+	margin-block-start: calc(var(--wp--style--block-gap, 1.5rem) + 2rem) !important;
+}
+
+.is-style-disque-tronque figure {
+	position: relative;
+	isolation: isolate;
+	overflow: visible;
+	margin-block-start: -2rem !important;
+	text-align: center;
+}
+
+.is-style-disque-tronque figure::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: auto 0 0;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: var(--wp--preset--color--accent);
+	clip-path: inset(0 0 12%);
+}
+
+.is-style-disque-tronque figure img {
+	width: 80%;
+	height: auto;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+}
+
+@media print {
+	.is-style-disque-tronque figure::before {
+		display: none;
+	}
+}

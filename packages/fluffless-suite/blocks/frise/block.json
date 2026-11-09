@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/frise",
+	"version": "0.2.1",
+	"title": "Timeline",
+	"category": "design",
+	"icon": "editor-ol",
+	"description": "A heading and two to eight steps on a line, each with a date or label, a title and one paragraph. Vertical or, on wide screens, side by side; dots or numbers as markers. CSS only.",
+	"keywords": [ "timeline", "steps", "process", "history", "frise" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"direction": { "type": "string", "enum": [ "vertical", "horizontal" ], "default": "vertical" },
+		"marker": { "type": "string", "enum": [ "dot", "number" ], "default": "dot" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

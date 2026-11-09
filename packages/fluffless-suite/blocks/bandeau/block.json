@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/bandeau",
+	"version": "0.2.1",
+	"title": "Scrolling keywords",
+	"category": "design",
+	"icon": "leftright",
+	"description": "A line of two to twelve keywords that scrolls across the page: separator, speed, direction, three looks (accent band, outline, stroked letters) and three sizes, in a colour from your theme. A real list read once by screen readers, a Pause button, paused on hover, still and wrapped under reduced motion, a plain list in print. No JavaScript on the site.",
+	"keywords": [ "marquee", "ticker", "keywords", "scrolling", "banner", "bandeau", "défilant" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"items": { "type": "array", "items": { "type": "string" }, "default": [] },
+		"separator": { "type": "string", "enum": [ "dot", "star", "slash", "arrow" ], "default": "dot" },
+		"speed": { "type": "string", "enum": [ "slow", "medium", "fast" ], "default": "medium" },
+		"direction": { "type": "string", "enum": [ "left", "right" ], "default": "left" },
+		"look": { "type": "string", "enum": [ "accent", "outline", "stroke" ], "default": "accent" },
+		"size": { "type": "string", "enum": [ "medium", "large", "giant" ], "default": "medium" },
+		"colour": { "type": "string", "default": "" },
+		"align": { "type": "string", "default": "full" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

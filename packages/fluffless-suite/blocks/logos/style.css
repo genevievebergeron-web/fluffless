@@ -1,0 +1,7 @@
+/* Grille : le groupe natif. Rangée : une ligne centrée qui s'enroule. Monochrome : gris jusqu'au survol ou au focus. */
+.fluffless-logos .wp-block-image img{inline-size:100%;block-size:auto;aspect-ratio:3/2;object-fit:contain}
+.fluffless-logos.is-arrangement-row .wp-block-group.is-layout-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}
+.fluffless-logos.is-arrangement-row .wp-block-image{flex:0 1 9rem}
+.fluffless-logos.is-tone-mono .wp-block-image img{filter:grayscale(1);opacity:.7;transition:filter .2s,opacity .2s}
+.fluffless-logos.is-tone-mono .wp-block-image:is(:hover,:focus-within) img{filter:none;opacity:1}
+@media (prefers-reduced-motion:reduce){.fluffless-logos .wp-block-image img{transition:none}}

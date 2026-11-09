@@ -1,0 +1,4 @@
+/* La grille vient du groupe natif (layout grid) ; ici, seulement la taille de la photo et du logo. */
+.fluffless-temoignages .wp-block-quote{margin:0}
+.fluffless-temoignages__photo img{inline-size:4rem;block-size:4rem;border-radius:50%;object-fit:cover}
+.fluffless-temoignages__logo img{inline-size:auto;block-size:2rem}

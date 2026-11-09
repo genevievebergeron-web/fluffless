@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/galerie",
+	"version": "0.2.1",
+	"title": "Photo gallery",
+	"category": "design",
+	"icon": "format-gallery",
+	"description": "A plain photo gallery on two, three or four columns, as a regular grid or a mosaic, with or without captions. Photos enlarge on click with the viewer built into WordPress. The content stays in regular blocks.",
+	"keywords": [ "gallery", "photos", "images", "mosaic", "galerie" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"arrangement": { "type": "string", "enum": [ "grid", "mosaic" ], "default": "grid" },
+		"captions": { "type": "string", "enum": [ "shown", "hidden" ], "default": "shown" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

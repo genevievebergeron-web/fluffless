@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/coordonnees",
+	"version": "0.2.1",
+	"title": "Contact details",
+	"category": "design",
+	"icon": "location",
+	"description": "Address, phone and opening hours read from the Local business settings of Fluffless SEO: one place to fill in, shown here and marked up for search engines. No script.",
+	"keywords": [
+		"address",
+		"phone",
+		"hours",
+		"contact",
+		"coordonnées"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"hours": {
+			"type": "string",
+			"enum": [
+				"shown",
+				"hidden"
+			],
+			"default": "shown"
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

@@ -1,0 +1,6 @@
+/* Liens en pastilles, icône et libellé ; aucun script de réseau. Pastille de 44 px bordure comprise, contenu centré. */
+.fluffless-partage__list{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.fluffless-partage__link{display:inline-flex;align-items:center;justify-content:center;gap:.5em;box-sizing:border-box;min-block-size:44px;min-inline-size:44px;padding:.5em .9em;border:1px solid var(--wp--preset--color--divider);border-radius:var(--wp--custom--radius--round,2em);color:inherit;text-decoration:none}
+.fluffless-partage__link:hover,.fluffless-partage__link:focus-visible{border-color:var(--wp--preset--color--accent)}
+.fluffless-partage__link svg{inline-size:1.25em;block-size:1.25em}
+.fluffless-partage__link .wp-block-fluffless-reseaux__text{padding:0}

@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/empreinte",
+	"version": "0.2.1",
+	"title": "Page footprint",
+	"example": {},
+	"category": "widgets",
+	"icon": "chart-bar",
+	"description": "Last SWDM v4 estimate of this page, for a new and a returning visit, with its rating, date and method link. Static HTML, no JavaScript on the site. Shows nothing until the page is measured.",
+	"keywords": [ "footprint", "carbon", "emissions", "sobriety" ],
+	"textdomain": "fluffless-suite",
+	"usesContext": [ "postId", "postType" ],
+	"attributes": {
+		"anchor": { "type": "string" },
+		"methodUrl": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": false,
+		"align": [ "left", "center", "right" ],
+		"color": {
+			"text": true,
+			"background": true,
+			"gradients": false,
+			"link": true,
+			"customColor": false
+		},
+		"typography": { "fontSize": true },
+		"spacing": { "margin": true, "padding": true }
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

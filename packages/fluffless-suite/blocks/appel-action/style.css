@@ -1,0 +1,10 @@
+/* Voile base à 80 % : contraste 7,8:1 au pire (7 palettes). */
+.fluffless-appel-action{display:flex;flex-direction:column;gap:var(--wp--preset--spacing--40,1.5rem)}
+.fluffless-appel-action>*{margin-block:0}
+.fluffless-appel-action.is-size-thin{padding-block:var(--wp--preset--spacing--40,1.5rem)}
+.fluffless-appel-action.is-size-generous{padding-block:var(--wp--preset--spacing--80,6rem)}
+.fluffless-appel-action.is-justify-center{align-items:center;text-align:center}
+.fluffless-appel-action.is-justify-center .wp-block-buttons{justify-content:center}
+.fluffless-appel-action.is-background-image{position:relative;isolation:isolate;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast)}
+.fluffless-appel-action.is-background-image::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--wp--preset--color--base);opacity:.8}
+.fluffless-appel-action__image{position:absolute;inset:0;z-index:-2;inline-size:100%;block-size:100%;object-fit:cover}

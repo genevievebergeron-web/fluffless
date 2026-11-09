@@ -1,0 +1,6 @@
+/* Colonnes : la grille native. En liste : une colonne, l'icône à gauche du titre et de la ligne. */
+.fluffless-valeurs.is-display-list .wp-block-group.is-layout-grid{grid-template-columns:1fr;max-inline-size:48rem}
+.fluffless-valeurs.is-display-list .is-layout-grid>:has(>.wp-block-fluffless-icone){display:grid;grid-template-columns:auto 1fr;column-gap:var(--wp--preset--spacing--40,1.5rem);align-items:start}
+.fluffless-valeurs.is-display-list .is-layout-grid>*>*{margin-block:0}
+.fluffless-valeurs.is-display-list .is-layout-grid>*>:not(.wp-block-fluffless-icone){grid-column:2}
+.fluffless-valeurs.is-display-list .is-layout-grid>*>.wp-block-fluffless-icone{grid-row:1/span 2}

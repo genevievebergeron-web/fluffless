@@ -1,0 +1,4 @@
+/* La grille vient du groupe natif (layout grid) ; ici, le cadrage de la photo et le rôle. */
+.fluffless-equipe__photo img{inline-size:100%;block-size:auto;aspect-ratio:1;object-fit:cover}
+.fluffless-equipe.is-photo-round .fluffless-equipe__photo img{border-radius:50%}
+.fluffless-equipe__role{font-size:var(--wp--preset--font-size--small);color:var(--wp--preset--color--muted)}

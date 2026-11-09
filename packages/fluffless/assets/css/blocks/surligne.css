@@ -1,0 +1,11 @@
+/* Titre surligné : une bande de marqueur derrière chaque ligne, sans changer la boîte du titre.
+   Le soulignement épais remonte dans les glyphes ; il est peint sous le texte. La bande est
+   l'accent fondu à 25 % dans le fond, pour que le texte garde son contraste. */
+.wp-block-heading.is-style-surligne {
+	text-decoration-line: underline;
+	text-decoration-color: var(--wp--preset--color--surface);
+	text-decoration-color: color-mix(in srgb, var(--wp--preset--color--accent) 25%, var(--wp--preset--color--base));
+	text-decoration-thickness: 0.55em;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -0.28em;
+}

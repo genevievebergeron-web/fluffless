@@ -1,0 +1,8 @@
+/* Coin coupé : coin supérieur droit et inférieur gauche coupés en biais.
+   La taille suit le jeton --wp--custom--cut (theme.json du thème et ses variations de style). */
+.is-style-coin-coupe:not(.wp-block-button):not(.wp-block-image),
+.wp-block-button.is-style-coin-coupe .wp-block-button__link,
+.wp-block-image.is-style-coin-coupe img {
+	clip-path: polygon(0 0, calc(100% - var(--wp--custom--cut)) 0, 100% var(--wp--custom--cut), 100% 100%, var(--wp--custom--cut) 100%, 0 calc(100% - var(--wp--custom--cut)));
+	border-radius: 0;
+}

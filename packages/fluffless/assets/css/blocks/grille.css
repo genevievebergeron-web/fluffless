@@ -1,0 +1,13 @@
+/* Tuiles de grille : la taille suit la largeur de la tuile, pas celle de l'écran.
+   Un titre Énorme ou un chiffre Géant tient dans une tuile de 200 px (320 px d'écran). */
+.is-layout-grid > * {
+	container-type: inline-size;
+}
+
+.is-layout-grid > * :is(h2, h3, h4).has-xx-large-font-size {
+	font-size: clamp(1.6rem, 13cqi, var(--wp--preset--font-size--xx-large)) !important;
+}
+
+.is-layout-grid > * p.has-xx-large-font-size {
+	font-size: clamp(1.9rem, 22cqi, var(--wp--preset--font-size--xx-large)) !important;
+}

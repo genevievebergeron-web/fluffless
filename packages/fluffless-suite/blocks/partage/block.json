@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/partage",
+	"version": "0.2.1",
+	"title": "Share buttons",
+	"category": "design",
+	"icon": "share",
+	"description": "Plain links that open the share page of LinkedIn, Facebook, Bluesky, Threads or the visitor's email app for the current page. No network script, nothing loaded until the click.",
+	"keywords": [
+		"share",
+		"social",
+		"links",
+		"partage"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"display": {
+			"type": "string",
+			"enum": [
+				"icons",
+				"labels"
+			],
+			"default": "icons"
+		},
+		"linkedin": {
+			"type": "boolean",
+			"default": true
+		},
+		"facebook": {
+			"type": "boolean",
+			"default": true
+		},
+		"bluesky": {
+			"type": "boolean",
+			"default": true
+		},
+		"threads": {
+			"type": "boolean",
+			"default": true
+		},
+		"email": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

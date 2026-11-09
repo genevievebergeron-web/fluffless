@@ -1,0 +1,28 @@
+/* Liste à filets : lignes séparées par un filet d'un pixel, fond transparent, puces retirées.
+   list-style-type: "" plutôt que list-style: none, qui retire le rôle de liste dans Safari et
+   VoiceOver. Vaut pour la liste du cœur, celles des sections Liste et Tarifs et les lignes
+   d'horaire des Coordonnées. */
+:is(ul, ol):is(.is-style-liste-filets, .is-style-liste-filets *) {
+	padding-inline-start: 0;
+	background: none;
+	list-style-type: "";
+}
+
+.is-style-liste-filets li,
+.is-style-liste-filets dl > div {
+	padding-block: 0.6em;
+	border-block-start: 1px solid;
+}
+
+.is-style-liste-filets li li:first-child {
+	margin-block-start: 0.6em;
+}
+
+.is-style-liste-filets li li {
+	padding-inline-start: 1.5em;
+}
+
+:is(ul, ol).is-style-liste-filets > li:last-child,
+.is-style-liste-filets :is(ul, ol, dl):not(li *) > :last-child {
+	border-block-end: 1px solid;
+}

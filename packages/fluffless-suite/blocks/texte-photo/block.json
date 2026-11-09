@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/texte-photo",
+	"version": "0.2.1",
+	"title": "Text and photo",
+	"category": "design",
+	"icon": "align-pull-left",
+	"description": "A heading, a short text and a button beside a photo. Move the photo, change the proportion, remove the button or colour the background. The content stays in regular blocks.",
+	"keywords": [ "text", "photo", "image", "section", "texte" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"media": { "type": "string", "enum": [ "end", "start" ], "default": "end" },
+		"ratio": { "type": "string", "enum": [ "50-50", "60-40" ], "default": "50-50" },
+		"background": { "type": "string", "enum": [ "surface", "accent" ], "default": "surface" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

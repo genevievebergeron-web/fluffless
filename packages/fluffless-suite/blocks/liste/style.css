@@ -1,0 +1,4 @@
+/* Coches : un caractère de puce, sans image ; les numéros viennent de la liste ordonnée native. */
+.fluffless-liste.is-marker-check .wp-block-list{list-style-type:"\2713\00a0\00a0"}
+.fluffless-liste.is-columns-2 li{break-inside:avoid}
+@media (min-width:600px){.fluffless-liste.is-columns-2 .wp-block-list{columns:2;column-gap:var(--wp--preset--spacing--50,2rem)}}

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/lien-infolettre",
+	"version": "0.2.1",
+	"title": "Newsletter link",
+	"example": {},
+	"category": "widgets",
+	"icon": "email",
+	"description": "Link to the newsletter sign-up page set in Settings, Fluffless, Footer.",
+	"keywords": [ "footer" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": false,
+		"color": { "text": true, "background": false, "gradients": false, "link": true, "customColor": false },
+		"typography": { "fontSize": true },
+		"spacing": { "margin": true }
+	},
+	"editorScript": "fluffless-footer-blocks-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

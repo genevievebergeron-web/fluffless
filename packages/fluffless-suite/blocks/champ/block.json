@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/champ",
+	"version": "0.2.1",
+	"title": "Form field",
+	"category": "widgets",
+	"icon": "edit",
+	"description": "One field of a form: text, email, phone, number, date, list, checkboxes, choice, long text, consent or hidden value.",
+	"keywords": [ "field", "champ", "input", "form", "formulaire" ],
+	"textdomain": "fluffless-suite",
+	"ancestor": [ "fluffless/formulaire" ],
+	"usesContext": [ "fluffless/formId" ],
+	"attributes": {
+		"type": { "type": "string", "enum": [ "text", "email", "phone", "number", "date", "select", "checkboxes", "radio", "textarea", "consent", "hidden" ], "default": "text" },
+		"label": { "type": "string", "default": "" },
+		"name": { "type": "string", "default": "" },
+		"required": { "type": "boolean", "default": false },
+		"placeholder": { "type": "string", "default": "" },
+		"autocomplete": { "type": "string", "default": "" },
+		"help": { "type": "string", "default": "" },
+		"options": { "type": "string", "default": "" },
+		"value": { "type": "string", "default": "" },
+		"when": { "type": "string", "default": "" },
+		"is": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": false,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

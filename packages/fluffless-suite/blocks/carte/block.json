@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/carte",
+	"version": "0.2.1",
+	"title": "Map",
+	"category": "design",
+	"icon": "location",
+	"description": "A still map or a photo of the entrance, the address, the hours and a button that opens the visitor's own maps app. No embedded map, no third-party request, no consent to ask.",
+	"keywords": [
+		"map",
+		"address",
+		"directions",
+		"location",
+		"carte"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"layout": {
+			"type": "string",
+			"enum": [
+				"side",
+				"stacked"
+			],
+			"default": "side"
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

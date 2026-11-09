@@ -1,0 +1,19 @@
+/* Inversion au passage : le bloc s'inverse sur ce qu'il recouvre (différence avec du blanc), donc
+   clair sur fond sombre et sombre sur fond clair. Sur un fond de teinte moyenne, le contraste
+   tombe : réserver au logo, à l'icône et au décor, pas au texte courant. Retour à la normale en
+   couleurs forcées et à l'impression. */
+.is-style-inversion {
+	mix-blend-mode: difference;
+	color: white;
+}
+
+.is-style-inversion a {
+	color: inherit;
+}
+
+@media print, (forced-colors: active) {
+	.is-style-inversion {
+		mix-blend-mode: normal;
+		color: inherit;
+	}
+}

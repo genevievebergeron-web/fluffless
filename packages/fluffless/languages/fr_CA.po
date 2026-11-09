@@ -1,0 +1,1730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fluffless 0.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/fluffless\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Français (Canada)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-13T03:23:43+00:00\n"
+"PO-Revision-Date: 2026-11-05T20:41:40+00:00\n"
+"Language: fr_CA\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: fluffless\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Fluffless"
+msgstr "Fluffless"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://fluffless.dev"
+msgstr "https://fluffless.dev"
+
+#. Description of the theme
+#: style.css
+msgid "A light, expressive block theme. Bare but mighty."
+msgstr "Thème de blocs léger et expressif. Minimaliste, mais puissant."
+
+#. Author of the theme
+#: style.css
+msgid "Geneviève Bergeron"
+msgstr "Geneviève Bergeron"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://genevievebergeron.ca"
+msgstr "https://genevievebergeron.ca"
+
+#: functions.php:354
+msgid "Structure"
+msgstr "Structure"
+
+#: functions.php:355
+msgid "Openers"
+msgstr "Ouvertures"
+
+#: functions.php:356
+msgid "Showcase"
+msgstr "Présenter"
+
+#: functions.php:357
+msgid "Proof"
+msgstr "Prouver"
+
+#: functions.php:358
+msgid "Storytelling"
+msgstr "Raconter"
+
+#: functions.php:359
+msgid "Action"
+msgstr "Agir"
+
+#: functions.php:360
+msgid "Full pages"
+msgstr "Pages complètes"
+
+#: patterns/appel-action.php
+msgctxt "Pattern title"
+msgid "Punchy call to action"
+msgstr "Appel à l’action coup de poing"
+
+#: patterns/appel-action.php
+msgctxt "Pattern description"
+msgid "A full-width accent-colour band with one giant sentence on the left and a single button on the right. Best at the end of a page."
+msgstr "Une bande pleine largeur couleur accent, une phrase géante à gauche et un seul bouton à droite. À placer en fin de page."
+
+#: patterns/appel-action.php:24
+#: patterns/page-a-propos.php:277
+#: patterns/page-accueil.php:368
+#: patterns/page-services.php:227
+msgid "One sentence that makes people want to act today"
+msgstr "Une phrase qui donne envie d’agir aujourd’hui"
+
+#: patterns/appel-action.php:32
+#: patterns/page-a-propos.php:285
+#: patterns/page-accueil.php:376
+#: patterns/page-services.php:235
+msgid "Say what happens after the click: a 20-minute call, a short form, a two-step donation."
+msgstr "Ce qui se passe après le clic : un appel de 20 minutes, un formulaire court, un don en deux étapes."
+
+#: patterns/appel-action.php:38
+#: patterns/page-a-propos.php:291
+#: patterns/page-accueil.php:48
+#: patterns/page-accueil.php:382
+#: patterns/page-services.php:241
+msgid "Your next step"
+msgstr "Le geste à poser"
+
+#: patterns/blogue-grille.php
+msgctxt "Pattern title"
+msgid "Blog in a grid"
+msgstr "Blogue en grille"
+
+#: patterns/blogue-grille.php
+msgctxt "Pattern description"
+msgid "Your latest posts in a three-column grid, with image, category, title and date. The heading sits left, the link to all posts sits right."
+msgstr "Les derniers articles dans une grille de trois colonnes, avec image, catégorie, titre et date. Le titre de section est à gauche, le lien vers tous les articles à droite."
+
+#: patterns/blogue-grille.php:22
+msgid "Name what your posts are about"
+msgstr "Le sujet des articles"
+
+#: patterns/blogue-grille.php:28
+#: patterns/page-accueil.php:350
+msgid "All posts"
+msgstr "Tous les articles"
+
+#: patterns/blogue-grille.php:53
+#: patterns/page-accueil.php:321
+msgid "No posts yet. The first one is the hardest, then it gets easier."
+msgstr "Aucun article pour l’instant. Le premier est le plus difficile, ensuite ça roule."
+
+#: patterns/chiffres.php
+msgctxt "Pattern title"
+msgid "Numbers that count"
+msgstr "Chiffres qui comptent"
+
+#: patterns/chiffres.php
+msgctxt "Pattern description"
+msgid "Four numbers in an asymmetric grid on an inverted background: the strongest one takes up a quarter of the section. Shows your impact with facts."
+msgstr "Quatre chiffres dans une grille asymétrique sur fond inversé : le plus fort prend le quart de la section. Pour prouver l’impact avec des faits."
+
+#: patterns/chiffres.php:24
+#: patterns/page-a-propos.php:57
+msgid "Facts, not adjectives"
+msgstr "Des faits, pas des adjectifs"
+
+#: patterns/chiffres.php:32
+#: patterns/page-a-propos.php:65
+msgid "Pick four numbers you can back up. Put the most telling one in the big tile and always say where it comes from."
+msgstr "Choisir quatre chiffres vérifiables. Mettre le plus parlant dans la grande tuile et toujours indiquer d’où il vient."
+
+#: patterns/chiffres.php:46
+#: patterns/page-a-propos.php:79
+msgid "1,200"
+msgstr "1 200"
+
+#: patterns/chiffres.php:50
+#: patterns/page-a-propos.php:83
+msgid "Swap in your real number, then say what it counts: people, hours, meals, files."
+msgstr "Remplacer par le vrai chiffre, puis préciser ce qu’il compte : personnes, heures, repas, dossiers."
+
+#: patterns/chiffres.php:60
+#: patterns/page-a-propos.php:93
+msgid "92%"
+msgstr "92 %"
+
+#: patterns/chiffres.php:64
+#: patterns/page-a-propos.php:97
+msgid "A percentage only means something with its source. Say where it comes from."
+msgstr "Un pourcentage n’a de sens qu’avec sa source. Indiquer d’où il vient."
+
+#: patterns/chiffres.php:72
+#: patterns/page-a-propos.php:105
+msgid "15 years"
+msgstr "15 ans"
+
+#: patterns/chiffres.php:76
+#: patterns/page-a-propos.php:109
+msgid "How long you’ve been doing this work."
+msgstr "Les années d’expérience dans ce travail."
+
+#: patterns/chiffres.php:84
+#: patterns/page-a-propos.php:117
+msgid "48"
+msgstr "48"
+
+#: patterns/chiffres.php:88
+#: patterns/page-a-propos.php:121
+msgid "A concrete, everyday number: projects, partners, cities."
+msgstr "Un chiffre concret du quotidien : projets, partenaires, villes."
+
+#: patterns/contact.php
+msgctxt "Pattern title"
+msgid "Contact details and hours"
+msgstr "Coordonnées et heures d’ouverture"
+
+#: patterns/contact.php
+msgctxt "Pattern description"
+msgid "Email, phone, address and opening hours on the left; a static map image with a directions button on the right. No embedded map, so no third-party tracking and no heavy script."
+msgstr "Courriel, téléphone, adresse et heures d’ouverture à gauche ; une image de carte statique avec un bouton d’itinéraire à droite. Aucune carte intégrée, donc aucun pistage de tiers ni script lourd."
+
+#: patterns/contact.php:24
+#: patterns/page-contact.php:37
+msgid "Write to us. A human answers."
+msgstr "Un message pour nous ? Une vraie personne répond."
+
+#: patterns/contact.php:28
+#: patterns/page-contact.php:41
+msgid "How soon do you reply, and what should people include in their first message? Say it here."
+msgstr "Le délai de réponse, et ce qu’un premier message devrait contenir."
+
+#: patterns/contact.php:36
+#: patterns/page-contact.php:49
+msgid "Email"
+msgstr "Courriel"
+
+#: patterns/contact.php:40
+#: patterns/page-contact.php:53
+msgid "hello@example.ca"
+msgstr "bonjour@exemple.ca"
+
+#: patterns/contact.php:48
+#: patterns/page-contact.php:61
+msgid "Phone"
+msgstr "Téléphone"
+
+#: patterns/contact.php:52
+#: patterns/page-contact.php:65
+msgid "555-555-0123"
+msgstr "555-555-0123"
+
+#: patterns/contact.php:60
+#: patterns/page-contact.php:73
+msgid "Address"
+msgstr "Adresse"
+
+#: patterns/contact.php:64
+#: patterns/page-contact.php:77
+msgid "Street address, city, province, postal code"
+msgstr "Adresse, ville, province, code postal"
+
+#: patterns/contact.php:80
+#: patterns/page-contact.php:95
+msgid "Opening hours"
+msgstr "Heures d’ouverture"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "Monday to Thursday"
+msgstr "Du lundi au jeudi"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "9 a.m. to 5 p.m."
+msgstr "De 9 h à 17 h"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "Friday"
+msgstr "Vendredi"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "9 a.m. to noon"
+msgstr "De 9 h à midi"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "Weekends and holidays"
+msgstr "Fins de semaine et jours fériés"
+
+#: patterns/contact.php:84
+#: patterns/page-contact.php:99
+msgid "Closed"
+msgstr "Fermé"
+
+#: patterns/contact.php:92
+#: patterns/page-contact.php:89
+msgid "Replace with a screenshot of your map (OpenStreetMap works well). In the alt text, write the address and the nearest landmark."
+msgstr "Remplacer par une capture de la carte (OpenStreetMap fait très bien l’affaire). Dans le texte de remplacement, indiquer l’adresse et le point de repère le plus proche."
+
+#: patterns/contact.php:70
+#: patterns/page-contact.php:105
+msgid "Get directions"
+msgstr "Voir l’itinéraire"
+
+#: patterns/entete.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr "En-tête"
+
+#: functions.php:1140
+#: patterns/menu.php:21
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: functions.php:1102
+msgid "Home"
+msgstr "Accueil"
+
+#: functions.php:1103
+msgid "Services"
+msgstr "Services"
+
+#: functions.php:1104
+msgid "About"
+msgstr "À propos"
+
+#: functions.php:1105
+#: patterns/page-contact.php:21
+msgid "Contact"
+msgstr "Contact"
+
+#: patterns/menu.php:35
+msgid "Menu"
+msgstr "Menu"
+
+#: patterns/menu.php:39
+msgid "Main menu, small screens"
+msgstr "Menu principal, petits écrans"
+
+#: patterns/entete-bandeau.php:44
+#: patterns/entete.php:36
+msgid "Contact us"
+msgstr "Nous joindre"
+
+#: patterns/equipe.php
+msgctxt "Pattern title"
+msgid "Team mosaic"
+msgstr "Équipe en mosaïque"
+
+#: patterns/equipe.php
+msgctxt "Pattern description"
+msgid "The introduction takes two cells, then one portrait per person with name, role and one line that is truly theirs. The last card invites people to join."
+msgstr "L’introduction occupe deux cases, puis un portrait par personne avec son nom, sa fonction et une ligne bien à elle. La dernière carte invite à se joindre à l’équipe."
+
+#: patterns/equipe.php:24
+#: patterns/page-a-propos.php:137
+msgid "The people who pick up the phone"
+msgstr "Les gens qui répondent au téléphone"
+
+#: patterns/equipe.php:28
+#: patterns/page-a-propos.php:141
+msgid "Why this team, for these clients? One or two sentences. Skip “passionate”: everyone says it."
+msgstr "Pourquoi cette équipe, pour cette clientèle ? Une ou deux phrases. Oublier « passionné » : tout le monde le dit."
+
+#: patterns/equipe.php:44
+#: patterns/equipe.php:68
+#: patterns/equipe.php:92
+#: patterns/page-a-propos.php:153
+#: patterns/page-a-propos.php:173
+#: patterns/page-a-propos.php:193
+msgid "First and last name"
+msgstr "Prénom et nom"
+
+#: patterns/equipe.php:48
+#: patterns/equipe.php:72
+#: patterns/equipe.php:96
+#: patterns/page-a-propos.php:157
+#: patterns/page-a-propos.php:177
+#: patterns/page-a-propos.php:197
+msgid "Role, in plain words"
+msgstr "Fonction, en mots simples"
+
+#: patterns/equipe.php:52
+#: patterns/equipe.php:76
+#: patterns/equipe.php:100
+#: patterns/page-a-propos.php:161
+#: patterns/page-a-propos.php:181
+#: patterns/page-a-propos.php:201
+msgid "One thing this person does that nobody else on the team does."
+msgstr "Une chose que cette personne fait et que personne d’autre dans l’équipe ne fait."
+
+#: patterns/equipe.php:108
+#: patterns/page-a-propos.php:209
+msgid "Hiring? Say so here, and who you are looking for."
+msgstr "Embauche en cours ? Le signaler ici, avec les profils recherchés."
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "Frequently asked questions"
+msgstr "Questions fréquentes"
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "The heading stays on the left, the questions open one by one on the right. Native HTML accordions: no JavaScript, keyboard ready."
+msgstr "Le titre reste à gauche, les questions s’ouvrent une à une à droite. Accordéons HTML natifs : aucun JavaScript, utilisables au clavier."
+
+#: patterns/faq.php:24
+#: patterns/page-contact.php:125
+#: patterns/page-services.php:171
+msgid "The questions we hear every week"
+msgstr "Les questions qu’on nous pose chaque semaine"
+
+#: patterns/faq.php:28
+#: patterns/page-contact.php:129
+#: patterns/page-services.php:175
+msgid "Copy the real questions from your inbox, in your clients’ own words. If an answer needs three paragraphs, it deserves its own page."
+msgstr "Reprendre les vraies questions de la boîte de réception, dans les mots de la clientèle. Si une réponse demande trois paragraphes, elle mérite sa propre page."
+
+#: patterns/faq.php:36
+#: patterns/page-services.php:183
+msgid "How much does it cost?"
+msgstr "Combien ça coûte ?"
+
+#: patterns/faq.php:38
+#: patterns/page-services.php:185
+msgid "Give a starting price or a range. People leave when they have to ask for it."
+msgstr "Donner un prix de départ ou une fourchette. Les gens partent quand il faut le demander."
+
+#: patterns/faq.php:44
+#: patterns/page-services.php:191
+msgid "How long does it take?"
+msgstr "Combien de temps ça prend ?"
+
+#: patterns/faq.php:46
+#: patterns/page-services.php:193
+msgid "A realistic timeline, from the first call to the finished work. Mention what can slow things down."
+msgstr "Un échéancier réaliste, du premier appel au travail terminé. Mentionner ce qui peut ralentir les choses."
+
+#: patterns/faq.php:52
+#: patterns/page-services.php:199
+msgid "Who is it not for?"
+msgstr "À qui ça ne s’adresse pas ?"
+
+#: patterns/faq.php:54
+#: patterns/page-services.php:201
+msgid "Saying no clearly saves everyone time, and it makes the right people trust you more."
+msgstr "Dire non clairement fait gagner du temps à tout le monde, et inspire encore plus confiance aux bonnes personnes."
+
+#: patterns/faq.php:60
+#: patterns/page-services.php:207
+msgid "What happens after I get in touch?"
+msgstr "Que se passe-t-il après ma prise de contact ?"
+
+#: patterns/faq.php:62
+#: patterns/page-services.php:209
+msgid "Walk through the next three steps. Nobody likes wondering whether their message got lost."
+msgstr "Décrire les trois prochaines étapes. Personne n’aime se demander si son message s’est perdu."
+
+#: patterns/infolettre.php
+msgctxt "Pattern title"
+msgid "Newsletter"
+msgstr "Infolettre"
+
+#: patterns/infolettre.php
+msgctxt "Pattern description"
+msgid "An accent-colour band with an honest frequency promise in very large type, plus a raw-bordered box listing what subscribers get, with the sign-up button."
+msgstr "Une bande couleur accent avec une promesse de fréquence honnête en très grand, et un encadré brut qui liste ce qu’on reçoit avec le bouton d’inscription."
+
+#: patterns/infolettre.php:24
+msgid "One letter a month. That’s it."
+msgstr "Une lettre par mois. Pas plus."
+
+#: patterns/infolettre.php:28
+msgid "Promise a frequency you’ll actually keep. One letter a month beats one a week for three weeks."
+msgstr "Promettre une fréquence réaliste. Mieux vaut une lettre par mois qu’une par semaine pendant trois semaines."
+
+#: patterns/infolettre.php:38
+msgid "In every issue"
+msgstr "Dans chaque envoi"
+
+#: patterns/infolettre.php:43
+msgid "Something readers will learn"
+msgstr "Ce que la personne apprend"
+
+#: patterns/infolettre.php:47
+msgid "News from your field"
+msgstr "Une nouvelle du milieu"
+
+#: patterns/infolettre.php:51
+msgid "Just one call to action"
+msgstr "Une seule invitation à agir"
+
+#: patterns/infolettre.php:58
+msgid "Sign me up"
+msgstr "Je m’inscris"
+
+#: patterns/infolettre.php:64
+msgid "Unsubscribe in one click. Your address is used for this and nothing else."
+msgstr "Désabonnement en un clic. L’adresse ne sert qu’à ça."
+
+#: patterns/ouverture-texte-image.php
+msgctxt "Pattern title"
+msgid "Text and image"
+msgstr "Texte et image"
+
+#: patterns/ouverture-texte-image.php
+msgctxt "Pattern description"
+msgid "A giant full-width headline, then a narrow message on the left and a large image with an offset frame on the right. The columns stack on mobile."
+msgstr "Un titre géant sur toute la largeur, puis un message étroit à gauche et une grande image au cadre décalé à droite. Les colonnes s’empilent sur mobile."
+
+#: patterns/ouverture-texte-image.php:20
+#: patterns/page-services.php:21
+msgid "Your promise, in one sentence that holds up"
+msgstr "La promesse, en une phrase qui tient"
+
+#: patterns/ouverture-texte-image.php:28
+#: patterns/page-services.php:29
+msgid "Two or three sentences: the problem you solve, who you solve it for, and what sets you apart. Write the way you’d talk to a client."
+msgstr "Deux ou trois phrases : le problème réglé, pour qui, et ce qui distingue l’entreprise. Écrire comme on parle à la clientèle."
+
+#: patterns/ouverture-texte-image.php:34
+#: patterns/ouverture-titre-geant.php:47
+#: patterns/page-services.php:35
+msgid "Your main action"
+msgstr "Le geste principal"
+
+#: patterns/ouverture-texte-image.php:42
+#: patterns/page-services.php:43
+msgid "A concrete guarantee, like how fast you reply"
+msgstr "Une garantie concrète, par exemple le délai de réponse"
+
+#: patterns/ouverture-titre-geant.php
+msgctxt "Pattern title"
+msgid "Giant headline that fills the room"
+msgstr "Grand titre qui prend toute la place"
+
+#: patterns/ouverture-titre-geant.php
+msgctxt "Pattern description"
+msgid "An oversized full-width headline, then the message shifted to the right under a big arrow. For a page with one thing to say."
+msgstr "Un titre démesuré sur toute la largeur, puis le message décalé vers la droite sous une grosse flèche. Pour une page qui a une seule chose à dire."
+
+#: patterns/ouverture-titre-geant.php:22
+#: patterns/page-accueil.php:23
+msgid "Who you are, in three words"
+msgstr "L’entreprise, en trois mots"
+
+#: patterns/ouverture-titre-geant.php:28
+#: patterns/page-accueil.php:29
+msgid "Say in five words what changes for people"
+msgstr "Ce qui change pour les gens, en cinq mots"
+
+#: patterns/ouverture-titre-geant.php:41
+#: patterns/page-accueil.php:42
+msgid "One supporting sentence: who you work for and what people get when they choose you. Two lines, tops."
+msgstr "Une phrase d’appui : la clientèle visée et ce qu’elle obtient en choisissant l’entreprise. Pas plus de deux lignes."
+
+#: patterns/page-a-propos.php
+msgctxt "Pattern title"
+msgid "About page"
+msgstr "Page À propos"
+
+#: patterns/page-a-propos.php
+msgctxt "Pattern description"
+msgid "A full About page: why you exist, the numbers that back it up, the team, a client in their own words, and an invitation to get in touch."
+msgstr "Une page À propos complète : la raison d’être, les chiffres qui l’appuient, l’équipe, un témoignage de la clientèle et une invitation à prendre contact."
+
+#: patterns/page-a-propos.php:21
+msgid "About us"
+msgstr "À propos"
+
+#: patterns/page-a-propos.php:25
+msgid "Why we started, in one sentence"
+msgstr "Pourquoi on a commencé, en une phrase"
+
+#: patterns/page-a-propos.php:37
+msgid "Tell the moment it started: a problem you saw, a person you wanted to help. A story beats a mission statement."
+msgstr "Raconter le moment où tout a commencé : un problème constaté, une personne à aider. Une histoire vaut mieux qu’un énoncé de mission."
+
+#: patterns/page-a-propos.php:41
+msgid "Then what you still refuse to do, years later. That’s what sets you apart."
+msgstr "Puis ce qui reste hors de question, des années plus tard. C’est ce qui fait la différence."
+
+#: patterns/page-a-propos.php:231
+#: patterns/page-accueil.php:248
+#: patterns/temoignage-pleine-page.php:22
+msgid "Paste a real sentence from a client, word for word. The one where they describe what changed for them, not how nice you were."
+msgstr "Coller une vraie phrase de la clientèle, mot pour mot. Celle qui décrit ce qui a changé, pas l’amabilité du service."
+
+#: patterns/page-a-propos.php:253
+#: patterns/page-accueil.php:270
+#: patterns/temoignage-pleine-page.php:44
+msgid "Client’s name"
+msgstr "Nom de la cliente ou du client"
+
+#: patterns/page-a-propos.php:257
+#: patterns/page-accueil.php:274
+#: patterns/temoignage-pleine-page.php:48
+msgid "Role and organization, with permission"
+msgstr "Fonction et organisme, avec son autorisation"
+
+#: patterns/page-accueil.php
+msgctxt "Pattern title"
+msgid "Home page"
+msgstr "Page d’accueil"
+
+#: patterns/page-accueil.php:74
+msgid "Rank your strengths from most to least important. The tile sizes follow that order."
+msgstr "Classer les forces de la plus importante à la moins importante. La taille des tuiles suit cet ordre."
+
+#: patterns/page-accueil.php:88
+msgid "Your main strength, in four words"
+msgstr "La force principale, en quatre mots"
+
+#: patterns/page-accueil.php:92
+msgid "Show the proof: an action, a result, a story from the field. This is the tile people read first."
+msgstr "Donner la preuve : un geste, un résultat, une anecdote de terrain. C’est la tuile qu’on lit en premier."
+
+#: patterns/page-accueil.php:102
+msgid "A second strength"
+msgstr "Une deuxième force"
+
+#: patterns/page-accueil.php:106
+msgid "Write what people get out of it, not what you put into it."
+msgstr "Ce que la personne y gagne, pas ce que l’entreprise y met."
+
+#: patterns/page-accueil.php:114
+msgid "A detail that matters"
+msgstr "Un détail qui compte"
+
+#: patterns/page-accueil.php:118
+msgid "One short sentence, one fact you can check."
+msgstr "Une phrase courte, un fait vérifiable."
+
+#: patterns/page-accueil.php:126
+msgid "A way of working"
+msgstr "Une façon de faire"
+
+#: patterns/page-accueil.php:130
+msgid "What you do differently, and why."
+msgstr "Ce qui se fait autrement ici, et pourquoi."
+
+#: patterns/page-accueil.php:138
+msgid "Finish with the strength people bring up when they recommend you."
+msgstr "Terminer par la force que les gens mentionnent dans leurs recommandations."
+
+#: patterns/page-accueil.php:162
+#: patterns/services-grille.php:24
+msgid "Three concrete ways we can help"
+msgstr "Nos trois façons concrètes d’aider"
+
+#: patterns/page-accueil.php:170
+#: patterns/services-grille.php:32
+msgid "One sentence on who these services are for. Put the most requested one in the big tile."
+msgstr "Une phrase qui dit à qui s’adressent ces services. Mettre le plus demandé dans la grande tuile."
+
+#: patterns/page-accueil.php:188
+#: patterns/services-grille.php:50
+msgid "Your featured service"
+msgstr "Le service vedette"
+
+#: patterns/page-accueil.php:192
+#: patterns/services-grille.php:54
+msgid "What people get, in one or two sentences. Name the result, not the method."
+msgstr "Ce que la personne obtient, en une ou deux phrases. Nommer le résultat, pas la méthode."
+
+#: patterns/page-accueil.php:198
+#: patterns/services-grille.php:60
+msgid "See the details"
+msgstr "Voir le détail"
+
+#: patterns/page-accueil.php:214
+#: patterns/services-grille.php:76
+msgid "Second service"
+msgstr "Deuxième service"
+
+#: patterns/page-accueil.php:218
+#: patterns/services-grille.php:80
+msgid "Who it’s for, and what it changes. One sentence."
+msgstr "Pour qui, et ce que ça change. Une phrase."
+
+#: patterns/page-accueil.php:230
+#: patterns/services-grille.php:92
+msgid "Third service"
+msgstr "Troisième service"
+
+#: patterns/page-accueil.php:234
+#: patterns/services-grille.php:96
+msgid "A practical detail helps people decide: length, format, starting price."
+msgstr "Un détail pratique aide à décider : durée, format, prix de départ."
+
+#: patterns/page-accueil.php:292
+msgid "Fresh off the desk"
+msgstr "Tout frais sorti de l’atelier"
+
+#: patterns/page-contact.php
+msgctxt "Pattern title"
+msgid "Contact page"
+msgstr "Page Contact"
+
+#: patterns/page-contact.php
+msgctxt "Pattern description"
+msgid "A full Contact page: a short headline, your details with hours and a static map, then the answers that save an email."
+msgstr "Une page Contact complète : un titre court, les coordonnées avec les heures et une carte statique, puis les réponses qui évitent un courriel."
+
+#: patterns/page-contact.php:25
+#: patterns/page-services.php:105
+#: patterns/services-zigzag.php:56
+msgid "Let’s talk"
+msgstr "Parlons-en"
+
+#: patterns/page-services.php
+msgctxt "Pattern title"
+msgid "Services page"
+msgstr "Page Services"
+
+#: patterns/page-services.php:69
+#: patterns/services-zigzag.php:20
+msgid "Our services"
+msgstr "Nos services"
+
+#: patterns/page-services.php:77
+#: patterns/services-zigzag.php:28
+msgid "01"
+msgstr "01"
+
+#: patterns/page-services.php:85
+#: patterns/services-zigzag.php:36
+msgid "First service, named the way your clients name it"
+msgstr "Premier service, nommé comme la clientèle le nomme"
+
+#: patterns/page-services.php:89
+#: patterns/services-zigzag.php:40
+msgid "Describe where the person started, then what changed afterward. Three or four sentences, no more."
+msgstr "Décrire la situation de départ de la personne, puis ce qui a changé après. Trois ou quatre phrases, pas plus."
+
+#: patterns/page-services.php:94
+#: patterns/services-zigzag.php:45
+msgid "What’s included"
+msgstr "Ce qui est inclus"
+
+#: patterns/page-services.php:98
+#: patterns/services-zigzag.php:49
+msgid "How long it takes"
+msgstr "Combien de temps ça prend"
+
+#: patterns/page-services.php:143
+#: patterns/services-zigzag.php:94
+msgid "Second service, with a clear benefit"
+msgstr "Deuxième service, avec un bénéfice clair"
+
+#: patterns/page-services.php:147
+#: patterns/services-zigzag.php:98
+msgid "Same structure: the situation, the change, the proof. If you have a short testimonial, this is where it goes."
+msgstr "Même structure : la situation, le changement, une preuve. C’est ici qu’un court témoignage trouve sa place."
+
+#: patterns/page-services.php:155
+#: patterns/services-zigzag.php:106
+msgid "02"
+msgstr "02"
+
+#: patterns/pied-de-page-compact.php
+msgctxt "Pattern title"
+msgid "Compact footer"
+msgstr "Pied de page compact"
+
+#: patterns/pied-de-page-compact.php
+msgctxt "Pattern description"
+msgid "A single band on a tinted background: site name, menu and contact on one line that wraps as needed, then the legal line."
+msgstr "Une seule bande sur fond teinté : nom du site, menu et coordonnées sur une ligne qui passe à la suivante au besoin, puis la ligne légale."
+
+#: patterns/pied-de-page-compact.php:18
+#: patterns/pied-de-page.php:18
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: patterns/pied-de-page-compact.php:29
+#: patterns/pied-de-page.php:53
+msgid "Footer menu"
+msgstr "Menu du pied de page"
+
+#: functions.php:1325
+#: patterns/pied-de-page-compact.php:37
+#: patterns/pied-de-page.php:37
+msgid "Your email address"
+msgstr "Adresse courriel"
+
+#: functions.php:1326
+#: patterns/pied-de-page-compact.php:41
+#: patterns/pied-de-page.php:41
+msgid "Your phone number"
+msgstr "Numéro de téléphone"
+
+#: patterns/pied-de-page.php
+msgctxt "Pattern title"
+msgid "Manifesto footer"
+msgstr "Pied de page manifeste"
+
+#: patterns/pied-de-page.php
+msgctxt "Pattern description"
+msgid "A signature sentence in very large type and the site name in poster format, then contact, navigation and the legal line."
+msgstr "Une phrase signature en très gros caractères et le nom du site en format affiche, puis les coordonnées, la navigation et la ligne légale."
+
+#: functions.php:1324
+#: patterns/pied-de-page.php:25
+msgid "Write the sentence you want people to remember as they leave your site."
+msgstr "La phrase à retenir en quittant le site."
+
+#: functions.php:1327
+#: patterns/pied-de-page.php:45
+msgid "Monday to Friday, 9 a.m. to 5 p.m."
+msgstr "Du lundi au vendredi, de 9 h à 17 h"
+
+#: patterns/portfolio-vedettes.php
+msgctxt "Pattern title"
+msgid "Three featured projects"
+msgstr "Trois projets vedettes"
+
+#: patterns/portfolio-vedettes.php
+msgctxt "Pattern description"
+msgid "Three projects you pick by hand: the strongest one takes two thirds of the width, the other two stack beside it. Each has an image, its type, a title and one line of result."
+msgstr "Trois projets choisis à la main : le plus fort occupe les deux tiers de la largeur, les deux autres s’empilent à côté. Chacun a une image, son type, un titre et une ligne sur le résultat."
+
+#: patterns/portfolio-vedettes.php:22
+msgid "Three projects we’re proud of"
+msgstr "Trois projets dont on est fiers"
+
+#: patterns/portfolio-vedettes.php:28
+msgid "See all projects"
+msgstr "Voir tous les projets"
+
+#: patterns/portfolio-vedettes.php:48
+#: patterns/portfolio-vedettes.php:72
+#: patterns/portfolio-vedettes.php:92
+msgid "Type of project"
+msgstr "Type de projet"
+
+#: patterns/portfolio-vedettes.php:52
+msgid "Your strongest project, linked to its case study"
+msgstr "Le meilleur projet, lié à son étude de cas"
+
+#: patterns/portfolio-vedettes.php:56
+msgid "One line on the result for the client, not on the technique."
+msgstr "Une ligne sur le résultat pour la cliente, pas sur la technique."
+
+#: patterns/portfolio-vedettes.php:76
+msgid "Second project"
+msgstr "Deuxième projet"
+
+#: patterns/portfolio-vedettes.php:96
+msgid "Third project"
+msgstr "Troisième projet"
+
+#: patterns/services-grille.php
+msgctxt "Pattern title"
+msgid "Services grid"
+msgstr "Services en grille"
+
+#: patterns/services-grille.php
+msgctxt "Pattern description"
+msgid "Three services in an asymmetric grid: the featured service spans two columns in the accent colour, and the other two stack beside it."
+msgstr "Trois services dans une grille asymétrique : le service vedette prend deux colonnes en couleur accent, les deux autres s’empilent à côté."
+
+#: patterns/services-zigzag.php
+msgctxt "Pattern title"
+msgid "Services zigzag"
+msgstr "Services en zigzag"
+
+#: patterns/services-zigzag.php
+msgctxt "Pattern description"
+msgid "Two services alternating text and image, each with a very large number in the margin, so you can take the time to explain each one."
+msgstr "Deux services en alternance texte et image, chacun numéroté en très grand dans la marge, pour prendre le temps d’expliquer chacun."
+
+#: patterns/temoignage-pleine-page.php
+msgctxt "Pattern title"
+msgid "Full-page testimonial"
+msgstr "Témoignage pleine page"
+
+#: patterns/temoignage-pleine-page.php
+msgctxt "Pattern description"
+msgid "One testimonial, very large, on a dark background. The portrait and name sit low on the right, like a signature. One strong quote beats ten lukewarm ones."
+msgstr "Un seul témoignage, en très grand, sur fond foncé. Le portrait et le nom sont en bas à droite, comme une signature. Une citation forte vaut mieux que dix tièdes."
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Fond"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr "Surface"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Texte"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr "Accent"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Alert"
+msgstr "Alerte"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Mesh"
+msgstr "Dégradé maillé"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Fade"
+msgstr "Fondu"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System grotesque"
+msgstr "Grotesque système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System humanist"
+msgstr "Humaniste système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System industrial"
+msgstr "Industrielle système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System rounded"
+msgstr "Arrondie système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System transitional"
+msgstr "Transitionnelle système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System didone"
+msgstr "Didone système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System slab"
+msgstr "Mécane système"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System mono"
+msgstr "Mono système"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Petit"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Regular"
+msgstr "Normal"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Moyen"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grand"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr "Très grand"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr "Énorme"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Giant"
+msgstr "Géant"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr "Minuscule"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Extra small"
+msgstr "Très petit"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr "Petit"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr "Moyen"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr "Grand"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Extra large"
+msgstr "Très grand"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Massive"
+msgstr "Immense"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Soft"
+msgstr "Douce"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Hard"
+msgstr "Brute"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Full width, no title"
+msgstr "Pleine largeur, sans titre"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank canvas"
+msgstr "Toile vierge"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank canvas, no header or footer"
+msgstr "Toile vierge, sans en-tête ni pied de page"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "En-tête"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Pied de page"
+
+#: styles/blocks/button-contour.json
+msgctxt "Style variation name"
+msgid "Outline"
+msgstr "Contour"
+
+#: functions.php:322
+msgctxt "Style variation name"
+msgid "Arrow"
+msgstr "Flèche"
+
+#: styles/blocks/group-bordure-brute.json
+msgctxt "Style variation name"
+msgid "Raw border"
+msgstr "Bordure brute"
+
+#: styles/blocks/group-carte.json
+msgctxt "Style variation name"
+msgid "Card"
+msgstr "Carte"
+
+#: styles/blocks/group-inverse.json
+msgctxt "Style variation name"
+msgid "Inverted"
+msgstr "Inversé"
+
+#: styles/blocks/heading-geant.json
+msgctxt "Style variation name"
+msgid "Giant heading"
+msgstr "Titre géant"
+
+#: functions.php:328
+msgctxt "Style variation name"
+msgid "Offset frame"
+msgstr "Cadre décalé"
+
+#: functions.php:329
+msgctxt "Style variation name"
+msgid "Greyscale on hover"
+msgstr "Noir et blanc au survol"
+
+#: functions.php:332
+msgctxt "Style variation name"
+msgid "Checkmarks"
+msgstr "Coches"
+
+#: styles/brut.json
+msgctxt "Style variation name"
+msgid "Raw"
+msgstr "Brut"
+
+#: styles/chaleureux.json
+msgctxt "Style variation name"
+msgid "Warm"
+msgstr "Chaleureux"
+
+#: styles/clair.json
+msgctxt "Style variation name"
+msgid "Light"
+msgstr "Clair"
+
+#: styles/contraste-eleve.json
+msgctxt "Style variation name"
+msgid "High contrast"
+msgstr "Contraste élevé"
+
+#: styles/doux.json
+msgctxt "Style variation name"
+msgid "Soft"
+msgstr "Doux"
+
+#: styles/editorial.json
+msgctxt "Style variation name"
+msgid "Editorial"
+msgstr "Éditorial"
+
+#: patterns/aucun-contenu-archive.php
+msgctxt "Pattern title"
+msgid "Empty archive message"
+msgstr "Message d’archive vide"
+
+#: patterns/aucun-contenu-archive.php
+msgctxt "Pattern description"
+msgid "Shown by the archive template when a section has no posts yet."
+msgstr "Affiché par le gabarit d’archive quand une section n’a encore aucun article."
+
+#: patterns/aucun-contenu-archive.php:15
+msgid "Nothing in this section yet."
+msgstr "Aucun contenu dans cette section pour l’instant."
+
+#: patterns/aucun-contenu.php
+msgctxt "Pattern title"
+msgid "No content message"
+msgstr "Message sans contenu"
+
+#: patterns/aucun-contenu.php
+msgctxt "Pattern description"
+msgid "Shown by the blog template when there are no posts yet."
+msgstr "Affiché par le gabarit du blogue quand il n’y a encore aucun article."
+
+#: patterns/aucun-contenu.php:15
+msgid "Nothing here yet."
+msgstr "Aucun contenu pour l’instant."
+
+#: patterns/aucun-resultat.php
+msgctxt "Pattern title"
+msgid "No search results message"
+msgstr "Message sans résultat de recherche"
+
+#: patterns/aucun-resultat.php
+msgctxt "Pattern description"
+msgid "Shown by the search template when nothing matches."
+msgstr "Affiché par le gabarit de recherche quand rien ne correspond."
+
+#: patterns/aucun-resultat.php:15
+msgid "No results. Try other words."
+msgstr "Aucun résultat avec ces mots."
+
+#: patterns/message-404.php
+msgctxt "Pattern title"
+msgid "404 message"
+msgstr "Message 404"
+
+#: patterns/message-404.php
+msgctxt "Pattern description"
+msgid "Heading and explanation shown on the 404 template."
+msgstr "Titre et explication affichés par le gabarit 404."
+
+#: styles/blocks/group-diagonale.json
+msgctxt "Style variation name"
+msgid "Diagonal"
+msgstr "Diagonale"
+
+#: patterns/articles-recents-liste.php
+msgctxt "Pattern title"
+msgid "Recent posts, as a list"
+msgstr "Articles récents, en liste"
+
+#: patterns/articles-recents-liste.php
+msgctxt "Pattern description"
+msgid "The five latest posts as a plain list of titles and dates, without images. Fits a sidebar, a footer or the end of a page."
+msgstr "Les cinq derniers articles en simple liste de titres et de dates, sans images. Convient à une colonne latérale, à un pied de page ou à la fin d’une page."
+
+#: patterns/articles-recents-liste.php:20
+msgid "Recent posts"
+msgstr "Articles récents"
+
+#: patterns/articles-recents-liste.php:32
+msgid "No post yet."
+msgstr "Aucun article pour l’instant."
+
+#: patterns/nuage-etiquettes.php
+msgctxt "Pattern title"
+msgid "Tag cloud"
+msgstr "Nuage d’étiquettes"
+
+#: patterns/nuage-etiquettes.php
+msgctxt "Pattern description"
+msgid "The tags of the blog, sized by how often they are used. A native block, no script."
+msgstr "Les étiquettes du blogue, dimensionnées selon leur fréquence. Un bloc natif, aucun script."
+
+#: patterns/nuage-etiquettes.php:20
+msgid "Topics"
+msgstr "Sujets"
+
+#: patterns/entete.php
+msgctxt "Pattern description"
+msgid "Bold site name on the left, menu and contact button on the right, across the full width. On phones the menu opens as a panel under the header, with its submenus listed."
+msgstr "Nom du site en gras à gauche, menu et bouton de contact à droite, sur toute la largeur. Sur téléphone, le menu s’ouvre en panneau sous l’en-tête, sous-menus compris."
+
+#: patterns/entete-bandeau.php
+msgctxt "Pattern title"
+msgid "Header with banner"
+msgstr "En-tête avec bandeau"
+
+#: patterns/entete-bandeau.php
+msgctxt "Pattern description"
+msgid "A thin announcement bar above the default header: a promotion, an event, a new service. One paragraph, easy to change or remove."
+msgstr "Une mince barre d’annonce au-dessus de l’en-tête par défaut : une promotion, un événement, un nouveau service. Un seul paragraphe, facile à changer ou à retirer."
+
+#: patterns/entete-bandeau.php:20
+msgid "Announce something here: a promotion, an event, a new service."
+msgstr "Une annonce ici : une promotion, un événement, un nouveau service."
+
+#: patterns/entete-bandeau.php:20
+#: patterns/page-accueil.php:144
+msgid "Learn more"
+msgstr "En savoir plus"
+
+#: patterns/entete-boutique.php
+msgctxt "Pattern title"
+msgid "Header, shop"
+msgstr "En-tête boutique"
+
+#: patterns/entete-boutique.php
+msgctxt "Pattern description"
+msgid "Site name on the left; menu, a search field and a Cart link on the right. The Cart link goes to the WooCommerce cart when the shop is active, otherwise to /panier/."
+msgstr "Nom du site à gauche ; menu, champ de recherche et lien Panier à droite. Le lien Panier mène au panier WooCommerce quand la boutique est active, sinon à /panier/."
+
+#: patterns/entete-boutique.php:36
+msgid "Search"
+msgstr "Rechercher"
+
+#: patterns/entete-boutique.php:36
+msgid "Search…"
+msgstr "Rechercher…"
+
+#: patterns/entete-boutique.php:41
+msgid "Cart"
+msgstr "Panier"
+
+#: patterns/entete-centre.php
+msgctxt "Pattern title"
+msgid "Header, centered"
+msgstr "En-tête centré"
+
+#: patterns/entete-centre.php
+msgctxt "Pattern description"
+msgid "Logo and site name centered, with the menu centered on a second line. Suits studios, restaurants and personal sites."
+msgstr "Logo et nom du site centrés, menu centré sur une deuxième ligne. Convient aux studios, aux restaurants et aux sites personnels."
+
+#: patterns/entete-sobre.php
+msgctxt "Pattern title"
+msgid "Header, plain"
+msgstr "En-tête sobre"
+
+#: patterns/entete-sobre.php
+msgctxt "Pattern description"
+msgid "Site name on the left, menu on the right, nothing else. The lightest header."
+msgstr "Nom du site à gauche, menu à droite, rien d’autre. L’en-tête le plus léger."
+
+#: patterns/menu.php
+msgctxt "Pattern title"
+msgid "Menu"
+msgstr "Menu"
+
+#: patterns/menu.php
+msgctxt "Pattern description"
+msgid "Main menu shared by every header: a flat menu on wide screens and a Menu button that opens a panel under the header on phones. No script."
+msgstr "Menu principal partagé par tous les en-têtes : menu à plat sur grand écran et bouton Menu qui ouvre un panneau sous l’en-tête sur téléphone. Aucun script."
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header, plain"
+msgstr "En-tête sobre"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header, centered"
+msgstr "En-tête centré"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header with banner"
+msgstr "En-tête avec bandeau"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header, shop"
+msgstr "En-tête boutique"
+
+#: functions.php:378
+msgctxt "Template name"
+msgid "Archive in a grid"
+msgstr "Archive en grille"
+
+#: functions.php:379
+msgid "The posts of an archive as cards in a three-column grid: image, category, title and date."
+msgstr "Les publications d’une archive en cartes sur une grille de trois colonnes : image, catégorie, titre et date."
+
+#: patterns/fiche-carte.php
+msgctxt "Pattern description"
+msgid "One post as a card: image, category, title and date. Insert it in a Query Loop; with Fluffless Suite, pick it once for a content type and every loop follows."
+msgstr "Une publication en carte : image, catégorie, titre et date. À insérer dans une boucle de requête ; avec Fluffless Suite, il suffit de la choisir une fois pour un type de contenu et toutes les boucles suivent."
+
+#: patterns/fiche-liste.php
+msgctxt "Pattern description"
+msgid "One post as a list row: title, date and a short excerpt under a thin rule. No image to load."
+msgstr "Une publication en ligne de liste : titre, date et court extrait sous un filet. Aucune image à charger."
+
+#: patterns/fiche-mosaique.php
+msgctxt "Pattern description"
+msgid "One post as a square tile: image and title. Suits portfolios, products and galleries in a tight grid."
+msgstr "Une publication en tuile carrée : image et titre. Convient aux portfolios, aux produits et aux galeries en grille serrée."
+
+#: functions.php:330
+msgctxt "Style variation name"
+msgid "Monochrome"
+msgstr "Monochrome"
+
+#: patterns/annonce-details.php
+msgctxt "Pattern title"
+msgid "Announcement banner"
+msgstr "Bandeau d’annonce"
+
+#: patterns/annonce-details.php
+msgctxt "Pattern description"
+msgid "An inverted full-width band with one line of news and a link. Built on the native Details block: it opens by default and folds to its first line with a click or the keyboard, with no script."
+msgstr "Une bande inversée pleine largeur avec une ligne de nouvelle et un lien. Bâtie sur le bloc Détails natif : ouverte par défaut, elle se replie sur sa première ligne d’un clic ou au clavier, sans script."
+
+#: patterns/annonce-details.php:21
+msgid "One line of news worth the top of every page"
+msgstr "Une ligne de nouvelle qui mérite le haut de chaque page"
+
+#: patterns/annonce-details.php:23
+msgid "One sentence with the date or the detail that matters, then the link."
+msgstr "Une phrase avec la date ou le détail qui compte, puis le lien."
+
+#: patterns/annonce-details.php:23
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: patterns/fiche-carte.php
+msgctxt "Pattern title"
+msgid "Post card"
+msgstr "Carte d’article"
+
+#: patterns/fiche-liste.php
+msgctxt "Pattern title"
+msgid "Post list row"
+msgstr "Rangée de liste d’articles"
+
+#: patterns/fiche-mosaique.php
+msgctxt "Pattern title"
+msgid "Post mosaic tile"
+msgstr "Tuile de mosaïque d’articles"
+
+#: patterns/liste-de-prix.php
+msgctxt "Pattern title"
+msgid "Price list"
+msgstr "Liste de prix"
+
+#: patterns/liste-de-prix.php
+msgctxt "Pattern description"
+msgid "Three raw-bordered tiles, each with a plan name, a price, three included items and a button. Only the recommended plan gets the filled button."
+msgstr "Trois tuiles à bordure brute, chacune avec le nom d’un forfait, un prix, trois éléments inclus et un bouton. Seul le forfait recommandé reçoit le bouton plein."
+
+#: patterns/liste-de-prix.php:28
+msgid "Starter"
+msgstr "Départ"
+
+#: patterns/liste-de-prix.php:32
+msgid "$490"
+msgstr "490 $"
+
+#: patterns/liste-de-prix.php:36
+msgid "Who this plan is for, in one sentence."
+msgstr "À qui s’adresse ce forfait, en une phrase."
+
+#: patterns/liste-de-prix.php:42
+msgid "First thing included"
+msgstr "Premier élément inclus"
+
+#: patterns/liste-de-prix.php:45
+msgid "Second thing included"
+msgstr "Deuxième élément inclus"
+
+#: patterns/liste-de-prix.php:48
+msgid "Third thing included"
+msgstr "Troisième élément inclus"
+
+#: patterns/liste-de-prix.php:56
+#: patterns/liste-de-prix.php:94
+msgid "Choose this plan"
+msgstr "Choisir ce forfait"
+
+#: patterns/liste-de-prix.php:66
+msgid "Recommended"
+msgstr "Recommandé"
+
+#: patterns/liste-de-prix.php:70
+msgid "$990"
+msgstr "990 $"
+
+#: patterns/liste-de-prix.php:74
+msgid "The plan most people pick, and why."
+msgstr "Le forfait que la plupart choisissent, et pourquoi."
+
+#: patterns/liste-de-prix.php:80
+msgid "Everything in the first plan"
+msgstr "Tout le premier forfait"
+
+#: patterns/liste-de-prix.php:83
+msgid "One more thing people ask for"
+msgstr "Un élément de plus, souvent demandé"
+
+#: patterns/liste-de-prix.php:86
+msgid "A concrete delivery time"
+msgstr "Un délai de livraison concret"
+
+#: patterns/liste-de-prix.php:104
+msgid "Custom"
+msgstr "Sur mesure"
+
+#: patterns/liste-de-prix.php:108
+msgid "On request"
+msgstr "Sur demande"
+
+#: patterns/liste-de-prix.php:112
+msgid "For the projects that do not fit a plan."
+msgstr "Pour les projets qui n’entrent dans aucun forfait."
+
+#: patterns/liste-de-prix.php:118
+msgid "Scope set together"
+msgstr "Portée définie ensemble"
+
+#: patterns/liste-de-prix.php:121
+msgid "A written estimate within a week"
+msgstr "Une estimation écrite en une semaine"
+
+#: patterns/liste-de-prix.php:124
+msgid "One contact person"
+msgstr "Une seule personne-ressource"
+
+#: patterns/liste-de-prix.php:132
+msgid "Tell us about it"
+msgstr "Nous en parler"
+
+#. translators: %s: URL of the home page.
+#: patterns/message-404.php:23
+#, php-format
+msgid "This page does not exist or has moved. Try a search, or <a href=\"%s\">go back to the home page</a>."
+msgstr "Cette page n’existe pas ou a été déplacée. Essayer une recherche, ou <a href=\"%s\">revenir à la page d’accueil</a>."
+
+#: patterns/page-accueil.php
+msgctxt "Pattern description"
+msgid "A full home page in reading order: who you are, what you do best, your services, proof from a client, recent posts, and one clear next step. One filled button per screen: the opener and the closing band; the sections in between use the outlined button."
+msgstr "Une page d’accueil complète dans l’ordre de lecture : qui est là, ce qu’on fait de mieux, les services, la preuve d’une cliente ou d’un client, les articles récents et une seule prochaine étape claire. Un bouton plein par écran : l’ouverture et la bande de fin ; les sections entre les deux utilisent le bouton contour."
+
+#: patterns/page-services.php
+msgctxt "Pattern description"
+msgid "A full Services page: a short opening, each service with its image, the questions people ask before buying, and a single call to action. One filled button per screen: the opener and the closing band; the section in between uses the outlined button."
+msgstr "Une page Services complète : une courte ouverture, chaque service avec son image, les questions posées avant d’acheter et un seul appel à l’action. Un bouton plein par écran : l’ouverture et la bande de fin ; la section entre les deux utilise le bouton contour."
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Duotone name"
+msgid "Contrast on base"
+msgstr "Contraste sur fond"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Duotone name"
+msgid "Accent on base"
+msgstr "Accent sur fond"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Secondary text"
+msgstr "Texte secondaire"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Line"
+msgstr "Filet"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Text on accent"
+msgstr "Texte sur accent"
+
+#: theme.json
+#: styles/brut.json
+#: styles/chaleureux.json
+#: styles/clair.json
+#: styles/contraste-eleve.json
+#: styles/doux.json
+#: styles/editorial.json
+msgctxt "Color name"
+msgid "Second accent"
+msgstr "Second accent"
+
+#: styles/blocks/group-filet.json
+msgctxt "Style variation name"
+msgid "Top rule"
+msgstr "Filet supérieur"
+
+#: styles/typography/arrondi.json
+msgctxt "Style variation name"
+msgid "Friendly"
+msgstr "Amical"
+
+#: styles/typography/arrondi.json
+msgctxt "Style variation description"
+msgid "Rounded headings on a grotesque body. System fonts, nothing to download."
+msgstr "Titres arrondis sur un corps grotesque. Polices système, rien à télécharger."
+
+#: styles/typography/didone.json
+msgctxt "Style variation name"
+msgid "Classic"
+msgstr "Classique"
+
+#: styles/typography/didone.json
+msgctxt "Style variation description"
+msgid "Didone headings on a transitional serif body. System fonts, nothing to download."
+msgstr "Titres didones sur un corps à empattements de transition. Polices système, rien à télécharger."
+
+#: styles/typography/mono.json
+msgctxt "Style variation name"
+msgid "Technical"
+msgstr "Technique"
+
+#: styles/typography/mono.json
+msgctxt "Style variation description"
+msgid "Monospace headings on a grotesque body. System fonts, nothing to download."
+msgstr "Titres à chasse fixe sur un corps grotesque. Polices système, rien à télécharger."
+
+#: styles/typography/slab.json
+msgctxt "Style variation name"
+msgid "Sturdy"
+msgstr "Robuste"
+
+#: styles/typography/slab.json
+msgctxt "Style variation description"
+msgid "Slab headings on a humanist body. System fonts, nothing to download."
+msgstr "Titres à empattements carrés sur un corps humaniste. Polices système, rien à télécharger."
+
+#: functions.php:326
+msgctxt "Style variation name"
+msgid "Highlighted"
+msgstr "Surligné"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Post with a giant title"
+msgstr "Article avec titre géant"
+
+#: styles/brut.json
+msgctxt "Style variation description"
+msgid "Concrete-grey ground, black text, brick-red accent, industrial uppercase headings and hard 3 px borders."
+msgstr "Fond gris béton, texte noir, accent rouge brique, titres industriels en capitales et bordures dures de 3 px."
+
+#: styles/chaleureux.json
+msgctxt "Style variation description"
+msgid "Saturated sand ground, dark brown text, rust accent, humanist body with serif headings and round buttons."
+msgstr "Fond sable saturé, texte brun foncé, accent rouille, corps humaniste avec titres à empattements et boutons ronds."
+
+#: styles/clair.json
+msgctxt "Style variation description"
+msgid "Cool near-white ground, ink-blue text, teal accent: the airiest palette, for sites that want to feel light."
+msgstr "Fond presque blanc et froid, texte bleu encre, accent sarcelle : la palette la plus aérée, pour les sites qui veulent respirer."
+
+#: styles/contraste-eleve.json
+msgctxt "Style variation description"
+msgid "Pure black on pure white, navy accent, underlined links and a larger body size."
+msgstr "Noir pur sur blanc pur, accent marine, liens soulignés et corps de texte plus grand."
+
+#: styles/doux.json
+msgctxt "Style variation description"
+msgid "Pastel lavender ground, plum text, indigo accent, rounded headings and generous corners."
+msgstr "Fond lavande pastel, texte prune, accent indigo, titres arrondis et coins généreux."
+
+#: styles/editorial.json
+msgctxt "Style variation description"
+msgid "Ivory paper, black ink, crimson accent, serif body with a drop cap and high-contrast display headings, for long reads."
+msgstr "Papier ivoire, encre noire, accent cramoisi, corps à empattements avec lettrine et titres d’affiche très contrastés, pour les longues lectures."
+
+#: functions.php:1022
+#: functions.php:1104
+#: patterns/page-accueil.php:143
+#: patterns/page-accueil.php:144
+msgctxt "page address"
+msgid "about"
+msgstr "a-propos"
+
+#: functions.php:323
+msgctxt "Style variation name"
+msgid "Pixel outline"
+msgstr "Contour pixel"
+
+#: functions.php:324
+msgctxt "Style variation name"
+msgid "Pixel arrow"
+msgstr "Flèche pixel"
+
+#: functions.php:780
+msgid "Table"
+msgstr "Tableau"
+
+#. translators: %d: position of the caption-less table on the page, from 2.
+#: functions.php:782
+#, php-format
+msgid "Table %d"
+msgstr "Tableau %d"
+
+#. translators: %s: address of the page that does not exist yet, e.g. contact.
+#: functions.php:1050
+#, php-format
+msgid "This link stays hidden on the site until the page “%s” is published."
+msgstr "Ce lien reste caché sur le site tant que la page « %s » n’est pas publiée."
+
+#: patterns/equipe.php:114
+#: patterns/page-a-propos.php:215
+msgid "Send your application"
+msgstr "Envoyer votre candidature"
+
+#: patterns/liste-de-prix.php:20
+msgid "Prices shown for the essentials"
+msgstr "Prix affichés pour l’essentiel"
+
+#: patterns/page-accueil.php:66
+msgid "What sets this approach apart"
+msgstr "Ce qui distingue cette approche"
+
+#: patterns/page-contact.php:137
+msgid "How quickly will I get an answer?"
+msgstr "En combien de temps aurai-je une réponse ?"
+
+#: patterns/page-contact.php:139
+msgid "Give a real delay, for example two business days, and say what happens when you are away."
+msgstr "Indiquer un délai réel, par exemple deux jours ouvrables, et préciser ce qui se passe en votre absence."
+
+#: patterns/page-contact.php:145
+msgid "Can we meet by video or in person?"
+msgstr "Peut-on se rencontrer en visioconférence ou en personne ?"
+
+#: patterns/page-contact.php:147
+msgid "Say which formats you offer, how long a first meeting lasts and how to book it."
+msgstr "Préciser les formats offerts, la durée d’une première rencontre et la façon de la réserver."
+
+#: patterns/page-contact.php:153
+msgid "Do you travel to clients?"
+msgstr "Vous déplacez-vous chez vos clients ?"
+
+#: patterns/page-contact.php:155
+msgid "Name the area you cover and whether travel costs extra. If you only work remotely, say so."
+msgstr "Nommer le territoire couvert et indiquer si les déplacements sont facturés en sus. Si vous travaillez uniquement à distance, le dire."
+
+#: patterns/page-contact.php:161
+msgid "What should I put in my first message?"
+msgstr "Que dois-je écrire dans mon premier message ?"
+
+#: patterns/page-contact.php:163
+msgid "List the two or three details that let you give a useful answer on the first try."
+msgstr "Énumérer les deux ou trois renseignements qui vous permettent de répondre utilement du premier coup."

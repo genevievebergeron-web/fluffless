@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/fiche",
+	"version": "0.2.1",
+	"title": "Loop card",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "Shows each post of a Query Loop with the card chosen once for its content type under Appearance, Loop cards: card, list, mosaic or a synced pattern of yours. Change the card there and every loop follows. No script.",
+	"keywords": [
+		"loop",
+		"card",
+		"query",
+		"fiche"
+	],
+	"textdomain": "fluffless-suite",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"anchor": { "type": "string" },
+		"card": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

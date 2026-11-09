@@ -1,0 +1,10 @@
+/* Coins décalés : deux coins opposés fortement arrondis (haut gauche et bas droit), les deux
+   autres carrés ; fl-coins-miroir passe à l'autre diagonale. */
+.is-style-coins-decales img {
+	--fl-coin: clamp(2rem, 8vw, 5rem);
+	border-radius: var(--fl-coin) 0;
+}
+
+.is-style-coins-decales.fl-coins-miroir img {
+	border-radius: 0 var(--fl-coin);
+}

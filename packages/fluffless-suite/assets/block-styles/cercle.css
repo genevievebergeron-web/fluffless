@@ -1,0 +1,7 @@
+/* Cercle : image recadrée en carré puis arrondie en disque. */
+.is-style-cercle img {
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+}

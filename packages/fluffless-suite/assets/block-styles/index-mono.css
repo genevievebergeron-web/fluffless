@@ -1,0 +1,42 @@
+/* Index mono : numéro automatique en police à chasse fixe devant le titre, compté par page
+   (et par contenu d'article dans une boucle). Le préfixe est décoratif : texte de remplacement
+   vide là où « content: … / "" » est compris, pour que le nom accessible reste le titre seul.
+   Variantes par classe : fl-index-slash (01 /) et fl-index-dot (point plein). */
+body,
+.wp-block-post-content {
+	counter-reset: fluffless-index;
+}
+
+.is-style-index-mono {
+	counter-increment: fluffless-index;
+	--fl-index: "[" counter(fluffless-index, decimal-leading-zero) "]";
+}
+
+.is-style-index-mono.fl-index-slash {
+	--fl-index: counter(fluffless-index, decimal-leading-zero) " /";
+}
+
+.is-style-index-mono.fl-index-dot {
+	--fl-index: "\25CF";
+}
+
+.is-style-index-mono::before {
+	content: var(--fl-index);
+	margin-inline-end: 0.6em;
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size: 0.5em;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	vertical-align: middle;
+	color: var(--wp--preset--color--accent);
+}
+
+.is-style-index-mono.fl-index-dot::before {
+	font-size: 0.8em;
+}
+
+@supports (content: "a" / "") {
+	.is-style-index-mono::before {
+		content: var(--fl-index) / "";
+	}
+}

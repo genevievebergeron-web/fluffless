@@ -1,0 +1,9 @@
+.fluffless-video{--fl-r:16/9}
+.fluffless-video.is-ratio-4-3{--fl-r:4/3}
+.fluffless-video.is-ratio-1-1{--fl-r:1}
+.fluffless-video__facade,.fluffless-video__frame,.fluffless-video__player{display:block;position:relative;inline-size:100%;aspect-ratio:var(--fl-r);border:0;background:var(--wp--preset--color--contrast);overflow:hidden;object-fit:cover}
+.fluffless-video__poster{position:absolute;inset:0;inline-size:100%;block-size:100%;object-fit:cover}
+.fluffless-video__play{position:absolute;inset-block-start:50%;inset-inline-start:50%;translate:-50% -50%;display:grid;place-items:center;inline-size:4rem;block-size:4rem;border-radius:50%;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);transition:scale .2s}
+.fluffless-video__play svg{inline-size:2rem;block-size:2rem}
+.fluffless-video__facade:is(:hover,:focus-visible) .fluffless-video__play{scale:1.1}
+.fluffless-video>:is(a,iframe,video)~*{margin-block-start:var(--wp--preset--spacing--30,1rem)}

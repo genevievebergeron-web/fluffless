@@ -1,0 +1,23 @@
+/*
+ * Forme d'accent : une forme en couleur accent derrière le contenu, dessinée par un seul
+ * pseudo-élément (aucune image, aucun script). Les classes fl-accent-* précisent la forme, la
+ * place, la taille et la transparence ; sans elles : disque, coin haut-droit, moyenne, 25 %.
+ * Sous 48rem, la taille plafonne à 40vw : le décor ne traverse plus titres et texte sur mobile.
+ * Les listes vivent dans BlockStyles::ACCENT_OPTIONS et le panneau block-styles-editor.js.
+ */
+.is-style-forme-accent{position:relative;isolation:isolate;overflow:hidden}
+.is-style-forme-accent::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:0;right:0;width:var(--fl-accent-size,18rem);height:var(--fl-accent-size,18rem);max-width:70vw;max-height:70vw;translate:30% -30%;border-radius:50%;background:var(--wp--preset--color--accent);opacity:.25}
+.is-style-forme-accent.fl-accent-shape-half-moon::before{height:calc(var(--fl-accent-size,18rem)/2);border-radius:50% 50% 0 0/100% 100% 0 0}
+.is-style-forme-accent.fl-accent-shape-ring::before{background:none;border:calc(var(--fl-accent-size,18rem)/9) solid var(--wp--preset--color--accent)}
+.is-style-forme-accent.fl-accent-shape-drop::before{border-radius:50% 50% 50% 0;rotate:135deg;scale:.72}
+.is-style-forme-accent.fl-accent-shape-dot-grid::before{border-radius:0;background:radial-gradient(var(--wp--preset--color--accent) 22%,transparent 26%) 0 0/1.25rem 1.25rem}
+.is-style-forme-accent.fl-accent-place-bottom-left::before{top:auto;right:auto;bottom:0;left:0;translate:-30% 30%}
+.is-style-forme-accent.fl-accent-place-title::before{right:auto;left:max(var(--wp--preset--spacing--50,2rem),calc(50% - var(--wp--style--global--content-size,42rem)/2));translate:-40% 0}
+.is-style-forme-accent.fl-accent-place-right-edge::before{bottom:0;height:auto;max-height:none;translate:40% 0}
+.is-style-forme-accent.fl-accent-size-small{--fl-accent-size:10rem}
+.is-style-forme-accent.fl-accent-size-large{--fl-accent-size:28rem}
+.is-style-forme-accent.fl-accent-alpha-10::before{opacity:.1}
+.is-style-forme-accent.fl-accent-alpha-50::before{opacity:.5}
+.is-style-forme-accent.fl-accent-alpha-100::before{opacity:1}
+@media (max-width:48rem){.is-style-forme-accent.is-style-forme-accent{--fl-accent-size:min(18rem,40vw)}.is-style-forme-accent.fl-accent-size-small{--fl-accent-size:min(10rem,40vw)}.is-style-forme-accent.fl-accent-size-large{--fl-accent-size:min(28rem,40vw)}}
+@media print{.is-style-forme-accent::before{display:none}}

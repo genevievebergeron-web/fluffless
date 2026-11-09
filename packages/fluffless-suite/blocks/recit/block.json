@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/recit",
+	"version": "0.2.1",
+	"title": "Scrolling story",
+	"category": "design",
+	"icon": "excerpt-view",
+	"description": "A scene that stays in place while the steps beside it scroll in. Native CSS motion where supported, a small fallback elsewhere, and no motion for visitors who ask for less.",
+	"keywords": [ "scroll", "sticky", "story", "steps", "récit" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"scene": { "type": "string", "enum": [ "start", "end" ], "default": "start" },
+		"effect": { "type": "string", "enum": [ "rise", "fade", "none" ], "default": "rise" },
+		"align": { "type": "string", "default": "wide" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

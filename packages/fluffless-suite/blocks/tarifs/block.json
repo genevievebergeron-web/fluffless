@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/tarifs",
+	"version": "0.2.1",
+	"title": "Pricing table",
+	"category": "design",
+	"icon": "money-alt",
+	"description": "A heading and two to four plans side by side: name, price, who it is for, what is included and a button. One plan can stand out. The content stays in regular blocks.",
+	"keywords": [ "pricing", "plans", "prices", "tarifs", "table" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"featured": { "type": "integer", "enum": [ 0, 1, 2, 3, 4 ], "default": 0 }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

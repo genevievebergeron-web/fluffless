@@ -1,0 +1,17 @@
+/* Frise : chaque étape pose un point sur un fil commun. Décor seulement, le texte porte le sens. */
+.wp-block-group.is-style-frise > * {
+	position: relative;
+	border-top: 3px solid currentcolor;
+	padding-top: var(--wp--preset--spacing--50);
+}
+
+.wp-block-group.is-style-frise > *::before {
+	content: "";
+	position: absolute;
+	top: calc(-0.5rem - 1.5px);
+	inset-inline-start: 0;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: var(--wp--preset--color--accent);
+}

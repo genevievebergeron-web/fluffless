@@ -1,0 +1,23 @@
+/* Sections empilées : chaque enfant direct colle en haut de la fenêtre et le suivant glisse
+   par-dessus, sur un fond opaque (le sien, celui du groupe, sinon la couleur de base). L'enfant
+   qui reçoit le focus repasse devant, pour que le focus clavier ne soit jamais recouvert.
+   Éteint sous prefers-reduced-motion, à l'impression et dans une fenêtre de moins de 600 px de
+   haut. Chaque enfant doit tenir dans la hauteur de la fenêtre. */
+@media screen and (min-height: 600px) and (prefers-reduced-motion: no-preference) {
+	.is-style-empilees > * {
+		position: sticky;
+		top: var(--wp-admin--admin-bar--height, 0px);
+	}
+
+	.is-style-empilees > :not(.has-background) {
+		background: var(--wp--preset--color--base);
+	}
+
+	.is-style-empilees.has-background > :not(.has-background) {
+		background: inherit;
+	}
+
+	.is-style-empilees > :focus-within {
+		z-index: 1;
+	}
+}

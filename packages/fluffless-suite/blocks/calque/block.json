@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/calque",
+	"version": "0.2.1",
+	"title": "Image layer",
+	"category": "media",
+	"icon": "images-alt2",
+	"description": "A decorative image placed anywhere in its section, behind or in front of the text: position anchored to the centre or a corner (it holds its place when the section resizes), width, rotation, opacity and blend mode. Rendered in CSS, no JavaScript on the site.",
+	"keywords": [ "layer", "background", "decoration", "overlay", "calque" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"id": { "type": "number", "default": 0 },
+		"url": { "type": "string", "default": "" },
+		"alt": { "type": "string", "default": "" },
+		"decorative": { "type": "boolean", "default": true },
+		"x": { "type": "number", "default": 50 },
+		"y": { "type": "number", "default": 50 },
+		"width": { "type": "number", "default": 30 },
+		"rotate": { "type": "number", "default": 0 },
+		"opacity": { "type": "number", "default": 100 },
+		"blend": { "type": "string", "default": "normal" },
+		"layer": { "type": "string", "enum": [ "back", "front" ], "default": "back" },
+		"hideMobile": { "type": "boolean", "default": false },
+		"pin": { "type": "string", "enum": [ "center", "top-left", "top-right", "bottom-left", "bottom-right" ], "default": "center" },
+		"clip": { "type": "string", "enum": [ "clip", "overflow" ], "default": "clip" },
+		"clipMargin": { "type": "number", "default": 0 },
+		"minWidth": { "type": "string", "default": "" },
+		"maxWidth": { "type": "string", "default": "" },
+		"xMobile": { "type": "number" },
+		"yMobile": { "type": "number" },
+		"widthMobile": { "type": "number" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js"
+}

@@ -1,0 +1,111 @@
+# Équivalent distant de « npm run ci », puis construction des paquets (sans publication).
+# Actions épinglées par SHA de commit (version en commentaire).
+name: CI
+
+# Pushes sur main et PR seulement : une branche avec PR ne lance qu'un run par push.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    # Postgres du service de licences (npm run test:api, dans npm run ci) : jetable, propre à ce run.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: ci-jetable
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgres://postgres:ci-jetable@127.0.0.1:5432/postgres
+      # Instance jetable (runner éphémère) : test:uninstall, qui efface options et tables, ne tourne que sur elle.
+      COMPOSE_FILE: compose.yaml
+      COMPOSE_PROJECT_NAME: fluffless-ci-jetable
+      FLUFFLESS_HOME_URL: http://127.0.0.1:8882/
+      # Noms de clients pour check:proprete (secret du dépôt ; vide, le contrôle est annoncé comme sauté).
+      FLUFFLESS_NOMS_CLIENTS: ${{ secrets.FLUFFLESS_NOMS_CLIENTS }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        # Historique complet : check:proprete lit les commits postérieurs à sa base.
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dépendances Node
+        run: npm ci && npm --prefix services/api ci
+
+      # test:giant-size mesure l'accueil dans Chromium (playwright-core, version de package-lock.json).
+      - name: Chromium pour test:giant-size
+        run: npx playwright-core install --with-deps chromium
+
+      - name: Police sans-serif du runner alignée sur Arial (Liberation Sans plutôt que DejaVu Sans)
+        # Sans réglage, system-ui et sans-serif tombent sur DejaVu Sans, plus large d'environ 13 % :
+        # « Accompagnement » en Géant (2rem) déborde alors 320 px de 4 px (test:giant-size), ce qu'aucun
+        # téléphone ne reproduit. Liberation Sans a les chasses d'Arial, comme Windows et Android (Roboto proche).
+        run: |
+          mkdir -p ~/.config/fontconfig
+          cat > ~/.config/fontconfig/fonts.conf <<'XML'
+          <?xml version="1.0"?>
+          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+          <fontconfig>
+            <alias binding="strong"><family>system-ui</family><prefer><family>Liberation Sans</family></prefer></alias>
+            <alias binding="strong"><family>sans-serif</family><prefer><family>Liberation Sans</family></prefer></alias>
+          </fontconfig>
+          XML
+          fc-cache -f >/dev/null
+          # Échoue à voix haute si l'image du runner perd fonts-liberation : sinon DejaVu revient sans bruit.
+          for f in sans-serif system-ui; do fc-match "$f" | tee /dev/stderr | grep -q 'Liberation Sans' || exit 1; done
+
+      - name: gettext (msgfmt, msgattrib pour check:i18n)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq gettext
+
+      # Jeton du run pour Composer : sans lui, api.github.com freine les téléchargements (HTTP 504).
+      - name: Dépendances PHP (PHPCS, PHPStan) dans Docker
+        env:
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.GITHUB_TOKEN }}"}}'
+        run: |
+          echo "DB_PASSWORD=$(openssl rand -hex 16)" > .env
+          docker compose run --rm -e COMPOSER_AUTH php-tools composer install
+
+      - name: WordPress de dev (thème et extension montés depuis packages/)
+        run: |
+          # Des tests écrivent dans packages/ (monté) sous l'utilisateur 33 du conteneur : le checkout appartient au runner.
+          chmod -R a+rwX packages
+          docker compose up -d --wait db wordpress
+          for _ in $(seq 1 30); do curl -fsS -o /dev/null http://127.0.0.1:8882/wp-login.php && break; sleep 2; done
+          docker compose run --rm -T cli wp core install --url=http://127.0.0.1:8882 --title=CI \
+            --admin_user=ci --admin_password="$(openssl rand -hex 16)" --admin_email=ci@example.org --skip-email
+          docker compose run --rm -T cli wp theme activate fluffless
+          # Permaliens /%postname%/ comme en local : sans réécriture, url_to_postid ne résout aucun chemin (test carbone).
+          docker compose run --rm -T cli wp rewrite structure '/%postname%/'
+          docker compose run --rm -T cli wp plugin activate fluffless-suite fluffless-consent
+          # Module Événements (éteint par défaut) : events-test.php l'exige.
+          docker compose run --rm -T cli wp option patch update fluffless_settings modules events true --format=json
+          # Les tests basculent en fr_CA et en_CA : mêmes langues que le WordPress local.
+          docker compose run --rm -T cli wp language core install fr_CA en_CA
+
+      - name: Contrôles (s'arrête au premier échec)
+        run: npm run ci
+
+      # Non signés : le CI vérifie la construction ; le serveur signe à la mise en ligne.
+      - name: Paquets et manifeste de mises à jour
+        run: SKIP_CHECKS=1 RELEASE_UNSIGNED=1 npm run release
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: fluffless-dist
+          path: dist/
+          retention-days: 7

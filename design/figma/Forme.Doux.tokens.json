@@ -1,0 +1,29 @@
+{
+	"rayon": {
+		"none": {
+			"$type": "number",
+			"$value": 0
+		},
+		"soft": {
+			"$type": "number",
+			"$value": 20
+		},
+		"round": {
+			"$type": "number",
+			"$value": 999
+		},
+		"large": {
+			"$type": "number",
+			"$value": 24
+		},
+		"small": {
+			"$type": "number",
+			"$value": 4
+		},
+		"cut": {
+			"$type": "number",
+			"$value": 8,
+			"$description": "Coin coupé (style Coupé)"
+		}
+	}
+}

@@ -1,0 +1,64 @@
+# WordPress isolé pour la comparaison de sobriété (Fluffless, Ollie, Elementor).
+# Distinct de l'instance de développement (compose.yaml à la racine, port 8882).
+# Démarrer   : docker compose -f tools/bench/compose.yaml up -d
+# Préparer   : tools/bench/setup.sh <fluffless|fluffless-gratuit|ollie|elementor>
+# Mesurer    : npm run bench
+# Arrêter    : docker compose -f tools/bench/compose.yaml down        (garde les volumes)
+# Supprimer  : docker compose -f tools/bench/compose.yaml down -v     (retire base et fichiers)
+name: fluffless-bench
+
+x-db-env: &db-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: bench
+  # Instance jetable, liée à 127.0.0.1 : mot de passe local sans valeur de secret.
+  WORDPRESS_DB_PASSWORD: bench-local-only
+  WORDPRESS_DB_NAME: bench
+
+x-code-volumes: &code-volumes
+  - wp:/var/www/html
+  - ../../packages:/packages:ro
+  - ./:/bench:ro
+  - ../reports/bench-build:/bench-build:ro
+  - ../../references:/references:ro
+
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: bench
+      MARIADB_USER: bench
+      MARIADB_PASSWORD: bench-local-only
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  wordpress:
+    image: wordpress:7.1-php8.3-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8883:80"
+    environment:
+      <<: *db-env
+      # Pas de WP_DEBUG ni de WP_DEVELOPMENT_MODE : on mesure un site en conditions de production.
+    volumes: *code-volumes
+
+  cli:
+    image: wordpress:cli-2-php8.3
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      - wordpress
+    environment:
+      <<: *db-env
+    volumes: *code-volumes
+
+volumes:
+  db:
+  wp:

@@ -1,0 +1,270 @@
+/*
+Theme Name: Fluffless
+Theme URI: https://fluffless.dev
+Author: Geneviève Bergeron
+Author URI: https://genevievebergeron.ca
+Description: A light, expressive block theme. Bare but mighty.
+Version: 0.2.1
+Requires at least: 6.8
+Tested up to: 7.1
+Requires PHP: 8.2
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fluffless
+Tags: one-column, wide-blocks, block-patterns, block-styles, full-site-editing, style-variations, translation-ready, custom-colors
+*/
+
+/* Seulement ce que theme.json ne sait pas exprimer. */
+
+:where(h1, h2, h3, h4, .wp-block-heading) {
+	text-wrap: balance;
+}
+
+:where(p, li) {
+	text-wrap: pretty;
+}
+
+/* Menu mobile sans JavaScript : un bloc Détails natif (<details>) remplace le menu en ligne
+   sous 600 px. Accessible au clavier, aucun script.
+   Limite connue : Échap ne ferme pas un <details> (seul <dialog> le fait nativement). On le
+   referme avec Entrée ou Espace sur « Menu », ou en suivant un lien. Un petit script
+   d'accessibilité (assets/js/nav-escape.js, moins de 1 ko) referme le menu avec Échap : c'est
+   le seul JavaScript du thème côté visiteur, plafonné à 1 ko. */
+.fluffless-nav-mobile {
+	display: none;
+}
+
+.fluffless-nav-mobile > summary {
+	cursor: pointer;
+	list-style: none;
+	font-weight: 700;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+	border: 2px solid currentcolor;
+	border-radius: var(--wp--custom--radius--soft);
+}
+
+.fluffless-nav-mobile > summary::-webkit-details-marker {
+	display: none;
+}
+
+.fluffless-nav-mobile > summary::after {
+	content: " \2193";
+}
+
+.fluffless-nav-mobile[open] > summary::after {
+	content: " \2191";
+}
+
+/* Ouvert, le menu devient un panneau sur toute la largeur de l'en-tête (positionné par rapport à
+   <header>, voir plus bas), sur fond base, sans pousser le contenu de la page. */
+.fluffless-nav-mobile[open] > .wp-block-navigation {
+	position: absolute;
+	inset-inline: 0;
+	top: 100%;
+	z-index: 20;
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	border-block-end: 2px solid var(--wp--preset--color--contrast);
+	box-shadow: 0 0.75rem 1.5rem -1rem var(--wp--preset--color--contrast);
+}
+
+/* Chaque lien du panneau fait une cible de 44 px au moins. */
+.fluffless-nav-mobile[open] .wp-block-navigation-item__content {
+	display: block;
+	min-height: 44px;
+	padding-block: var(--wp--preset--spacing--30);
+}
+
+/* Dans le panneau, les sous-menus sont déjà dépliés : rien à survoler, rien à cliquer, un seul
+   état pour tout le monde. Le cœur les cache et les positionne en absolu ; on les remet en flux. */
+header.wp-block-template-part .fluffless-nav-mobile .wp-block-navigation__submenu-container {
+	position: static;
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+	width: auto;
+	min-width: 0;
+	overflow: visible;
+	margin-block-start: var(--wp--preset--spacing--20);
+	padding-inline-start: var(--wp--preset--spacing--30);
+	border: 0;
+	border-inline-start: 2px solid var(--wp--preset--color--divider);
+	background: transparent;
+	box-shadow: none;
+}
+
+/* Sur écran large, un lien parent porte une flèche en CSS : l'icône du cœur reste désactivée
+   (showSubmenuIcon à faux), sinon le bloc Navigation charge son script. */
+header.wp-block-template-part .fluffless-nav-desktop .has-child > .wp-block-navigation-item__content::after {
+	content: " \2193";
+}
+
+/* L'en-tête sert de repère aux panneaux (menu mobile, panneau de menu de la Suite). Collant
+   quand son groupe racine porte la position « Collante » native du bloc Groupe : le cœur pose
+   position: sticky sur le groupe, mais c'est <header> qui doit coller pour que ça se voie. */
+header.wp-block-template-part {
+	position: relative;
+}
+
+header.wp-block-template-part:has(> .is-position-sticky) {
+	position: sticky;
+	top: 0;
+	z-index: 30;
+}
+
+/* En-tête compact sur petit écran : le contenu et son appel à l'action restent au premier écran. */
+@media (max-width: 600px) {
+	header.wp-block-template-part .fluffless-nav-desktop {
+		display: none;
+	}
+
+	header.wp-block-template-part .fluffless-nav-mobile {
+		display: block;
+	}
+
+	header.wp-block-template-part > .wp-block-group {
+		padding-top: var(--wp--preset--spacing--30) !important;
+		padding-bottom: var(--wp--preset--spacing--30) !important;
+	}
+
+	header.wp-block-template-part .wp-block-group {
+		row-gap: var(--wp--preset--spacing--20);
+		column-gap: var(--wp--preset--spacing--30);
+	}
+
+	header.wp-block-template-part .wp-block-site-title {
+		font-size: var(--wp--preset--font-size--medium) !important;
+	}
+
+	header.wp-block-template-part .wp-block-navigation {
+		gap: var(--wp--preset--spacing--30);
+	}
+
+	header.wp-block-template-part .wp-block-button__link {
+		padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+	}
+
+	/* Les très grands titres respirent un peu plus sur une colonne étroite. */
+	:is(.has-giant-font-size, .has-xx-large-font-size, .is-style-geant) {
+		line-height: 1 !important;
+	}
+}
+
+/* Les sections sont larges, mais le texte courant garde une mesure lisible. */
+:where(main, .wp-block-group, .wp-block-column, .wp-block-cover__inner-container, .wp-block-details) > p:not(.has-text-align-center) {
+	max-width: 65ch;
+}
+
+/* Focus visible partout : double contour, trait contrast et liseré base. Les deux couleurs
+   contrastent entre elles dans les 7 variations (tools/check-contrast.mjs, paires UI) : le focus
+   reste lisible sur fond accent, surface, base ou inversé, champs de recherche compris.
+   Le liseré base déborde de l'autre côté du trait (6 px, le trait occupe de 2 à 4 px) : le trait
+   contrast est bordé de base des deux côtés et n'a plus à contraster avec le fond de la section.
+   :root pèse plus lourd que les règles :focus-visible de theme.json. */
+:root :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--wp--preset--color--contrast);
+	outline-offset: 2px;
+	box-shadow: 0 0 0 6px var(--wp--preset--color--base);
+}
+
+/* Lien d'évitement : pastille pleine, lisible sur fond clair comme sombre. */
+:root .skip-link.screen-reader-text:focus {
+	background: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base);
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* Les très grandes tailles gardent un interligne serré, même sur un paragraphe.
+   Pas de coupure automatique sur les chiffres et les titres courts (« 15 an s », « pho-to »). */
+.has-xx-large-font-size,
+:where(h1, h2, h3, h4) {
+	hyphens: manual;
+}
+
+.has-xx-large-font-size {
+	line-height: var(--wp--custom--line-height--tight);
+}
+
+/* Colonnes : un titre Énorme suit la largeur de sa colonne, comme dans une tuile de grille. Dans une
+   colonne étroite (30 à 40 % de la rangée), un mot de 13 lettres (« d’accompagner ») tient sans se
+   couper ; dans une colonne large, le plafond reste la taille Énorme du thème. */
+.wp-block-column:has(> :is(h1, h2, h3, h4).has-xx-large-font-size) {
+	container-type: inline-size;
+}
+
+.wp-block-column > :is(h1, h2, h3, h4).has-xx-large-font-size {
+	font-size: clamp(1.6rem, 13cqi, var(--wp--preset--font-size--xx-large)) !important;
+}
+
+/* Styles de blocs, préréglage Géant, grille, prix, cadres, zigzag et accordéon : une feuille par
+   classe dans assets/css/blocks/, en ligne seulement sur les pages qui la portent (functions.php). */
+
+/* Menu : survol et focus soulignés, page courante en gras. */
+.wp-block-navigation a:hover,
+.wp-block-navigation a:focus-visible {
+	color: var(--wp--preset--color--accent);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 2px;
+}
+
+.wp-block-navigation a[aria-current="page"] {
+	font-weight: 800;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 2px;
+}
+
+/* Section courante : le lien dont la page affichée descend (classe posée par le thème). */
+.wp-block-navigation .current-menu-ancestor > .wp-block-navigation-item__content {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 1px;
+}
+
+/* Icône de sous-menu du cœur (showSubmenuIcon, un enfant peut l'activer) : le bouton atteint
+   24 px, la flèche garde 0,6 em. Le cœur donne width: inherit au svg, d'où la règle explicite. */
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+	min-width: 24px;
+	min-height: 24px;
+	margin-left: 0;
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-icon svg {
+	width: 0.6em;
+	height: 0.6em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Relais de l'ancien rôle « border », devenu « divider » : le contenu enregistré avant le
+   renommage garde sa couleur. has-border-color n'est relayée que sur les séparateurs, où elle
+   désigne bien la couleur du rôle ; ailleurs, WordPress la pose sur tout bloc à bordure colorée. */
+body {
+	--wp--preset--color--border: var(--wp--preset--color--divider);
+}
+
+.has-border-background-color {
+	background-color: var(--wp--preset--color--divider) !important;
+}
+
+.has-border-border-color {
+	border-color: var(--wp--preset--color--divider) !important;
+}
+
+.wp-block-separator.has-border-color {
+	color: var(--wp--preset--color--divider) !important;
+}

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Scrolling band",
+	"slug": "bande",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"spacing": {
+			"blockGap": "var:preset|spacing|60"
+		}
+	}
+}

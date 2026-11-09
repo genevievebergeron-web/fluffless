@@ -1,0 +1,7 @@
+.fluffless-coordonnees__address{font-style:normal}
+.fluffless-coordonnees__phone{margin-block:.5rem 0}
+.fluffless-coordonnees__hours{display:grid;gap:.35rem;margin-block:1rem 0}
+.fluffless-coordonnees__hours>div{display:grid;grid-template-columns:minmax(8rem,auto) 1fr;gap:1rem}
+.fluffless-coordonnees__hours dt{font-weight:600}
+.fluffless-coordonnees__hours dd{margin:0}
+.fluffless-coordonnees.is-hours-hidden .fluffless-coordonnees__hours{display:none}

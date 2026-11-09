@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Soft shape",
+	"slug": "forme-douce",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"color": { "background": "var:preset|color|surface", "text": "var:preset|color|contrast" },
+		"border": { "radius": "clamp(1.25rem, 3vw, 2.5rem)" },
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|70",
+				"bottom": "var:preset|spacing|70",
+				"left": "var:preset|spacing|60",
+				"right": "var:preset|spacing|60"
+			}
+		}
+	}
+}

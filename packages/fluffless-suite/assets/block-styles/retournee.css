@@ -1,0 +1,36 @@
+/* Carte qui se retourne : premier enfant = recto, second = verso. CSS seul.
+   Retournement au survol et au focus clavier (:focus-within), seulement sur un appareil qui
+   survole et sans mouvement réduit. Ailleurs, les deux faces restent empilées et lisibles :
+   rien n'est jamais caché aux lecteurs d'écran ni au toucher. Sans lien dedans, le rendu
+   public donne tabindex="0" à la carte (BlockStyles::focusable), qui a donc son propre
+   anneau de focus. */
+.wp-block-group.is-style-retournee:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	.wp-block-group.is-style-retournee {
+		display: grid;
+		perspective: 60rem;
+	}
+
+	.wp-block-group.is-style-retournee > * {
+		grid-area: 1 / 1;
+		margin: 0;
+		backface-visibility: hidden;
+		transition: transform 0.5s ease;
+	}
+
+	.wp-block-group.is-style-retournee > :nth-child(2) {
+		transform: rotateY(180deg);
+	}
+
+	.wp-block-group.is-style-retournee:is(:hover, :focus-within) > :first-child {
+		transform: rotateY(-180deg);
+	}
+
+	.wp-block-group.is-style-retournee:is(:hover, :focus-within) > :nth-child(2) {
+		transform: none;
+	}
+}

@@ -1,0 +1,15 @@
+/* Tableau du cœur habillé par des classes ; les cellules restent celles de l'éditeur. Sept réglages : 2 ko permis. */
+.fluffless-tableau{--fl-b:1px solid var(--wp--preset--color--divider)}
+.fluffless-tableau :is(td,th){border:0;padding:.6em .8em;text-align:start;vertical-align:top}
+.fluffless-tableau tr{border-block-end:var(--fl-b)}
+.fluffless-tableau thead{border-block-end:2px solid var(--wp--preset--color--contrast)}
+.fluffless-tableau.is-density-compact :is(td,th){padding:.3em .5em;font-size:var(--wp--preset--font-size--small)}
+.fluffless-tableau.is-lines-grid :is(td,th){border:var(--fl-b)}
+.fluffless-tableau.is-lines-none :is(tr,thead){border:0}
+.fluffless-tableau.is-stripes-striped tbody tr:nth-child(odd){background:var(--wp--preset--color--surface)}
+.fluffless-tableau.is-header-accent th{background:var(--wp--preset--color--accent);color:var(--wp--preset--color--on-accent)}
+.fluffless-tableau.is-header-sticky .wp-block-table{overflow:visible}
+.fluffless-tableau.is-header-sticky thead th{position:sticky;inset-block-start:0;background:var(--wp--preset--color--base)}
+.fluffless-tableau.is-heads-bold tr>:first-child{font-weight:700}
+.fluffless-tableau.is-numbers-right .is-num{text-align:end;font-variant-numeric:tabular-nums}
+@media (max-width:600px){.fluffless-tableau.is-mobile-stack :is(thead,td:empty){display:none}.fluffless-tableau.is-mobile-stack :is(tr,td,th){display:block;border:0}.fluffless-tableau.is-mobile-stack .is-num{text-align:start}.fluffless-tableau.is-mobile-stack tr{border-block-end:var(--fl-b);padding-block:.5em}.fluffless-tableau.is-mobile-stack td::before{content:attr(data-label);display:block;font-weight:700;font-size:var(--wp--preset--font-size--small)}}

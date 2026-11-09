@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+vendor/
+references/*
+!references/LISEZ-MOI.md
+.lighthouseci/
+tools/reports/
+*.zip
+.DS_Store
+dist/
+tools/reports/forms-html/

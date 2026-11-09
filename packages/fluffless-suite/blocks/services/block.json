@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/services",
+	"version": "0.2.1",
+	"title": "Services",
+	"category": "design",
+	"icon": "grid-view",
+	"description": "A heading and two to six services on two, three or four columns, as cards or as a list, each with an optional icon, a name, one line and on request a button. The content stays in regular blocks.",
+	"keywords": [ "services", "offer", "cards", "grid", "prestations" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"display": { "type": "string", "enum": [ "cards", "list" ], "default": "cards" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

@@ -1,0 +1,3 @@
+/* Les questions gardent une mesure lisible ; le reste vient du bloc Détails du cœur et du thème. */
+.fluffless-questions__list{max-inline-size:48rem}
+.fluffless-questions .wp-block-details>summary{font-weight:600;cursor:pointer}

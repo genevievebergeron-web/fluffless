@@ -1,0 +1,18 @@
+parameters:
+	level: 8
+	paths:
+		- packages/fluffless-suite
+		- packages/fluffless-seo
+		- packages/fluffless-consent
+		- packages/fluffless
+	# Signatures d'extensions tierces facultatives (Polylang), de WP-CLI, de PHPMailer, de Sensei LMS et de Formidable, lues sans être chargées.
+	scanFiles:
+		- tools/phpstan/polylang-stubs.php
+		- tools/phpstan/wp-cli-stubs.php
+		- tools/phpstan/phpmailer-stubs.php
+		- tools/phpstan/sensei-stubs.php
+		- tools/phpstan/forms-stubs.php
+	excludePaths:
+		- */node_modules/*
+		- */vendor/*
+		- */build/*

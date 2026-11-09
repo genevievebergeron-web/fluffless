@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Retro shadow",
+	"slug": "retro",
+	"blockTypes": [ "core/button", "core/group", "fluffless/carte" ],
+	"styles": {}
+}

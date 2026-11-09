@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Top rule",
+	"slug": "filet",
+	"blockTypes": [ "core/group", "core/column" ],
+	"styles": {
+		"border": {
+			"top": { "width": "0.25rem", "style": "solid", "color": "var:preset|color|contrast" }
+		},
+		"spacing": {
+			"padding": { "top": "var:preset|spacing|50" }
+		}
+	}
+}

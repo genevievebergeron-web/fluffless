@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/chiffres",
+	"version": "0.2.1",
+	"title": "Key figures",
+	"category": "design",
+	"icon": "chart-bar",
+	"description": "A heading and two to four figures side by side, each with a large or compact number and one line that says what it counts. The content stays in regular blocks.",
+	"keywords": [ "numbers", "statistics", "impact", "results", "chiffres" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"size": { "type": "string", "enum": [ "large", "compact" ], "default": "large" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

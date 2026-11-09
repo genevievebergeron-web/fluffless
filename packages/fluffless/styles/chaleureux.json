@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Warm",
+	"description": "Saturated sand ground, dark brown text, rust accent, humanist body with serif headings and round buttons.",
+	"settings": {
+		"color": {
+			"duotone": [
+				{ "slug": "contraste", "name": "Contrast on base", "colors": [ "#2a1a10", "#efd9b4" ] },
+				{ "slug": "accent", "name": "Accent on base", "colors": [ "#9a3412", "#efd9b4" ] }
+			],
+			"palette": [
+				{ "slug": "base", "name": "Base", "color": "#efd9b4" },
+				{ "slug": "surface", "name": "Surface", "color": "#e4c99b" },
+				{ "slug": "contrast", "name": "Contrast", "color": "#2a1a10" },
+				{ "slug": "muted", "name": "Secondary text", "color": "#5c4330" },
+				{ "slug": "divider", "name": "Line", "color": "#8a6a4a" },
+				{ "slug": "accent", "name": "Accent", "color": "#9a3412" },
+				{ "slug": "on-accent", "name": "Text on accent", "color": "#efd9b4" },
+				{ "slug": "accent-2", "name": "Second accent", "color": "#2f5d50" },
+				{ "slug": "alert", "name": "Alert", "color": "#8a1c1c" }
+			]
+		}
+	},
+	"styles": {
+		"typography": { "fontFamily": "var:preset|font-family|humanist" },
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var:preset|font-family|serif", "fontWeight": "700", "letterSpacing": "0" }
+			},
+			"button": {
+				"border": { "radius": "var:custom|radius|round" }
+			}
+		}
+	}
+}

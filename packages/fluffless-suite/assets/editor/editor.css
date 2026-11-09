@@ -1,0 +1,38 @@
+/* Éditeur de pages Fluffless : écran de départ, questionnaire, bibliothèque, boutons du canevas.
+   Chargée dans l'éditeur de pages seulement (dehors et dans le canevas), jamais côté visiteur. */
+.fl-start__intro{margin:0 0 24px;font-size:15px}
+.fl-start__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin:0;padding:0;list-style:none}
+.fl-start__card{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid rgb(0 0 0/.15);border-radius:8px}
+.fl-start__name,.fl-questions__page{display:flex;align-items:center;gap:12px;margin:0;font-size:18px}
+/* Icônes pixel art : 24 px entiers, bords nets ; tuile penchée comme dans l'espace Fluffless. */
+.fl-pixel{flex:none;width:24px;height:24px}
+.fl-pixel-tile{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;border-radius:14px 14px 14px 4px;background:color-mix(in srgb,var(--wp-admin-theme-color,#3858e9) 12%,transparent);color:var(--wp-admin-theme-color,#3858e9);transform:rotate(-4deg);transition:transform 180ms ease-out}
+.fl-start__card:hover .fl-pixel-tile{transform:rotate(0) scale(1.06)}
+@media (prefers-reduced-motion:reduce){.fl-pixel-tile{transition:none}}
+@media (forced-colors:active){.fl-pixel-tile{border:1px solid CanvasText}}
+.fl-start__preview{height:320px;overflow:hidden;border-radius:4px;background:rgb(0 0 0/.04)}
+.fl-start__card--blank .fl-start__description{flex:1}
+.fl-start__description{margin:0}
+.fl-start__badge{display:inline-block;margin:0 8px 4px 0;padding:2px 8px;border-radius:999px;background:rgb(0 0 0/.07);font-size:12px;font-weight:600}
+.fl-save-template .components-base-control{margin-bottom:16px}
+.fl-save-template__actions{display:flex;justify-content:flex-end;gap:8px}
+.fl-start__actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.fl-start .components-button,.fl-questions .components-button,.fl-library__bar .components-button,.fl-editor-panel .components-button{min-height:44px}
+.fl-questions{max-width:40rem;margin:0 auto}
+.fl-questions__page{margin-bottom:4px}
+.fl-questions__step{margin:0 0 16px;opacity:.8}
+.fl-questions__keys{margin:12px 0 0;font-size:12px;opacity:.8}
+.fl-questions__actions{display:flex;gap:8px;margin-top:24px}
+.fl-questions__back{margin-right:auto}
+.fl-library__bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:24px}
+.fl-library__bar .components-search-control{flex:1 1 16rem}
+.fl-library__tabs{display:flex;flex-wrap:wrap;gap:4px}
+.fl-library .block-editor-block-patterns-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.fl-library__locked{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin:24px 0 0;padding:0;list-style:none}
+.fl-library__locked li{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;min-height:160px;margin:0;padding:24px;border:2px dashed currentColor;border-radius:4px;opacity:.8}
+.fl-library__locked p{margin:0}
+.fl-editor-panel .components-button{display:flex;width:100%;justify-content:center;margin-top:12px}
+.fl-add-section{display:flex;justify-content:center;margin-block:12px}
+.fl-add-section .fl-add-section__button{min-height:44px;padding:0 20px;border:2px dashed currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;opacity:.7}
+.fl-add-section .fl-add-section__button:hover,.fl-add-section .fl-add-section__button:focus-visible{opacity:1}
+.fl-review h3{margin:16px 0 4px;font-size:13px}.fl-review ul{margin:0;padding-left:1.2em;list-style:disc}.fl-review li{margin:4px 0}.fl-review .components-button.is-link{text-align:start;white-space:normal;height:auto}.fl-review__detail{color:#50575e}

@@ -1,0 +1,9 @@
+/* Géant : titre calé sur la largeur de l'écran. La part en rem du clamp garde le zoom du texte
+   actif ; overflow-wrap coupe un mot trop long plutôt que de faire défiler la page de côté. */
+.is-style-geant {
+	font-size: clamp(2.5rem, 1rem + 9vw, 11rem);
+	line-height: 0.95;
+	letter-spacing: -0.04em;
+	text-wrap: balance;
+	overflow-wrap: anywhere;
+}

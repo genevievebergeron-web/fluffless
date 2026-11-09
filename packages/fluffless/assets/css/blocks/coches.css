@@ -1,0 +1,21 @@
+.wp-block-list.is-style-coches {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.wp-block-list.is-style-coches li {
+	padding-inline-start: 1.6em;
+	position: relative;
+}
+
+.wp-block-list.is-style-coches li::before {
+	content: "\2713";
+	position: absolute;
+	inset-inline-start: 0;
+	color: var(--wp--preset--color--accent);
+	font-weight: 800;
+}
+
+.has-accent-background-color .wp-block-list.is-style-coches li::before {
+	color: currentcolor;
+}

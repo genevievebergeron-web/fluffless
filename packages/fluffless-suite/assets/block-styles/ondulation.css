@@ -1,0 +1,39 @@
+/* Ondulation : bouton au contour accent ; au survol et au clavier, un disque accent grandit depuis
+   le centre (pseudo-élément, scale) et le texte passe à la couleur lisible sur l'accent (5,31:1 au
+   minimum sur les sept palettes du thème). Sous mouvement réduit, l'état final arrive d'un coup. */
+.is-style-ondulation .wp-block-button__link {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	border: 2px solid var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	background: transparent;
+	color: inherit;
+}
+
+.is-style-ondulation .wp-block-button__link::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset-inline: 0;
+	top: 50%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: var(--wp--preset--color--button-bg, var(--wp--preset--color--accent));
+	translate: 0 -50%;
+	scale: 0;
+}
+
+.is-style-ondulation .wp-block-button__link:is(:hover, :focus-visible) {
+	color: var(--wp--preset--color--on-accent);
+}
+
+.is-style-ondulation .wp-block-button__link:is(:hover, :focus-visible)::before {
+	scale: 1.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.is-style-ondulation .wp-block-button__link,
+	.is-style-ondulation .wp-block-button__link::before {
+		transition: scale 0.4s ease-out, color var(--wp--custom--transition);
+	}
+}

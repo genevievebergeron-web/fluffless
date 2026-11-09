@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Grow in",
+	"slug": "grandit",
+	"blockTypes": [ "core/group", "core/columns", "core/image", "core/heading" ],
+	"styles": {}
+}

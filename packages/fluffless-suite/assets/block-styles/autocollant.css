@@ -1,0 +1,26 @@
+/* Autocollant : penché de 3 degrés vers la gauche (vers la droite avec fl-autocollant-droite),
+   bordure épaisse en couleur de base, ombre dure décalée sans flou. Le groupe et le paragraphe
+   prennent le fond d'accent et son texte lisible ; l'image garde ses couleurs. */
+:is(.wp-block-group, p).is-style-autocollant,
+.is-style-autocollant img {
+	border: 0.4rem solid var(--wp--preset--color--base);
+	box-shadow: 0.4rem 0.4rem 0 var(--wp--preset--color--contrast);
+}
+
+.is-style-autocollant {
+	rotate: -3deg;
+}
+
+.is-style-autocollant.fl-autocollant-droite {
+	rotate: 3deg;
+}
+
+:is(.wp-block-group, p).is-style-autocollant {
+	padding: var(--wp--preset--spacing--30, 1rem) var(--wp--preset--spacing--40, 1.5rem);
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--on-accent);
+}
+
+p.is-style-autocollant {
+	width: fit-content;
+}

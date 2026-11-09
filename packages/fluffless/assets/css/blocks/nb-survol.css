@@ -1,0 +1,9 @@
+.wp-block-image.is-style-nb-survol img {
+	filter: grayscale(1);
+	transition: filter var(--wp--custom--transition);
+}
+
+.wp-block-image.is-style-nb-survol:hover img,
+.wp-block-image.is-style-nb-survol:focus-within img {
+	filter: none;
+}

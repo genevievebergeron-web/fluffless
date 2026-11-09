@@ -1,0 +1,18 @@
+/* Taille Géante : interligne serré et pas de coupure automatique, comme la taille Énorme. */
+.has-giant-font-size {
+	hyphens: manual;
+	line-height: var(--wp--custom--line-height--tight);
+}
+
+/* Un mot long (« Développement », 13 à 14 lettres) tient dans la colonne à 320 px : le plancher du
+   préréglage Géant (theme.json, fluid.min) est de 2rem, et un mot vraiment trop long se coupe plutôt que
+   de faire défiler la page. Aucun trait d'union automatique (hyphens: manual plus haut). La taille
+   elle-même vient du préréglage, sans plafond ni !important posés ici. */
+.has-giant-font-size {
+	overflow-wrap: break-word;
+}
+
+/* Dans une tuile de grille, le chiffre Géant suit la largeur de la tuile (container posé par grille.css). */
+.is-layout-grid > * p.has-giant-font-size {
+	font-size: clamp(2.5rem, 30cqi, var(--wp--preset--font-size--giant)) !important;
+}

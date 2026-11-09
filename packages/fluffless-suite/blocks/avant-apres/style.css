@@ -1,0 +1,9 @@
+.fluffless-avant-apres__frame{--b:var(--wp--preset--color--base);--c:var(--wp--preset--color--contrast);position:relative;display:grid}
+.fluffless-avant-apres figure{grid-area:1/1;margin:0}
+.fluffless-avant-apres img{inline-size:100%;block-size:100%;object-fit:cover}
+.fluffless-avant-apres figure~figure{clip-path:inset(0 0 0 var(--fl-p))}
+.fluffless-avant-apres__frame::after{content:"";position:absolute;inset:0 auto 0 var(--fl-p);inline-size:40px;translate:-50%;background:radial-gradient(circle,var(--b) 16px,var(--c) 0 20px,transparent 0),linear-gradient(var(--b) 0 0) 50%/2px 100% no-repeat;pointer-events:none}
+.fluffless-avant-apres input{position:absolute;inset:0;inline-size:100%;block-size:100%;margin:0;opacity:0;cursor:ew-resize}
+.fluffless-avant-apres input:focus-visible{opacity:1}
+.fluffless-avant-apres span{position:absolute;inset-block-start:.5rem;inset-inline-start:.5rem;padding:.2em .6em;font-size:.8em;background:var(--b);color:var(--c)}
+.fluffless-avant-apres span+span{inset-inline:auto .5rem}

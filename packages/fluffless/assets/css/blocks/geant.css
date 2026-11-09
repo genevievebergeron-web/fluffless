@@ -1,0 +1,14 @@
+/* Coupe seulement un mot trop long pour sa colonne, sans trait d'union ajouté. */
+.is-style-geant {
+	overflow-wrap: break-word;
+	hyphens: manual;
+}
+
+/* Dans une colonne, un titre géant suit la largeur de sa colonne et non celle de l'écran. */
+.wp-block-column:has(> .is-style-geant) {
+	container-type: inline-size;
+}
+
+.wp-block-column > .is-style-geant {
+	font-size: clamp(2.25rem, 14cqi, var(--wp--preset--font-size--giant));
+}

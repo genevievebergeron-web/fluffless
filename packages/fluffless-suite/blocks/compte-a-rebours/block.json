@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/compte-a-rebours",
+	"version": "0.2.1",
+	"title": "Countdown",
+	"category": "design",
+	"icon": "clock",
+	"description": "A heading, one paragraph and the number of days (or hours, on the last day) left before a date, computed by the server. Once the date has passed, a line of your choice. No script.",
+	"keywords": [
+		"countdown",
+		"date",
+		"event",
+		"launch",
+		"compte"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"size": {
+			"type": "string",
+			"enum": [
+				"large",
+				"compact"
+			],
+			"default": "large"
+		},
+		"date": {
+			"type": "string",
+			"default": ""
+		},
+		"after": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

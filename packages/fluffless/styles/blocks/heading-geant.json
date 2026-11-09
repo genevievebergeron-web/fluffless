@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Giant heading",
+	"slug": "geant",
+	"blockTypes": [ "core/heading", "core/post-title", "core/site-title" ],
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|giant",
+			"fontWeight": "900",
+			"lineHeight": "0.92",
+			"letterSpacing": "-0.03em"
+		}
+	}
+}

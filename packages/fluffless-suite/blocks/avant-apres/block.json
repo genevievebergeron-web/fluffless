@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/avant-apres",
+	"version": "0.2.1",
+	"title": "Before and after",
+	"category": "design",
+	"icon": "image-flip-horizontal",
+	"description": "Two images, one over the other, and a native slider to reveal the second. A few lines of script, no library; without script both images stay visible at the starting position.",
+	"keywords": [
+		"before",
+		"after",
+		"compare",
+		"slider",
+		"avant"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"start": {
+			"type": "integer",
+			"enum": [
+				50,
+				25,
+				75
+			],
+			"default": 50
+		},
+		"labels": {
+			"type": "string",
+			"enum": [
+				"shown",
+				"hidden"
+			],
+			"default": "shown"
+		},
+		"before": {
+			"type": "string",
+			"default": ""
+		},
+		"after": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"viewScriptModule": "file:./view.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

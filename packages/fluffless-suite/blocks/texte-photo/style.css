@@ -1,0 +1,5 @@
+/* Texte puis image dans le DOM ; la photo passe à gauche par order, jamais en inversant le contenu. */
+.fluffless-texte-photo{display:grid;gap:var(--wp--preset--spacing--50,2rem);align-items:center}
+.fluffless-texte-photo>*{margin-block:0}
+.fluffless-texte-photo img{inline-size:100%;block-size:auto}
+@media (min-width:782px){.fluffless-texte-photo{grid-template-columns:1fr 1fr}.fluffless-texte-photo.is-ratio-60-40{grid-template-columns:3fr 2fr}.fluffless-texte-photo.is-media-start.is-ratio-60-40{grid-template-columns:2fr 3fr}.fluffless-texte-photo.is-media-start>:nth-child(2){order:-1}}

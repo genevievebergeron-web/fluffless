@@ -1,0 +1,22 @@
+/* Défilement horizontal : cartes alignées au défilement (scroll-snap), aucun script, aucun
+   défilement automatique. La barre de défilement reste visible pour signaler la suite.
+   Clavier : Chrome et Edge rendent la zone focalisable d'eux-mêmes, pas Firefox ni Safari.
+   Sans lien dans les cartes, le rendu public donne donc tabindex="0" au conteneur
+   (BlockStyles::focusable), qui a son propre anneau de focus ci-dessous. */
+.wp-block-group.is-style-defilement:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
+.wp-block-group.is-style-defilement {
+	flex-wrap: nowrap !important;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	padding-block-end: var(--wp--preset--spacing--40);
+}
+
+.wp-block-group.is-style-defilement > * {
+	flex: 0 0 min(85%, 22rem);
+	scroll-snap-align: start;
+}

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/temoignages",
+	"version": "0.2.1",
+	"title": "Testimonials",
+	"category": "design",
+	"icon": "format-quote",
+	"description": "One, two or three testimonials side by side, each with a quote and a name, with or without a photo and a company logo. The content stays in regular blocks.",
+	"keywords": [ "testimonial", "review", "quote", "client", "témoignages" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

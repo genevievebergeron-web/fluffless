@@ -1,0 +1,6 @@
+/* Grille du groupe natif ; ici la carte du plan, le prix, le bouton poussé en bas, le plan mis en avant. */
+.fluffless-tarifs .fluffless-tarifs__plan{display:flex;flex-direction:column;gap:var(--wp--preset--spacing--30,.75rem);border:1px solid var(--wp--preset--color--divider);padding:var(--wp--preset--spacing--50,2rem)}
+.fluffless-tarifs .fluffless-tarifs__plan>*{margin:0}
+.fluffless-tarifs .fluffless-tarifs__plan>.wp-block-buttons{margin-block-start:auto;padding-block-start:var(--wp--preset--spacing--30,.75rem)}
+.fluffless-tarifs__price{font-size:var(--wp--preset--font-size--x-large);font-weight:700;line-height:1.1}
+.is-featured-1 .fluffless-tarifs__plan:nth-child(1),.is-featured-2 .fluffless-tarifs__plan:nth-child(2),.is-featured-3 .fluffless-tarifs__plan:nth-child(3),.is-featured-4 .fluffless-tarifs__plan:nth-child(4){border:2px solid var(--wp--preset--color--accent);box-shadow:var(--wp--preset--shadow--soft)}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/jalon",
+	"version": "0.2.1",
+	"title": "Timeline step",
+	"category": "design",
+	"icon": "marker",
+	"description": "One step of a Timeline: a date or label, a title and a paragraph. Only inside a Timeline.",
+	"keywords": [ "step", "jalon", "timeline", "frise" ],
+	"textdomain": "fluffless-suite",
+	"ancestor": [ "fluffless/frise" ],
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"customClassName": false
+	},
+	"editorScript": "file:./index.js"
+}

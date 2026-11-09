@@ -1,0 +1,14 @@
+/* Zoom au survol : l'image grandit de 5 % dans son cadre, qui la coupe ; au survol de la
+   souris et quand un lien dedans a le focus. Le thème annule la transition en mouvement
+   réduit. */
+.is-style-zoom-survol {
+	overflow: hidden;
+}
+
+.is-style-zoom-survol :is(img, .wp-block-cover__image-background, .wp-block-cover__video-background) {
+	transition: scale 0.4s ease-out;
+}
+
+.is-style-zoom-survol:is(:hover, :focus-within) :is(img, .wp-block-cover__image-background, .wp-block-cover__video-background) {
+	scale: 1.05;
+}

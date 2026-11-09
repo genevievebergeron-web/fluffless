@@ -1,0 +1,20 @@
+{
+	"name": "fluffless-api",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Serveur Fluffless : mises à jour signées, licences et signalements, hébergé chez canner.ca.",
+	"license": "GPL-2.0-or-later",
+	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"start": "node src/server.mjs",
+		"build": "node --check src/server.mjs",
+		"test": "node --test \"test/*.test.mjs\""
+	},
+	"dependencies": {
+		"nodemailer": "10.0.9",
+		"postgres": "3.4.9"
+	}
+}

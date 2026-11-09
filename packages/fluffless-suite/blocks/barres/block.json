@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/barres",
+	"version": "0.2.1",
+	"title": "Progress bars",
+	"category": "design",
+	"icon": "chart-bar",
+	"description": "A heading and two to eight bars, each with a label and a value from 0 to 100. Track and fill are CSS only; the value is plain text next to the label.",
+	"keywords": [
+		"progress",
+		"skills",
+		"percent",
+		"bars",
+		"barres"
+	],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"size": {
+			"type": "string",
+			"enum": [
+				"thin",
+				"thick"
+			],
+			"default": "thin"
+		},
+		"values": {
+			"type": "string",
+			"enum": [
+				"shown",
+				"hidden"
+			],
+			"default": "shown"
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"fluffless-sections",
+		"file:./style.css"
+	]
+}

@@ -1,0 +1,11 @@
+/* Zigzag : la rangée inversée (image, texte, numéro) se lit dans l'ordre de la première une fois
+   empilée sous 782 px : numéro, texte, puis image. */
+@media (max-width: 781px) {
+	.wp-block-columns.fluffless-zigzag-inverse > .wp-block-column:first-child {
+		order: 1;
+	}
+
+	.wp-block-columns.fluffless-zigzag-inverse > .wp-block-column:last-child {
+		order: -1;
+	}
+}

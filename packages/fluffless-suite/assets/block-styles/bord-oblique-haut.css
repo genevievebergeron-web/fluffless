@@ -1,0 +1,5 @@
+/* Bord oblique : le haut de la section penche. Angle : --wp--custom--slant. */
+.is-style-bord-oblique-haut {
+	clip-path: polygon(0 var(--wp--custom--slant), 100% 0, 100% 100%, 0 100%);
+	padding-top: calc(var(--wp--custom--slant) + var(--wp--preset--spacing--60)) !important;
+}

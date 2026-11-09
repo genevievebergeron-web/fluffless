@@ -1,0 +1,31 @@
+/* Bouton rétro : bordure et ombre pleine de la couleur de contraste de la palette, décalées ;
+   au survol et au clavier, le bouton s'enfonce et l'ombre se réduit. L'anneau de focus du
+   thème reste dessiné autour. Même effet sur un groupe ou une carte (l'« ombre décalée ») : la face
+   glisse en diagonale vers l'ombre au survol et au focus dedans, sans transition sous mouvement
+   réduit. */
+.wp-block-button.is-style-retro .wp-block-button__link {
+	border-color: var(--wp--preset--color--contrast);
+	box-shadow: 0.3em 0.3em 0 var(--wp--preset--color--contrast);
+	transition: translate var(--wp--custom--transition), box-shadow var(--wp--custom--transition);
+}
+
+.wp-block-button.is-style-retro .wp-block-button__link:is(:hover, :focus-visible) {
+	translate: 0.15em 0.15em;
+	box-shadow: 0.15em 0.15em 0 var(--wp--preset--color--contrast);
+}
+
+:is(.wp-block-group, .fluffless-carte).is-style-retro {
+	border: 2px solid var(--wp--preset--color--contrast);
+	box-shadow: 0.5rem 0.5rem 0 var(--wp--preset--color--contrast);
+}
+
+:is(.wp-block-group, .fluffless-carte).is-style-retro:is(:hover, :focus-within) {
+	translate: 0.25rem 0.25rem;
+	box-shadow: 0.25rem 0.25rem 0 var(--wp--preset--color--contrast);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:is(.wp-block-group, .fluffless-carte).is-style-retro {
+		transition: translate var(--wp--custom--transition), box-shadow var(--wp--custom--transition);
+	}
+}

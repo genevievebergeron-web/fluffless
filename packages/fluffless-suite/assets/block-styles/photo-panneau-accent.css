@@ -1,0 +1,33 @@
+/* Panneau photo, accent : le texte de la Couverture dans un panneau opaque (couleur d'accent), coins doux,
+   placé par le réglage « Position du contenu » du bloc (au centre par défaut ; centre-centre ne
+   pose aucune classe, d'où aucune position forcée ici), sans voile à l'opacité de départ (50,
+   seule valeur sans classe has-background-dim-*) : la photo reste nette. Toute autre opacité
+   ramène le voile ; une Couverture sans image (couleur unie, opacité 100) garde son fond. Le
+   panneau prend la couleur de texte du bloc quand elle est réglée, garde sa largeur de contenu
+   jusqu'à 36rem et prend toute la largeur sur un petit écran. Les liens suivent la couleur du
+   texte (un lien accent sur fond accent serait invisible) et les boutons sans couleur propre
+   s'inversent (fond on-accent, texte accent). Modes fixe, parallaxe et vidéo inchangés. */
+.wp-block-cover.is-style-photo-panneau-accent > .wp-block-cover__background:not([class*="has-background-dim-"]) {
+	opacity: 0;
+}
+
+.wp-block-cover.is-style-photo-panneau-accent.is-style-photo-panneau-accent .wp-block-cover__inner-container {
+	width: auto;
+	max-width: min(100%, 36rem);
+	padding: var(--wp--preset--spacing--40, 1.5rem);
+	border-radius: var(--wp--custom--radius--soft, 0.5rem);
+	background: var(--wp--preset--color--accent);
+}
+
+.wp-block-cover.is-style-photo-panneau-accent:not(.has-text-color) .wp-block-cover__inner-container {
+	color: var(--wp--preset--color--on-accent);
+}
+
+.wp-block-cover.is-style-photo-panneau-accent .wp-block-cover__inner-container a:where(:not(.wp-element-button)) {
+	color: inherit;
+}
+
+.wp-block-cover.is-style-photo-panneau-accent .wp-block-cover__inner-container .wp-element-button:where(:not(.has-background)) {
+	background: var(--wp--preset--color--on-accent);
+	color: var(--wp--preset--color--accent);
+}

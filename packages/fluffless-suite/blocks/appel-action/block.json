@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/appel-action",
+	"version": "0.2.1",
+	"title": "Call to action banner",
+	"category": "design",
+	"icon": "megaphone",
+	"description": "A banner that invites one clear step: one or two buttons, a plain, accent or image background, centred or left, thin or generous. The content stays in regular blocks.",
+	"keywords": [ "call to action", "banner", "button", "contact", "appel" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" },
+		"background": { "type": "string", "enum": [ "accent", "surface", "image" ], "default": "accent" },
+		"justify": { "type": "string", "enum": [ "center", "start" ], "default": "center" },
+		"size": { "type": "string", "enum": [ "generous", "thin" ], "default": "generous" },
+		"imageId": { "type": "number", "default": 0 }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"customClassName": true
+	},
+	"editorScript": "file:./index.js",
+	"style": [ "fluffless-sections", "file:./style.css" ]
+}

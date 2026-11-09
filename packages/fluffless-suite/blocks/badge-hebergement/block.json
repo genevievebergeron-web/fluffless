@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fluffless/badge-hebergement",
+	"version": "0.2.1",
+	"title": "Verified hosting badge",
+	"example": {},
+	"category": "widgets",
+	"icon": "yes-alt",
+	"description": "Says your host runs on renewable energy, with a link to the Green Web Foundation check, only once the sobriety check has confirmed it. Otherwise, nothing.",
+	"keywords": [ "footer" ],
+	"textdomain": "fluffless-suite",
+	"attributes": {
+		"anchor": { "type": "string" }
+	},
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": false,
+		"color": { "text": true, "background": false, "gradients": false, "link": true, "customColor": false },
+		"typography": { "fontSize": true },
+		"spacing": { "margin": true }
+	},
+	"editorScript": "fluffless-footer-blocks-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,51 @@
+/* Entête qui se détache : collé au bord en haut de page, il devient la capsule au défilement
+   (animation-timeline: scroll, sans script). Sans prise en charge : entête collant simple, sans
+   capsule. Sous mouvement réduit : capsule fixe, aucune animation. Ni overflow ni clip-path ;
+   panneau de menu ouvert, le rayon se ramène (important : il passe devant l'animation). Le collage ne vaut qu'à l'écran.
+   --fl-m et --fl-o : marge et ombre de la capsule, écrites une fois pour les deux états. */
+@media screen {
+	header.wp-block-template-part:has(> .is-style-detache) {
+		position: sticky;
+		top: var(--wp-admin--admin-bar--height, 0px);
+		z-index: 30;
+	}
+}
+
+.is-style-detache {
+	--fl-m: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30) 0;
+	--fl-o: 0 0.25rem 1rem -0.5rem color-mix(in srgb, var(--wp--preset--color--contrast) 25%, transparent);
+}
+
+html:has(.is-style-detache) {
+	scroll-padding-top: 7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.is-style-detache {
+		margin: var(--fl-m);
+		border-radius: 9999px;
+		box-shadow: var(--fl-o);
+	}
+}
+
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.is-style-detache {
+			animation: fluffless-detache linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 12rem;
+		}
+
+		@keyframes fluffless-detache {
+			to {
+				margin: var(--fl-m);
+				border-radius: 9999px;
+				box-shadow: var(--fl-o);
+			}
+		}
+	}
+}
+
+.is-style-detache:has(details[open]) {
+	border-radius: 1.5rem !important;
+}

@@ -1,0 +1,91 @@
+/* Guide « Bien démarrer » : widget du tableau de bord et panneau de l'éditeur, aux couleurs de fluffless.dev.
+   Typographie système, aucun fichier externe. Contrastes : texte 12,4:1 et vert 6,9:1 sur le fond forêt. */
+.fl-guide,
+.fl-guide-panel .fl-guide-actions {
+	--fl-g-bg: #172c24;
+	--fl-g-surface: #1e3e35;
+	--fl-g-text: #e9f0ea;
+	--fl-g-muted: #b8cbbf;
+	--fl-g-green: #66be8d;
+	--fl-g-pink: #ee8294;
+	--fl-g-olive: #ada537;
+}
+
+#fluffless_getting_started .inside { margin: 0; padding: 0; }
+
+.fl-guide {
+	background: var(--fl-g-bg);
+	color: var(--fl-g-text);
+	padding: 1.25rem 1.25rem 1rem;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.fl-guide-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin: 0 0 0.75rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.fl-guide-brand .fl-icon { color: var(--fl-g-pink); width: 28px; height: 28px; }
+
+.fl-guide-intro { margin: 0 0 1rem; color: var(--fl-g-muted); }
+
+.fl-guide-actions { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.5rem; }
+.fl-guide .fl-guide-actions { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); }
+.fl-guide-actions li { margin: 0; }
+
+.fl-guide-actions a,
+.fl-guide-actions button {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.75rem;
+	border: 2px solid transparent;
+	border-radius: 0.5rem;
+	background: var(--fl-g-surface);
+	color: var(--fl-g-muted);
+	font: inherit;
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: start;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.fl-guide-actions strong { display: block; color: var(--fl-g-text); font-size: 14px; }
+
+.fl-guide-actions .fl-icon,
+.fl-guide-actions .dashicon {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+	color: var(--fl-g-green);
+}
+
+.fl-guide-actions a:hover,
+.fl-guide-actions button:hover { border-color: var(--fl-g-green); }
+
+.fl-guide-actions a:focus-visible,
+.fl-guide-actions button:focus-visible { outline: 2px solid var(--fl-g-pink); outline-offset: 2px; box-shadow: none; }
+
+/* Premier élément mis en avant : le bouton vert de fluffless.dev. */
+.fl-guide-actions li:first-child a,
+.fl-guide-actions li:first-child button { background: var(--fl-g-green); color: var(--fl-g-bg); }
+.fl-guide-actions li:first-child strong,
+.fl-guide-actions li:first-child .fl-icon,
+.fl-guide-actions li:first-child .dashicon { color: var(--fl-g-bg); }
+
+.fl-guide-suite { margin: 0 0 0.5rem; color: var(--fl-g-muted); }
+.fl-guide a:not(.fl-guide-actions a) { color: var(--fl-g-green); }
+.fl-guide-hide { margin: 0; font-size: 12px; color: var(--fl-g-muted); }
+
+/* Panneau de l'éditeur : les cartes forêt sur la barre latérale claire de WordPress. */
+.fl-guide-panel .fl-guide-actions { margin-bottom: 0.75rem; padding: 0.5rem; border-radius: 0.75rem; background: var(--fl-g-bg); }
